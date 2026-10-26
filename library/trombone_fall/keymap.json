@@ -1,0 +1,177 @@
+{
+ "name": "trombone_fall",
+ "category": "HORNS",
+ "source": "vsco2ce",
+ "license": "CC0-1.0",
+ "credit": "VSCO 2 Community Edition by Versilian Studios (CC0)",
+ "samplerate": 44100,
+ "loop": false,
+ "zones": [
+  {
+   "file": "trombone_fall_043_G2_v1.flac",
+   "root": 43,
+   "lokey": 31,
+   "hikey": 43,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 24439,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_G1_1.wav",
+   "bytes": 23427
+  },
+  {
+   "file": "trombone_fall_044_Gs2_v1.flac",
+   "root": 44,
+   "lokey": 44,
+   "hikey": 44,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 33140,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_G#1_1.wav",
+   "bytes": 24793
+  },
+  {
+   "file": "trombone_fall_045_A2_v1.flac",
+   "root": 45,
+   "lokey": 45,
+   "hikey": 45,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 33134,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_A1_1.wav",
+   "bytes": 27306
+  },
+  {
+   "file": "trombone_fall_046_As2_v1.flac",
+   "root": 46,
+   "lokey": 46,
+   "hikey": 47,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 22432,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_A#1_1.wav",
+   "bytes": 31174
+  },
+  {
+   "file": "trombone_fall_048_C3_v1.flac",
+   "root": 48,
+   "lokey": 48,
+   "hikey": 48,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 24091,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_C2_1.wav",
+   "bytes": 41076
+  },
+  {
+   "file": "trombone_fall_049_Cs3_v1.flac",
+   "root": 49,
+   "lokey": 49,
+   "hikey": 49,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 23296,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_C#2_1.wav",
+   "bytes": 39531
+  },
+  {
+   "file": "trombone_fall_050_D3_v1.flac",
+   "root": 50,
+   "lokey": 50,
+   "hikey": 50,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 25069,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_D2_1.wav",
+   "bytes": 35847
+  },
+  {
+   "file": "trombone_fall_051_Ds3_v1.flac",
+   "root": 51,
+   "lokey": 51,
+   "hikey": 51,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 25235,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_D#2_1.wav",
+   "bytes": 42863
+  },
+  {
+   "file": "trombone_fall_052_E3_v1.flac",
+   "root": 52,
+   "lokey": 52,
+   "hikey": 52,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 26485,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_E2_1.wav",
+   "bytes": 40038
+  },
+  {
+   "file": "trombone_fall_053_F3_v1.flac",
+   "root": 53,
+   "lokey": 53,
+   "hikey": 54,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 21758,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_F2_1.wav",
+   "bytes": 41226
+  },
+  {
+   "file": "trombone_fall_055_G3_v1.flac",
+   "root": 55,
+   "lokey": 55,
+   "hikey": 55,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 25990,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_G2_1.wav",
+   "bytes": 51441
+  },
+  {
+   "file": "trombone_fall_056_Gs3_v1.flac",
+   "root": 56,
+   "lokey": 56,
+   "hikey": 56,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 27344,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_G#2_1.wav",
+   "bytes": 55520
+  },
+  {
+   "file": "trombone_fall_057_A3_v1.flac",
+   "root": 57,
+   "lokey": 57,
+   "hikey": 57,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 27873,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_A2_1.wav",
+   "bytes": 48950
+  },
+  {
+   "file": "trombone_fall_058_As3_v1.flac",
+   "root": 58,
+   "lokey": 58,
+   "hikey": 58,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 25564,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_A#2_1.wav",
+   "bytes": 42896
+  },
+  {
+   "file": "trombone_fall_059_B3_v1.flac",
+   "root": 59,
+   "lokey": 59,
+   "hikey": 71,
+   "lovel": 1,
+   "hivel": 127,
+   "frames": 25608,
+   "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_B2_1.wav",
+   "bytes": 42026
+  }
+ ],
+ "total_bytes": 588114
+}

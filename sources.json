@@ -1,0 +1,26 @@
+{
+ "vsco2ce": {
+  "name": "VSCO 2 Community Edition",
+  "author": "Versilian Studios (Sam Gossner), Ivy Audio (Simon Dalzell)",
+  "url": "https://github.com/sgossner/VSCO-2-CE",
+  "license": "CC0-1.0",
+  "attribution_required": false,
+  "credit": "VSCO 2 Community Edition by Versilian Studios (CC0)"
+ },
+ "vcsl": {
+  "name": "Versilian Community Sample Library",
+  "author": "Versilian Studios (Sam Gossner)",
+  "url": "https://github.com/sgossner/VCSL",
+  "license": "CC0-1.0",
+  "attribution_required": false,
+  "credit": "VCSL by Versilian Studios (CC0)"
+ },
+ "tropix": {
+  "name": "Tropix original renders",
+  "author": "Tropix project",
+  "url": "",
+  "license": "Tropix project (original synthesis)",
+  "attribution_required": false,
+  "credit": "Rendered by the Tropix engines"
+ }
+}

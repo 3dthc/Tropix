@@ -9,6 +9,10 @@ reggae and Hawaiian sounds. Work in progress.
   `docs/demos/`, rendered by `tools/pan_demo.py`; measurements by `tools/pan_check.py`.
 - Amapiano log drum engine (`tools/logdrum.py`): five variations (classic, deep, knock, talking, gritty) with pitch
   drop, glide, saturation and a woody knock. Demos rendered by `tools/logdrum_demo.py`.
+- Horns (`tools/build_horns.py`): trumpet (open, vibrato, stabs, harmon mute), trombone (sustain, stabs, falls),
+  tenor sax and saxello (straight, vibrato, stabs) from VSCO 2 CE and VCSL, tuned per note and looped. Played by the
+  offline sampler (`tools/sampler.py`) with scoops, falls and vibrato; demos by `tools/horn_demo.py`, checks by
+  `tools/check_library.py`.
 
 ## Sound sources
 
