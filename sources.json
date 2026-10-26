@@ -22,5 +22,13 @@
   "license": "Tropix project (original synthesis)",
   "attribution_required": false,
   "credit": "Rendered by the Tropix engines"
+ },
+ "iowa": {
+  "name": "University of Iowa Musical Instrument Samples (pre-2012 set)",
+  "author": "University of Iowa Electronic Music Studios (Lawrence Fritts)",
+  "url": "https://theremin.music.uiowa.edu/mis.html",
+  "license": "Free to use for any projects, without restrictions (per the MIS site)",
+  "attribution_required": false,
+  "credit": "Musical Instrument Samples, University of Iowa Electronic Music Studios (theremin.music.uiowa.edu)"
  }
 }

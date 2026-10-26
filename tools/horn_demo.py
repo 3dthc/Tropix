@@ -80,7 +80,7 @@ def sax_line(buf, t0, b, line, base_vel=0.75, stab="tenor_sax_stab", sus="tenor_
         horn(buf, t0 + beat * b, inst, m, vel, dur, bends=bends, fade_with_fall=fade, release=0.14)
 
 
-def kompa():
+def kompa(stab="tenor_sax_stab", sus="tenor_sax", vib="tenor_sax_vib", transpose=0):
     bpm = 120
     b = 60 / bpm
     bars = 8
@@ -115,8 +115,24 @@ def kompa():
         # bar 8 (Bb)
         (28, 70, 3, "vf"),
     ]
-    sax_line(buf, 0, b, line, base_vel=0.72)
+    sax_line(buf, 0, b, line, base_vel=0.72, stab=stab, sus=sus, vib=vib, transpose=transpose)
     return finish(buf)
+
+
+def compare(pairs, line, bpm=100, gap_bars=1):
+    """Play the same phrase on each instrument in turn (pairs: (stab, sus, vib)), a bar of rest between."""
+    b = 60 / bpm
+    span = (max(beat + d for beat, _, d, _ in line) + 4 * gap_bars) * b
+    buf = np.zeros((int(SR * (span * len(pairs) + 4)), 2))
+    for k, (stab, sus, vib) in enumerate(pairs):
+        sax_line(buf, k * span, b, line, 0.75, stab=stab, sus=sus, vib=vib)
+    return finish(buf)
+
+
+PHRASE = [  # original, B-flat major
+    (0, 65, 1, "s"), (1, 67, 0.5, ""), (1.5, 70, 0.5, ""), (2, 72, 1.5, "a"), (3.5, 70, 0.5, ""),
+    (4, 67, 0.5, "x"), (4.5, 65, 0.5, "x"), (5, 62, 1, ""), (6, 65, 2, "v"),
+]
 
 
 def trumpet_solo():
@@ -217,7 +233,14 @@ def soca():
 if __name__ == "__main__":
     out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), "..", "docs", "demos")
     os.makedirs(out, exist_ok=True)
-    jobs = {"horns_kompa_tenor_sax": kompa, "horns_trumpet_solo": trumpet_solo,
+    jobs = {"horns_kompa_alto_sax": lambda: kompa("alto_sax", "alto_sax", "alto_sax_vib"),
+            "horns_compare_trumpets": lambda: compare([("trumpet_stab", "trumpet", "trumpet_vib"),
+                                                       ("trumpet_bright", "trumpet_bright", "trumpet_bright_vib")],
+                                                      PHRASE),
+            "horns_compare_soprano": lambda: compare([("saxello", "saxello", "saxello_vib"),
+                                                      ("soprano_sax", "soprano_sax", "soprano_sax_vib")],
+                                                     [(beat, m + 5, d, f) for beat, m, d, f in PHRASE]),
+            "horns_kompa_tenor_sax": kompa, "horns_trumpet_solo": trumpet_solo,
             "horns_afrobeat_section": afrobeat, "horns_soca_stabs": soca}
     for name in (sys.argv[2:] or jobs):
         x = jobs[name]()

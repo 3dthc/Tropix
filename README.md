@@ -13,6 +13,8 @@ reggae and Hawaiian sounds. Work in progress.
   tenor sax and saxello (straight, vibrato, stabs) from VSCO 2 CE and VCSL, tuned per note and looped. Played by the
   offline sampler (`tools/sampler.py`) with scoops, falls and vibrato; demos by `tools/horn_demo.py`, checks by
   `tools/check_library.py`.
+- Iowa horns: alto sax, soprano sax and a second trumpet (straight and vibrato, pp/mf/ff), split from the University
+  of Iowa chromatic runs by `tools/split_runs.py`; slow-swelling soft notes get a tightened attack.
 
 ## Sound sources
 

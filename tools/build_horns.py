@@ -19,6 +19,9 @@ RAW = os.path.join(LIB, "raw")
 OUT = os.path.join(LIB, "library")
 VSCO = os.path.join(RAW, "VSCO-2-CE", "Brass")
 SAX = os.path.join(RAW, "VCSL", "Aerophones", "Reed Aerophones")
+IOWA = os.path.join(RAW, "IowaMIS-notes")
+IOWA_NOTE = r"\.([A-G]s?\d)\.wav$"
+DYN = ["pp", "mf", "ff"]
 NOTE = r"_([A-G]#?\d)_"
 
 
@@ -49,6 +52,18 @@ def rr1(paths):
 
 # Known-bad takes found in the survey (an overblown note that sounds a fifth above its name).
 SKIP = {"BrettTenor_NV_Main_D2_vl3_rr1.wav", "BrettTenor_Staccato_Main_D2_vl2_rr4.wav"}
+
+
+def every(paths, step=2, base=0, note_re=None):
+    """Keep every `step`-th semitone (by MIDI number), so a chromatic set becomes whole-tone; horns stretch a
+    semitone either way without sounding pitched."""
+    from prep import note_to_midi
+    out = []
+    for p in paths:
+        m = re.search(note_re or IOWA_NOTE, os.path.basename(p))
+        if m and (note_to_midi(m.group(1)) - base) % step == 0:
+            out.append(p)
+    return out
 
 
 def ok(paths):
@@ -105,6 +120,31 @@ BUILDS = {
                     lambda: folder_zones(files(SAX, "Saxello", "Vibrato", "*.wav"), NOTE,
                                          lambda p: 0, max_len=4.5, fine_tune=True),
                     dict(loop=True, loop_region=(0.25, 0.92), loop_xfade=0.3, loop_mode="pitch")),
+    # University of Iowa MIS (pre-2012 set): three real dynamics, straight and vibrato, mono
+    "alto_sax": ("HORNS", "iowa",
+                 lambda: folder_zones(every(files(IOWA, "Woodwinds", "altosaxophone", "AltoSax.NoVib.*.wav")), IOWA_NOTE,
+                                      layer(r"\.(pp|mf|ff)\.", DYN), max_len=4.0, fine_tune=True),
+                 dict(loop=True, loop_region=(0.25, 0.92), loop_xfade=0.3, loop_mode="pitch", mono=True, attack_db=-14.0)),
+    "alto_sax_vib": ("HORNS", "iowa",
+                     lambda: folder_zones(every(files(IOWA, "Woodwinds", "altosaxophone", "AltoSax.Vib.*.wav")), IOWA_NOTE,
+                                          layer(r"\.(pp|mf|ff)\.", DYN), max_len=4.0, fine_tune=True),
+                     dict(loop=True, loop_region=(0.25, 0.92), loop_xfade=0.3, loop_mode="pitch", mono=True, attack_db=-14.0)),
+    "soprano_sax": ("HORNS", "iowa",
+                    lambda: folder_zones(every(files(IOWA, "Woodwinds", "sopranosaxophone", "SopSax.NoVib.*.wav")), IOWA_NOTE,
+                                         layer(r"\.(pp|mf|ff)\.", DYN), max_len=4.0, fine_tune=True),
+                    dict(loop=True, loop_region=(0.25, 0.92), loop_xfade=0.3, loop_mode="pitch", mono=True, attack_db=-14.0)),
+    "soprano_sax_vib": ("HORNS", "iowa",
+                        lambda: folder_zones(every(files(IOWA, "Woodwinds", "sopranosaxophone", "SopSax.Vib.*.wav")), IOWA_NOTE,
+                                             layer(r"\.(pp|mf|ff)\.", DYN), max_len=4.0, fine_tune=True),
+                        dict(loop=True, loop_region=(0.25, 0.92), loop_xfade=0.3, loop_mode="pitch", mono=True, attack_db=-14.0)),
+    "trumpet_bright": ("HORNS", "iowa",
+                       lambda: folder_zones(every(files(IOWA, "Brass", "Bbtrumpet", "Trumpet.novib.*.wav")), IOWA_NOTE,
+                                            layer(r"\.(pp|mf|ff)\.", DYN), max_len=4.0, fine_tune=True),
+                       dict(loop=True, loop_region=(0.25, 0.92), loop_xfade=0.3, loop_mode="pitch", mono=True)),
+    "trumpet_bright_vib": ("HORNS", "iowa",
+                           lambda: folder_zones(every(files(IOWA, "Brass", "Bbtrumpet", "Trumpet.vib.*.wav")), IOWA_NOTE,
+                                                layer(r"\.(pp|mf|ff)\.", DYN), max_len=4.0, fine_tune=True),
+                           dict(loop=True, loop_region=(0.25, 0.92), loop_xfade=0.3, loop_mode="pitch", mono=True)),
 }
 
 

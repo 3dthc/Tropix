@@ -1,5 +1,12 @@
 # Tropix sound library: sources and licenses
 
+## University of Iowa Musical Instrument Samples (pre-2012 set)
+
+- License: Free to use for any projects, without restrictions (per the MIS site)
+- Source: https://theremin.music.uiowa.edu/mis.html
+- Credit: Musical Instrument Samples, University of Iowa Electronic Music Studios (theremin.music.uiowa.edu)
+- Used in: alto_sax, alto_sax_vib, soprano_sax, soprano_sax_vib, trumpet_bright, trumpet_bright_vib
+
 ## Versilian Community Sample Library
 
 - License: CC0-1.0

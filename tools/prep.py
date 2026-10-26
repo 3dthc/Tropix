@@ -58,12 +58,34 @@ def db(v):
     return 20 * np.log10(max(v, 1e-12))
 
 
-def trim_start(x, thresh_db=-50.0, pre_ms=2.0):
+def trim_start(x, thresh_db=-50.0, pre_ms=2.0, steady_db=-30.0):
+    """Cut leading silence. The onset is where the level first comes within `steady_db` of the note's steady level
+    (90th percentile of the envelope) and above `thresh_db` re peak, so a quiet note recorded over room noise is
+    trimmed to its real start, not to the noise."""
     env = np.max(np.abs(x), axis=1)
-    peak = env.max()
-    idx = np.argmax(env > peak * 10 ** (thresh_db / 20))
+    sm = np.sqrt(np.convolve(env ** 2, np.ones(441) / 441, "same"))
+    level = np.percentile(sm, 90)
+    thr = max(sm.max() * 10 ** (thresh_db / 20), level * 10 ** (steady_db / 20))
+    idx = int(np.argmax(sm > thr))
     idx = max(0, idx - int(SR * pre_ms / 1000))
     return x[idx:]
+
+
+def tighten_attack(x, attack_db=-14.0, keep_ms=25.0, fade_ms=10.0, max_swell_ms=60.0):
+    """For notes that swell in slowly (a player easing into a soft note): if the level takes longer than
+    max_swell_ms to come within attack_db of the steady level, start the sample keep_ms before that point with a
+    short fade-in, so the note speaks when the key is pressed. Quick attacks are left untouched."""
+    env = np.max(np.abs(x), axis=1)
+    sm = np.sqrt(np.convolve(env ** 2, np.ones(441) / 441, "same"))
+    level = np.percentile(sm, 90)
+    idx = int(np.argmax(sm > level * 10 ** (attack_db / 20)))
+    if idx <= int(SR * max_swell_ms / 1000):
+        return x
+    a = max(0, idx - int(SR * keep_ms / 1000))
+    y = x[a:].copy()
+    n = int(SR * fade_ms / 1000)
+    y[:n] *= np.sin(np.linspace(0, np.pi / 2, n))[:, None] ** 2
+    return y
 
 
 def fit_length(x, max_s, fade_s=0.3, floor_db=-60.0):
@@ -291,7 +313,7 @@ def to_rate(x, rate):
 
 def build_instrument(name, category, source, zones, out_root, loop=False,
                      max_len=8.0, peak_db=-1.0, loop_region=(0.35, 0.9), trim=True,
-                     rate=SR, mono=False, floor_db=-60.0, fade_s=0.3, loop_xfade=0.25, loop_mode="wave", norm="peak", rms_db=-16.0):
+                     rate=SR, mono=False, floor_db=-60.0, fade_s=0.3, loop_xfade=0.25, loop_mode="wave", norm="peak", rms_db=-16.0, attack_db=None):
     """zones: list of dicts {audio (array) or path, root, vel (layer index), lovel, hivel}.
 
     rate: the stored sample rate (32000 or 22050 for sounds with little or nothing above 16 / 11 kHz: synth pads,
@@ -308,6 +330,8 @@ def build_instrument(name, category, source, zones, out_root, loop=False,
         x = z["audio"] if "audio" in z else load(z["path"])
         if trim:
             x = trim_start(x)
+            if attack_db is not None:
+                x = tighten_attack(x, attack_db)
         x = fit_length(x, z.get("max_len", max_len), fade_s=0.02 if loop else fade_s, floor_db=floor_db)
         if mono:
             x = np.repeat(x.mean(axis=1, keepdims=True), 2, axis=1)
