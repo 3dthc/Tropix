@@ -46,5 +46,37 @@
   "license": "CC0-1.0",
   "attribution_required": false,
   "credit": "Meta Open Sound (CC0)"
+ },
+ "gregsullivan": {
+  "name": "Greg Sullivan's E-Pianos (Wurlitzer EP200, Yamaha CP80, Hohner Pianet T)",
+  "author": "Greg Sullivan (sampling); SFZ mapping by kinwie",
+  "url": "https://github.com/sfzinstruments/GregSullivan.E-Pianos",
+  "license": "CC-BY-3.0",
+  "attribution_required": true,
+  "credit": "Wurlitzer EP200, Yamaha CP80 and Hohner Pianet T samples by Greg Sullivan (sullivang.net), CC BY 3.0, via github.com/sfzinstruments/GregSullivan.E-Pianos; trimmed, retuned and remapped for Tropix."
+ },
+ "karoryfer_swag": {
+  "name": "Swagbass",
+  "author": "Karoryfer Lecolds (D. Smolken)",
+  "url": "https://github.com/sfzinstruments/karoryfer.swagbass",
+  "license": "CC0-1.0",
+  "attribution_required": false,
+  "credit": "Swagbass by Karoryfer Lecolds (CC0)"
+ },
+ "karoryfer_growly": {
+  "name": "Growlybass",
+  "author": "Karoryfer Lecolds",
+  "url": "https://github.com/sfzinstruments/karoryfer.growlybass",
+  "license": "CC0-1.0",
+  "attribution_required": false,
+  "credit": "Growlybass by Karoryfer Lecolds (CC0)"
+ },
+ "karoryfer_gogodze": {
+  "name": "Gogodze Phu Vol I",
+  "author": "Karoryfer Lecolds",
+  "url": "https://github.com/sfzinstruments/karoryfer.gogodze-phu-vol-i",
+  "license": "CC0-1.0",
+  "attribution_required": false,
+  "credit": "Gogodze Phu Vol I by Karoryfer Lecolds (CC0)"
  }
 }

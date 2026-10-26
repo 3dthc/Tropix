@@ -243,13 +243,19 @@ def measured_cents(x, root):
 
 
 def steady_cents(x, root):
-    """Deviation from equal temperament over the steady part of the note (median YIN pitch), which is what the
-    ear hears for short horn notes whose attack bends into the pitch; falls back to the spectral estimate."""
+    """Deviation from equal temperament, from two independent estimates: the median YIN pitch over the steady part
+    (what the ear hears on horn notes whose attack bends into the pitch) and the strongest of the first three
+    harmonics (robust on very low notes whose fundamental is weak). If they agree, use their mean; if not, the
+    smaller correction; anything past 60 cents is a mis-measurement, so the zone is left as recorded."""
     from audio import pitch_of
     f = pitch_of(x, SR, guess_midi=root)
+    c_spec = measured_cents(x, root)
     if f is None:
-        return measured_cents(x, root)
-    return float(1200 * np.log2(f / (440 * 2 ** ((root - 69) / 12))))
+        c = c_spec
+    else:
+        c_yin = float(1200 * np.log2(f / (440 * 2 ** ((root - 69) / 12))))
+        c = (c_yin + c_spec) / 2 if abs(c_yin - c_spec) < 15 else min(c_yin, c_spec, key=abs)
+    return c if abs(c) <= 60 else 0.0
 
 
 def folder_zones(files, note_re, layer_key, max_len=8.0, measure=True, extra=None, fine_tune=False, shift=None):
@@ -313,7 +319,7 @@ def to_rate(x, rate):
 
 def build_instrument(name, category, source, zones, out_root, loop=False,
                      max_len=8.0, peak_db=-1.0, loop_region=(0.35, 0.9), trim=True,
-                     rate=SR, mono=False, floor_db=-60.0, fade_s=0.3, loop_xfade=0.25, loop_mode="wave", norm="peak", rms_db=-16.0, attack_db=None, even_keys=None):
+                     rate=SR, mono=False, floor_db=-60.0, fade_s=0.3, loop_xfade=0.25, loop_mode="wave", norm="peak", rms_db=-16.0, attack_db=None, even_keys=None, kit=False):
     """zones: list of dicts {audio (array) or path, root, vel (layer index), lovel, hivel}.
 
     rate: the stored sample rate (32000 or 22050 for sounds with little or nothing above 16 / 11 kHz: synth pads,
@@ -389,7 +395,7 @@ def build_instrument(name, category, source, zones, out_root, loop=False,
         sf.write(path, y[:, :1] if mono else y, rate, subtype="PCM_16", format="FLAC")
         size = os.path.getsize(path)
         total += size
-        lk, hk = ranges[z["vel"]][z["root"]]
+        lk, hk = (z["root"], z["root"]) if kit else ranges[z["vel"]][z["root"]]
         e = {"file": fn, "root": z["root"], "lokey": lk, "hikey": hk,
              "lovel": z["lovel"], "hivel": z["hivel"], "frames": len(x),
              "orig": os.path.relpath(z["path"], LIB) if "path" in z else "rendered",

@@ -18,6 +18,11 @@ reggae and Hawaiian sounds. Work in progress.
 - Guitars (`tools/build_guitars.py`): Gretsch and Höfner hollow-body electrics (p/mf/f plus palm mutes) from
   Karoryfer's Black And Green Guitars, and Meta Open Sound steel-string (slack-key) and nylon (palm-wine) acoustics.
   Demos by `tools/guitar_demo.py` (strums, chorus, kompa/highlife/reggae/slack-key/palm-wine patterns).
+- Keys (`tools/build_keys.py`): Kawai grand and Yamaha upright (VCSL), Wurlitzer, CP80 and Pianet (Greg Sullivan,
+  CC BY 3.0), TX81Z FM keys. Basses (`tools/build_bass.py`): flatwound and roundwound electric bass (Karoryfer).
+- Percussion and mallets (`tools/build_perc.py`): the island percussion kit (congas, bongos, shakers, bells,
+  claves, guiro, slit drum, frame drums, siren), the bobobo and cajon kit, marimba, balafon, vibraphone, kalimba
+  and mbira. Demos by `tools/band_demo.py`.
 
 ## Sound sources
 
