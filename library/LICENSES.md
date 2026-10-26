@@ -63,6 +63,13 @@
 - Credit: VSCO 2 Community Edition by Versilian Studios (CC0)
 - Used in: trombone, trombone_fall, trombone_stab, trumpet, trumpet_harmon, trumpet_stab
 
+## Ukulele (Freesound pack 40584)
+
+- License: CC0-1.0
+- Source: https://freesound.org/people/Sadiquecat/packs/40584/
+- Credit: Ukulele samples by Sadiquecat on Freesound (CC0); every file's license checked in the pack's readme
+- Used in: ukulele
+
 ## Gogodze Phu Vol I
 
 - License: CC0-1.0

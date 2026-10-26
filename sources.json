@@ -78,5 +78,13 @@
   "license": "CC0-1.0",
   "attribution_required": false,
   "credit": "Gogodze Phu Vol I by Karoryfer Lecolds (CC0)"
+ },
+ "freesound_uke": {
+  "name": "Ukulele (Freesound pack 40584)",
+  "author": "Sadiquecat",
+  "url": "https://freesound.org/people/Sadiquecat/packs/40584/",
+  "license": "CC0-1.0",
+  "attribution_required": false,
+  "credit": "Ukulele samples by Sadiquecat on Freesound (CC0); every file's license checked in the pack's readme"
  }
 }

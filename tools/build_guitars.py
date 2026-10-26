@@ -9,6 +9,7 @@
                           electric lines.
   slack_key               Meta Open Sound steel-string acoustic (three velocity layers) for Hawaiian slack-key.
   palm_wine               Meta Open Sound nylon guitar (finger, then pick) for palm-wine and highlife acoustic.
+  ukulele                 Freesound pack 40584 by Sadiquecat: a soprano ukulele in GCEA, for Hawaiian strums.
 All CC0. Notes are taken every whole tone (a guitar stretches a semitone either way cleanly), one round robin.
 """
 import glob
@@ -18,7 +19,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_horns import every, files, layer  # noqa: E402
-from prep import LIB, build_instrument, folder_zones, note_to_midi, write_credits  # noqa: E402
+from prep import LIB, build_instrument, folder_zones, load, note_to_midi, steady_cents, write_credits  # noqa: E402
 
 RAW = os.path.join(LIB, "raw")
 OUT = os.path.join(LIB, "library")
@@ -46,6 +47,34 @@ def meta_pick(paths, fret_target=4):
     return sorted(p for _, p in best.values())
 
 
+UKE = os.path.join(RAW, "Ukulele")
+UKE_OPEN = {"g": 67, "c": 60, "e": 64, "a": 69}   # re-entrant GCEA tuning
+
+
+def uke_zones(fret_target=3):
+    """Freesound pack 40584 (Sadiquecat, CC0): every fret 0-17 on each string, Zoom H5 XY stereo. For each note keep
+    the string where it sits nearest the 3rd fret (the natural strumming position), whole-tone steps."""
+    best = {}
+    for p in glob.glob(os.path.join(UKE, "*.flac")):
+        m = re.search(r"os_-([gcea])-fret-(\d+)-zoomh5xy", os.path.basename(p))
+        if not m:
+            continue
+        note = UKE_OPEN[m.group(1)] + int(m.group(2))
+        fret = int(m.group(2))
+        score = abs(fret - fret_target) + (1.5 if fret == 0 else 0)
+        if note not in best or score < best[note][0]:
+            best[note] = (score, p)
+    zones = []
+    for note in sorted(best):
+        if (note - 60) % 2:
+            continue
+        p = best[note][1]
+        z = dict(path=p, root=note, vel=1, lovel=1, hivel=127, max_len=3.0, audio=load(p))
+        z["tune"] = -round(steady_cents(z["audio"], note))
+        zones.append(z)
+    return zones
+
+
 ONE_SHOT = dict(fade_s=0.4, floor_db=-55.0, norm="rms", rms_db=-17.0, mono=True, even_keys=8.0)
 
 BUILDS = {
@@ -70,6 +99,7 @@ BUILDS = {
                                              note_re=META_NOTE), META_NOTE,
                                        layer(r"_Vel(\d+)_", ["01", "02", "03"]), max_len=4.5, fine_tune=True),
                   ONE_SHOT),
+    "ukulele": ("GUITARS", "freesound_uke", uke_zones, dict(ONE_SHOT, mono=False)),
     "palm_wine": ("GUITARS", "metaopensound",
                   lambda: folder_zones(every(meta_pick(files(META, "meta-nylon-guitar", "ogg", "*.ogg")),
                                              note_re=META_NOTE), META_NOTE,

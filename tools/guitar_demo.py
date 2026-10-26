@@ -175,7 +175,32 @@ def palm_wine():
     return finish(buf)
 
 
-JOBS = {"guitars_kompa": kompa, "guitars_highlife": highlife, "guitars_reggae": reggae,
+def ukulele():
+    """Hawaiian strum: island strum pattern (down, down-up, up-down-up) on GCEA chords, a picked melody to finish."""
+    bpm, bars = 100, 8
+    b = 60 / bpm
+    buf = np.zeros((int(SR * (bars * 4 * b + 4)), 2))
+    shapes = {"C": [67, 60, 64, 72], "Am": [69, 60, 64, 69], "F": [69, 65, 69, 72], "G7": [67, 62, 65, 71]}
+    prog = ["C", "Am", "F", "G7"] * 2
+    pattern = [(0, False, 0.8), (1, False, 0.6), (1.5, True, 0.5), (2.5, True, 0.5), (3, False, 0.65), (3.5, True, 0.5)]
+    for bar, ch in enumerate(prog):
+        t0 = bar * 4 * b
+        root = {"C": 36, "Am": 33, "F": 41, "G7": 43}[ch]
+        place(buf, bass(root, 1.6 * b, 0.6), t0)
+        place(buf, bass(root + 7, 1.6 * b, 0.5), t0 + 2 * b)
+        for e in range(8):
+            place(buf, shaker(0.5 if e % 2 else 0.3, RNG), t0 + e * b / 2)
+        if bar < 6:
+            for pos, up, v in pattern:
+                strum(buf, t0 + pos * b, "ukulele", shapes[ch], v, 0.6 * b, up=up, spread=0.009)
+        else:
+            for k, (pos, m) in enumerate(((0, 76), (0.5, 79), (1, 81), (2, 79), (2.5, 76), (3, 72))):
+                pluck(buf, t0 + pos * b, "ukulele", m - (2 if bar == 7 and k > 2 else 0), 0.7, b)
+    strum(buf, bars * 4 * b, "ukulele", shapes["C"], 0.7, 2.5, spread=0.03)
+    return finish(buf)
+
+
+JOBS = {"guitars_ukulele": ukulele, "guitars_kompa": kompa, "guitars_highlife": highlife, "guitars_reggae": reggae,
         "guitars_slack_key": slack_key, "guitars_palm_wine": palm_wine}
 
 if __name__ == "__main__":
