@@ -7,6 +7,8 @@ reggae and Hawaiian sounds. Work in progress.
 
 - Steel pan engine (`tools/pan.py`): modal synthesis of tenor, double second, cello and bass pans. Listening demos in
   `docs/demos/`, rendered by `tools/pan_demo.py`; measurements by `tools/pan_check.py`.
+- Amapiano log drum engine (`tools/logdrum.py`): five variations (classic, deep, knock, talking, gritty) with pitch
+  drop, glide, saturation and a woody knock. Demos rendered by `tools/logdrum_demo.py`.
 
 ## Sound sources
 
