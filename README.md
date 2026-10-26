@@ -29,6 +29,12 @@ reggae and Hawaiian sounds. Work in progress.
   exactly; VCSL chromatic harmonica sits with them. Pedal and lap steel (`tools/build_steels.py`) are the Black And
   Green guitars reshaped into swelled, sustained steel tones. Demos by `tools/engine_demo.py`.
 
+## UI
+
+Mockups of the plugin area (1280 x 628) in six colorways are in `docs/ui/`, drawn by `tools/ui_mockup.py` (HTML
+rendered by headless Chromium): BROWSE (genre, type and preset lists), SOUND (layers A and B) and SETTINGS.
+Fonts: Pacifico (logo), Outfit and Barlow Semi Condensed, all SIL Open Font License (`vst/fonts/`).
+
 ## Sound sources
 
 Every sampled sound comes from recordings that allow redistribution in a public plugin (CC0, CC BY, or "without
