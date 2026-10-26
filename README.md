@@ -23,6 +23,11 @@ reggae and Hawaiian sounds. Work in progress.
 - Percussion and mallets (`tools/build_perc.py`): the island percussion kit (congas, bongos, shakers, bells,
   claves, guiro, slit drum, frame drums, siren), the bobobo and cajon kit, marimba, balafon, vibraphone, kalimba
   and mbira. Demos by `tools/band_demo.py`.
+- Engines rendered to multisamples by `tools/build_engines.py`: tine piano (`tools/tine.py`), tonewheel organ in three
+  registrations (`tools/organ.py`), the four pans and a seamlessly looping roll, the five log drums, modeled
+  timbales, ipu and melodica (`tools/perc_model.py`), and six synth voices (`tools/synths.py`) whose loops repeat
+  exactly; VCSL chromatic harmonica sits with them. Pedal and lap steel (`tools/build_steels.py`) are the Black And
+  Green guitars reshaped into swelled, sustained steel tones. Demos by `tools/engine_demo.py`.
 
 ## Sound sources
 

@@ -1,0 +1,111 @@
+{
+ "name": "ipu",
+ "category": "PERCUSSION",
+ "source": "tropix",
+ "license": "Tropix project (original synthesis)",
+ "credit": "Rendered by the Tropix engines",
+ "samplerate": 44100,
+ "loop": false,
+ "zones": [
+  {
+   "file": "ipu_036_C2_v1.flac",
+   "root": 36,
+   "lokey": 36,
+   "hikey": 36,
+   "lovel": 1,
+   "hivel": 42,
+   "frames": 43175,
+   "orig": "rendered",
+   "bytes": 10645
+  },
+  {
+   "file": "ipu_037_Cs2_v1.flac",
+   "root": 37,
+   "lokey": 37,
+   "hikey": 37,
+   "lovel": 1,
+   "hivel": 42,
+   "frames": 18109,
+   "orig": "rendered",
+   "bytes": 5610
+  },
+  {
+   "file": "ipu_038_D2_v1.flac",
+   "root": 38,
+   "lokey": 38,
+   "hikey": 38,
+   "lovel": 1,
+   "hivel": 42,
+   "frames": 11530,
+   "orig": "rendered",
+   "bytes": 4029
+  },
+  {
+   "file": "ipu_036_C2_v2.flac",
+   "root": 36,
+   "lokey": 36,
+   "hikey": 36,
+   "lovel": 43,
+   "hivel": 85,
+   "frames": 43175,
+   "orig": "rendered",
+   "bytes": 11093
+  },
+  {
+   "file": "ipu_037_Cs2_v2.flac",
+   "root": 37,
+   "lokey": 37,
+   "hikey": 37,
+   "lovel": 43,
+   "hivel": 85,
+   "frames": 18109,
+   "orig": "rendered",
+   "bytes": 5811
+  },
+  {
+   "file": "ipu_038_D2_v2.flac",
+   "root": 38,
+   "lokey": 38,
+   "hikey": 38,
+   "lovel": 43,
+   "hivel": 85,
+   "frames": 11530,
+   "orig": "rendered",
+   "bytes": 4135
+  },
+  {
+   "file": "ipu_036_C2_v3.flac",
+   "root": 36,
+   "lokey": 36,
+   "hikey": 36,
+   "lovel": 86,
+   "hivel": 127,
+   "frames": 43175,
+   "orig": "rendered",
+   "bytes": 11364
+  },
+  {
+   "file": "ipu_037_Cs2_v3.flac",
+   "root": 37,
+   "lokey": 37,
+   "hikey": 37,
+   "lovel": 86,
+   "hivel": 127,
+   "frames": 18109,
+   "orig": "rendered",
+   "bytes": 6082
+  },
+  {
+   "file": "ipu_038_D2_v3.flac",
+   "root": 38,
+   "lokey": 38,
+   "hikey": 38,
+   "lovel": 86,
+   "hivel": 127,
+   "frames": 11530,
+   "orig": "rendered",
+   "bytes": 4234
+  }
+ ],
+ "total_bytes": 63003
+}

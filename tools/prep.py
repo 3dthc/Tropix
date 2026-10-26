@@ -338,13 +338,19 @@ def build_instrument(name, category, source, zones, out_root, loop=False,
             x = trim_start(x)
             if attack_db is not None:
                 x = tighten_attack(x, attack_db)
-        x = fit_length(x, z.get("max_len", max_len), fade_s=0.02 if loop else fade_s, floor_db=floor_db)
+        # a zone rendered to loop exactly keeps its last sample untouched (a fade there would break the loop)
+        x = fit_length(x, z.get("max_len", max_len),
+                       fade_s=0.0 if "loop_points" in z else (0.02 if loop else fade_s), floor_db=floor_db)
         if mono:
             x = np.repeat(x.mean(axis=1, keepdims=True), 2, axis=1)
         x = to_rate(x, rate)
         ls = le = None
         q = None
-        if loop:
+        if loop and "loop_points" in z:
+            # the zone was rendered to loop exactly between these points (e.g. a steady roll)
+            ls, le = (int(v * rate / SR) for v in z["loop_points"])
+            x, q = x[:le], 1.0
+        elif loop:
             if loop_mode == "pitch":
                 # try several loop ends and both finders; keep the best waveform match
                 best = None

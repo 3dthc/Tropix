@@ -1,5 +1,12 @@
 # Tropix sound library: sources and licenses
 
+## Tropix original renders
+
+- License: Tropix project (original synthesis)
+- Source: original to this project
+- Credit: Rendered by the Tropix engines
+- Used in: afro_pluck, ipu, island_pad, logdrum_classic, logdrum_deep, logdrum_gritty, logdrum_knock, logdrum_talking, melodica, organ_bubble, organ_full, organ_perc, pan_bass, pan_cello, pan_double_second, pan_roll, pan_tenor, piano_pluck, soca_brass, soca_lead, sub_bass, timbales, tine_piano
+
 ## University of Iowa Musical Instrument Samples (pre-2012 set)
 
 - License: Free to use for any projects, without restrictions (per the MIS site)
@@ -12,7 +19,7 @@
 - License: CC0-1.0
 - Source: https://github.com/sgossner/VCSL
 - Credit: VCSL by Versilian Studios (CC0)
-- Used in: balafon, fm_keys, grand_piano, island_perc, kalimba, marimba, mbira, tenor_sax, tenor_sax_stab, tenor_sax_vib, upright_piano, vibraphone
+- Used in: balafon, fm_keys, grand_piano, harmonica, harmonica_vib, island_perc, kalimba, marimba, mbira, tenor_sax, tenor_sax_stab, tenor_sax_vib, upright_piano, vibraphone
 
 ## Greg Sullivan's E-Pianos (Wurlitzer EP200, Yamaha CP80, Hohner Pianet T)
 
@@ -40,7 +47,7 @@
 - License: CC0-1.0
 - Source: https://github.com/sfzinstruments/karoryfer.black-and-green-guitars
 - Credit: Black And Green Guitars by Karoryfer Lecolds (CC0)
-- Used in: gretsch, gretsch_mute, hofner, hofner_mute
+- Used in: gretsch, gretsch_mute, hofner, hofner_mute, lap_steel, pedal_steel
 
 ## Meta Open Sound
 

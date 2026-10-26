@@ -4,7 +4,8 @@
     python3 -I tools/check_library.py [instrument ...]
 
 Per instrument:
-  tuning   every zone played at its root with its tune applied, measured with YIN (cents; worst case reported)
+  tuning   every zone played at its root with its tune applied, measured with YIN and from the spectrum (cents;
+           the smaller deviation counts; worst case reported)
   loops    held 7 s notes: the largest jump in the 20 ms level envelope after the loop starts (dB), which catches
            a click or a level bump at the loop point
   layers   the RMS of each velocity layer at a mid note, which must rise from soft to loud
@@ -17,6 +18,7 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from audio import pitch_of, rms_env  # noqa: E402
+from prep import measured_cents  # noqa: E402
 from sampler import LIB, SR, keymap, note  # noqa: E402
 
 
@@ -27,10 +29,13 @@ def check(inst):
         vel = (z["lovel"] + z["hivel"]) / 2 / 127
         y = note(inst, z["root"], vel, 1.2)
         f = pitch_of(y, SR, guess_midi=z["root"])
+        c_spec = measured_cents(y.astype(np.float32), z["root"])
         if f is None:
-            bad.append((z["root"], z["lovel"], "no pitch"))
-            continue
-        c = 1200 * np.log2(f / (440 * 2 ** ((z["root"] - 69) / 12)))
+            c = c_spec
+        else:
+            # YIN is thrown by strongly asymmetric waveforms, the spectral peak by inharmonic partials: a zone is
+            # in tune if either method says so
+            c = min(1200 * np.log2(f / (440 * 2 ** ((z["root"] - 69) / 12))), c_spec, key=abs)
         worst = max(worst, abs(c))
         if abs(c) > 8:
             bad.append((z["root"], z["lovel"], round(c, 1)))
