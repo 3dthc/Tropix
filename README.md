@@ -15,6 +15,9 @@ reggae and Hawaiian sounds. Work in progress.
   `tools/check_library.py`.
 - Iowa horns: alto sax, soprano sax and a second trumpet (straight and vibrato, pp/mf/ff), split from the University
   of Iowa chromatic runs by `tools/split_runs.py`; slow-swelling soft notes get a tightened attack.
+- Guitars (`tools/build_guitars.py`): Gretsch and Höfner hollow-body electrics (p/mf/f plus palm mutes) from
+  Karoryfer's Black And Green Guitars, and Meta Open Sound steel-string (slack-key) and nylon (palm-wine) acoustics.
+  Demos by `tools/guitar_demo.py` (strums, chorus, kompa/highlife/reggae/slack-key/palm-wine patterns).
 
 ## Sound sources
 

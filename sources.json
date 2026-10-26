@@ -30,5 +30,21 @@
   "license": "Free to use for any projects, without restrictions (per the MIS site)",
   "attribution_required": false,
   "credit": "Musical Instrument Samples, University of Iowa Electronic Music Studios (theremin.music.uiowa.edu)"
+ },
+ "karoryfer_bg": {
+  "name": "Black And Green Guitars",
+  "author": "Karoryfer Lecolds (recorded by Brian Wood)",
+  "url": "https://github.com/sfzinstruments/karoryfer.black-and-green-guitars",
+  "license": "CC0-1.0",
+  "attribution_required": false,
+  "credit": "Black And Green Guitars by Karoryfer Lecolds (CC0)"
+ },
+ "metaopensound": {
+  "name": "Meta Open Sound",
+  "author": "Meta (facebookincubator)",
+  "url": "https://github.com/facebookincubator/Meta-open-sound",
+  "license": "CC0-1.0",
+  "attribution_required": false,
+  "credit": "Meta Open Sound (CC0)"
  }
 }

@@ -7,6 +7,20 @@
 - Credit: Musical Instrument Samples, University of Iowa Electronic Music Studios (theremin.music.uiowa.edu)
 - Used in: alto_sax, alto_sax_vib, soprano_sax, soprano_sax_vib, trumpet_bright, trumpet_bright_vib
 
+## Black And Green Guitars
+
+- License: CC0-1.0
+- Source: https://github.com/sfzinstruments/karoryfer.black-and-green-guitars
+- Credit: Black And Green Guitars by Karoryfer Lecolds (CC0)
+- Used in: gretsch, gretsch_mute, hofner, hofner_mute
+
+## Meta Open Sound
+
+- License: CC0-1.0
+- Source: https://github.com/facebookincubator/Meta-open-sound
+- Credit: Meta Open Sound (CC0)
+- Used in: palm_wine, slack_key
+
 ## Versilian Community Sample Library
 
 - License: CC0-1.0

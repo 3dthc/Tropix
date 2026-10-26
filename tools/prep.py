@@ -313,7 +313,7 @@ def to_rate(x, rate):
 
 def build_instrument(name, category, source, zones, out_root, loop=False,
                      max_len=8.0, peak_db=-1.0, loop_region=(0.35, 0.9), trim=True,
-                     rate=SR, mono=False, floor_db=-60.0, fade_s=0.3, loop_xfade=0.25, loop_mode="wave", norm="peak", rms_db=-16.0, attack_db=None):
+                     rate=SR, mono=False, floor_db=-60.0, fade_s=0.3, loop_xfade=0.25, loop_mode="wave", norm="peak", rms_db=-16.0, attack_db=None, even_keys=None):
     """zones: list of dicts {audio (array) or path, root, vel (layer index), lovel, hivel}.
 
     rate: the stored sample rate (32000 or 22050 for sounds with little or nothing above 16 / 11 kHz: synth pads,
@@ -353,6 +353,19 @@ def build_instrument(name, category, source, zones, out_root, loop=False,
                 x, ls, le, q = find_loop(x, region=loop_region, xfade_s=loop_xfade, sr=rate)
         processed.append((z, x, ls, le, q))
 
+    if even_keys:
+        # even out note-to-note loudness within each velocity layer (a soft high string recorded much quieter
+        # than its neighbours), by at most even_keys dB, towards the layer's median
+        by_layer = {}
+        for i, (z, x, *_r) in enumerate(processed):
+            by_layer.setdefault(z["vel"], []).append(i)
+        lim = 10 ** (even_keys / 20)
+        for idx in by_layer.values():
+            r = np.array([np.sqrt(np.mean(processed[i][1][:int(0.3 * rate)] ** 2)) + 1e-9 for i in idx])
+            med = float(np.median(r))
+            for i, ri in zip(idx, r):
+                z, x, ls, le, q = processed[i]
+                processed[i] = (z, x * float(np.clip(med / ri, 1 / lim, lim)), ls, le, q)
     peak_gain = 10 ** (peak_db / 20) / max(np.max(np.abs(x)) for _, x, *_ in processed)
     if norm == "rms":
         # level the instrument by loudness: the loudest layer's median note RMS (first 0.4 s) hits rms_db,
