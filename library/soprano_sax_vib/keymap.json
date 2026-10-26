@@ -494,13 +494,13 @@
    "hikey": 57,
    "lovel": 86,
    "hivel": 127,
-   "frames": 124279,
+   "frames": 123480,
    "orig": "raw/IowaMIS-notes/Woodwinds/sopranosaxophone/SopSax.Vib.ff.Gs3.wav",
-   "bytes": 154880,
+   "bytes": 153997,
    "tune": -6,
-   "loop_start": 70743,
-   "loop_end": 124279,
-   "loop_score": 0.989
+   "loop_start": 79467,
+   "loop_end": 123480,
+   "loop_score": 0.991
   },
   {
    "file": "soprano_sax_vib_058_As3_v3.flac",
@@ -509,13 +509,13 @@
    "hikey": 59,
    "lovel": 86,
    "hivel": 127,
-   "frames": 111834,
+   "frames": 111132,
    "orig": "raw/IowaMIS-notes/Woodwinds/sopranosaxophone/SopSax.Vib.ff.As3.wav",
-   "bytes": 137417,
+   "bytes": 136520,
    "tune": -5,
-   "loop_start": 61071,
-   "loop_end": 111834,
-   "loop_score": 0.995
+   "loop_start": 60746,
+   "loop_end": 111132,
+   "loop_score": 0.992
   },
   {
    "file": "soprano_sax_vib_060_C4_v3.flac",
@@ -584,12 +584,12 @@
    "hikey": 69,
    "lovel": 86,
    "hivel": 127,
-   "frames": 126555,
+   "frames": 129654,
    "orig": "raw/IowaMIS-notes/Woodwinds/sopranosaxophone/SopSax.Vib.ff.Gs4.wav",
-   "bytes": 149910,
+   "bytes": 153816,
    "tune": 5,
-   "loop_start": 84293,
-   "loop_end": 126555,
+   "loop_start": 78234,
+   "loop_end": 129654,
    "loop_score": 0.996
   },
   {
@@ -728,5 +728,5 @@
    "loop_score": 0.997
   }
  ],
- "total_bytes": 5033200
+ "total_bytes": 5035326
 }

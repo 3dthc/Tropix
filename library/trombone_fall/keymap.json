@@ -14,9 +14,9 @@
    "hikey": 43,
    "lovel": 1,
    "hivel": 127,
-   "frames": 24439,
+   "frames": 22784,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_G1_1.wav",
-   "bytes": 23427
+   "bytes": 22188
   },
   {
    "file": "trombone_fall_044_Gs2_v1.flac",
@@ -25,9 +25,9 @@
    "hikey": 44,
    "lovel": 1,
    "hivel": 127,
-   "frames": 33140,
+   "frames": 25872,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_G#1_1.wav",
-   "bytes": 24793
+   "bytes": 22483
   },
   {
    "file": "trombone_fall_045_A2_v1.flac",
@@ -36,9 +36,9 @@
    "hikey": 45,
    "lovel": 1,
    "hivel": 127,
-   "frames": 33134,
+   "frames": 25929,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_A1_1.wav",
-   "bytes": 27306
+   "bytes": 24926
   },
   {
    "file": "trombone_fall_046_As2_v1.flac",
@@ -47,9 +47,9 @@
    "hikey": 47,
    "lovel": 1,
    "hivel": 127,
-   "frames": 22432,
+   "frames": 22236,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_A#1_1.wav",
-   "bytes": 31174
+   "bytes": 31116
   },
   {
    "file": "trombone_fall_048_C3_v1.flac",
@@ -58,9 +58,9 @@
    "hikey": 48,
    "lovel": 1,
    "hivel": 127,
-   "frames": 24091,
+   "frames": 23984,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_C2_1.wav",
-   "bytes": 41076
+   "bytes": 40914
   },
   {
    "file": "trombone_fall_049_Cs3_v1.flac",
@@ -69,9 +69,9 @@
    "hikey": 49,
    "lovel": 1,
    "hivel": 127,
-   "frames": 23296,
+   "frames": 23113,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_C#2_1.wav",
-   "bytes": 39531
+   "bytes": 39400
   },
   {
    "file": "trombone_fall_050_D3_v1.flac",
@@ -80,9 +80,9 @@
    "hikey": 50,
    "lovel": 1,
    "hivel": 127,
-   "frames": 25069,
+   "frames": 24931,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_D2_1.wav",
-   "bytes": 35847
+   "bytes": 35890
   },
   {
    "file": "trombone_fall_051_Ds3_v1.flac",
@@ -91,9 +91,9 @@
    "hikey": 51,
    "lovel": 1,
    "hivel": 127,
-   "frames": 25235,
+   "frames": 25038,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_D#2_1.wav",
-   "bytes": 42863
+   "bytes": 42613
   },
   {
    "file": "trombone_fall_052_E3_v1.flac",
@@ -102,9 +102,9 @@
    "hikey": 52,
    "lovel": 1,
    "hivel": 127,
-   "frames": 26485,
+   "frames": 26606,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_E2_1.wav",
-   "bytes": 40038
+   "bytes": 40097
   },
   {
    "file": "trombone_fall_053_F3_v1.flac",
@@ -113,9 +113,9 @@
    "hikey": 54,
    "lovel": 1,
    "hivel": 127,
-   "frames": 21758,
+   "frames": 21604,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_F2_1.wav",
-   "bytes": 41226
+   "bytes": 41279
   },
   {
    "file": "trombone_fall_055_G3_v1.flac",
@@ -124,9 +124,9 @@
    "hikey": 55,
    "lovel": 1,
    "hivel": 127,
-   "frames": 25990,
+   "frames": 26134,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_G2_1.wav",
-   "bytes": 51441
+   "bytes": 51745
   },
   {
    "file": "trombone_fall_056_Gs3_v1.flac",
@@ -135,9 +135,9 @@
    "hikey": 56,
    "lovel": 1,
    "hivel": 127,
-   "frames": 27344,
+   "frames": 27219,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_G#2_1.wav",
-   "bytes": 55520
+   "bytes": 55428
   },
   {
    "file": "trombone_fall_057_A3_v1.flac",
@@ -146,9 +146,9 @@
    "hikey": 57,
    "lovel": 1,
    "hivel": 127,
-   "frames": 27873,
+   "frames": 27213,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_A2_1.wav",
-   "bytes": 48950
+   "bytes": 47989
   },
   {
    "file": "trombone_fall_058_As3_v1.flac",
@@ -157,9 +157,9 @@
    "hikey": 58,
    "lovel": 1,
    "hivel": 127,
-   "frames": 25564,
+   "frames": 23065,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_A#2_1.wav",
-   "bytes": 42896
+   "bytes": 41075
   },
   {
    "file": "trombone_fall_059_B3_v1.flac",
@@ -168,10 +168,10 @@
    "hikey": 71,
    "lovel": 1,
    "hivel": 127,
-   "frames": 25608,
+   "frames": 25460,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Fall/Trombone_Fall_B2_1.wav",
-   "bytes": 42026
+   "bytes": 41997
   }
  ],
- "total_bytes": 588114
+ "total_bytes": 579140
 }

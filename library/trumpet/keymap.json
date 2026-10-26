@@ -14,13 +14,13 @@
    "hikey": 55,
    "lovel": 1,
    "hivel": 64,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_F2_v1_rr1.wav",
-   "bytes": 163686,
+   "bytes": 128337,
    "tune": 0,
-   "loop_start": 108478,
-   "loop_end": 168682,
-   "loop_score": 0.958
+   "loop_start": 77879,
+   "loop_end": 131197,
+   "loop_score": 0.981
   },
   {
    "file": "trumpet_057_A3_v1.flac",
@@ -29,13 +29,13 @@
    "hikey": 58,
    "lovel": 1,
    "hivel": 64,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_A2_v1_rr1.wav",
-   "bytes": 154257,
+   "bytes": 121198,
    "tune": 0,
-   "loop_start": 100467,
-   "loop_end": 168682,
-   "loop_score": 0.991
+   "loop_start": 82874,
+   "loop_end": 131197,
+   "loop_score": 0.984
   },
   {
    "file": "trumpet_060_C4_v1.flac",
@@ -44,13 +44,13 @@
    "hikey": 61,
    "lovel": 1,
    "hivel": 64,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_C3_v1_rr1.wav",
-   "bytes": 181371,
+   "bytes": 141994,
    "tune": -1,
-   "loop_start": 91599,
-   "loop_end": 168682,
-   "loop_score": 0.985
+   "loop_start": 80759,
+   "loop_end": 131197,
+   "loop_score": 0.991
   },
   {
    "file": "trumpet_063_Ds4_v1.flac",
@@ -59,13 +59,13 @@
    "hikey": 65,
    "lovel": 1,
    "hivel": 64,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_D#3_v1_rr1.wav",
-   "bytes": 162561,
+   "bytes": 126540,
    "tune": -1,
-   "loop_start": 100401,
-   "loop_end": 168682,
-   "loop_score": 0.992
+   "loop_start": 84472,
+   "loop_end": 131197,
+   "loop_score": 0.993
   },
   {
    "file": "trumpet_067_G4_v1.flac",
@@ -74,13 +74,13 @@
    "hikey": 68,
    "lovel": 1,
    "hivel": 64,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_G3_v1_rr1.wav",
-   "bytes": 165925,
+   "bytes": 128636,
    "tune": 0,
-   "loop_start": 78601,
-   "loop_end": 168682,
-   "loop_score": 0.973
+   "loop_start": 79742,
+   "loop_end": 131197,
+   "loop_score": 0.991
   },
   {
    "file": "trumpet_070_As4_v1.flac",
@@ -89,13 +89,13 @@
    "hikey": 72,
    "lovel": 1,
    "hivel": 64,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_A#3_v1_rr1.wav",
-   "bytes": 205462,
+   "bytes": 159970,
    "tune": 0,
-   "loop_start": 99693,
-   "loop_end": 168682,
-   "loop_score": 0.992
+   "loop_start": 72034,
+   "loop_end": 131197,
+   "loop_score": 0.973
   },
   {
    "file": "trumpet_074_D5_v1.flac",
@@ -104,13 +104,13 @@
    "hikey": 75,
    "lovel": 1,
    "hivel": 64,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_D4_v1_rr1.wav",
-   "bytes": 214235,
+   "bytes": 170212,
    "tune": -1,
-   "loop_start": 81372,
-   "loop_end": 168682,
-   "loop_score": 0.997
+   "loop_start": 83576,
+   "loop_end": 131197,
+   "loop_score": 0.999
   },
   {
    "file": "trumpet_077_F5_v1.flac",
@@ -119,13 +119,13 @@
    "hikey": 79,
    "lovel": 1,
    "hivel": 64,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_F4_v1_rr1.wav",
-   "bytes": 251731,
+   "bytes": 198109,
    "tune": -1,
-   "loop_start": 81896,
-   "loop_end": 168682,
-   "loop_score": 0.993
+   "loop_start": 57160,
+   "loop_end": 131197,
+   "loop_score": 0.982
   },
   {
    "file": "trumpet_081_A5_v1.flac",
@@ -134,13 +134,13 @@
    "hikey": 82,
    "lovel": 1,
    "hivel": 64,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_A4_v1_rr1.wav",
-   "bytes": 260676,
+   "bytes": 205570,
    "tune": -2,
-   "loop_start": 95154,
-   "loop_end": 168682,
-   "loop_score": 0.995
+   "loop_start": 71258,
+   "loop_end": 131197,
+   "loop_score": 0.997
   },
   {
    "file": "trumpet_084_C6_v1.flac",
@@ -149,13 +149,13 @@
    "hikey": 96,
    "lovel": 1,
    "hivel": 64,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_C5_v1_rr1.wav",
-   "bytes": 297689,
+   "bytes": 236166,
    "tune": -1,
-   "loop_start": 68594,
-   "loop_end": 168682,
-   "loop_score": 0.987
+   "loop_start": 83079,
+   "loop_end": 131197,
+   "loop_score": 0.994
   },
   {
    "file": "trumpet_053_F3_v2.flac",
@@ -164,13 +164,13 @@
    "hikey": 55,
    "lovel": 65,
    "hivel": 127,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_F2_v3_rr1.wav",
-   "bytes": 294458,
+   "bytes": 231286,
    "tune": -1,
-   "loop_start": 84900,
-   "loop_end": 168682,
-   "loop_score": 0.965
+   "loop_start": 56721,
+   "loop_end": 131197,
+   "loop_score": 0.934
   },
   {
    "file": "trumpet_057_A3_v2.flac",
@@ -179,13 +179,13 @@
    "hikey": 58,
    "lovel": 65,
    "hivel": 127,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_A2_v3_rr1.wav",
-   "bytes": 270339,
+   "bytes": 212762,
    "tune": -1,
-   "loop_start": 101393,
-   "loop_end": 168682,
-   "loop_score": 0.985
+   "loop_start": 71636,
+   "loop_end": 131197,
+   "loop_score": 0.908
   },
   {
    "file": "trumpet_060_C4_v2.flac",
@@ -194,13 +194,13 @@
    "hikey": 61,
    "lovel": 65,
    "hivel": 127,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_C3_v3_rr1.wav",
-   "bytes": 301876,
+   "bytes": 235494,
    "tune": -1,
-   "loop_start": 65317,
-   "loop_end": 168682,
-   "loop_score": 0.952
+   "loop_start": 65049,
+   "loop_end": 131197,
+   "loop_score": 0.979
   },
   {
    "file": "trumpet_063_Ds4_v2.flac",
@@ -209,12 +209,12 @@
    "hikey": 65,
    "lovel": 65,
    "hivel": 127,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_D#3_v3_rr1.wav",
-   "bytes": 322825,
+   "bytes": 253217,
    "tune": 0,
-   "loop_start": 76824,
-   "loop_end": 168682,
+   "loop_start": 70385,
+   "loop_end": 131197,
    "loop_score": 0.992
   },
   {
@@ -224,13 +224,13 @@
    "hikey": 68,
    "lovel": 65,
    "hivel": 127,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_G3_v3_rr1.wav",
-   "bytes": 369087,
+   "bytes": 281761,
    "tune": 0,
-   "loop_start": 64507,
-   "loop_end": 168682,
-   "loop_score": 0.97
+   "loop_start": 67299,
+   "loop_end": 131197,
+   "loop_score": 0.992
   },
   {
    "file": "trumpet_070_As4_v2.flac",
@@ -239,13 +239,13 @@
    "hikey": 72,
    "lovel": 65,
    "hivel": 127,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_A#3_v3_rr1.wav",
-   "bytes": 331964,
+   "bytes": 259960,
    "tune": -1,
-   "loop_start": 74261,
-   "loop_end": 168682,
-   "loop_score": 0.994
+   "loop_start": 56899,
+   "loop_end": 131197,
+   "loop_score": 0.988
   },
   {
    "file": "trumpet_074_D5_v2.flac",
@@ -254,13 +254,13 @@
    "hikey": 75,
    "lovel": 65,
    "hivel": 127,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_D4_v3_rr1.wav",
-   "bytes": 387460,
+   "bytes": 306298,
    "tune": 0,
-   "loop_start": 97124,
-   "loop_end": 168682,
-   "loop_score": 0.994
+   "loop_start": 62521,
+   "loop_end": 131197,
+   "loop_score": 0.974
   },
   {
    "file": "trumpet_077_F5_v2.flac",
@@ -269,13 +269,13 @@
    "hikey": 79,
    "lovel": 65,
    "hivel": 127,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_F4_v3_rr1.wav",
-   "bytes": 344540,
+   "bytes": 272490,
    "tune": -1,
-   "loop_start": 85908,
-   "loop_end": 168682,
-   "loop_score": 0.992
+   "loop_start": 84193,
+   "loop_end": 131197,
+   "loop_score": 0.995
   },
   {
    "file": "trumpet_081_A5_v2.flac",
@@ -284,13 +284,13 @@
    "hikey": 82,
    "lovel": 65,
    "hivel": 127,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_A4_v3_rr1.wav",
-   "bytes": 351777,
+   "bytes": 278845,
    "tune": -2,
-   "loop_start": 93509,
-   "loop_end": 168682,
-   "loop_score": 0.992
+   "loop_start": 74325,
+   "loop_end": 131197,
+   "loop_score": 0.991
   },
   {
    "file": "trumpet_084_C6_v2.flac",
@@ -299,14 +299,14 @@
    "hikey": 96,
    "lovel": 65,
    "hivel": 127,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/sus/Sum_SHTrumpet_sus_C5_v3_rr1.wav",
-   "bytes": 377793,
+   "bytes": 297735,
    "tune": -1,
-   "loop_start": 104390,
-   "loop_end": 168682,
-   "loop_score": 0.991
+   "loop_start": 66486,
+   "loop_end": 131197,
+   "loop_score": 0.974
   }
  ],
- "total_bytes": 5409712
+ "total_bytes": 4246580
 }

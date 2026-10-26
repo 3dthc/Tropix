@@ -26,9 +26,9 @@
    "hikey": 44,
    "lovel": 1,
    "hivel": 42,
-   "frames": 19508,
+   "frames": 19060,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_G1_v1_1.wav",
-   "bytes": 12629,
+   "bytes": 12536,
    "tune": -3
   },
   {
@@ -38,9 +38,9 @@
    "hikey": 45,
    "lovel": 1,
    "hivel": 42,
-   "frames": 13491,
+   "frames": 13637,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_A1_v1_1.wav",
-   "bytes": 9221,
+   "bytes": 9279,
    "tune": -1
   },
   {
@@ -62,9 +62,9 @@
    "hikey": 49,
    "lovel": 1,
    "hivel": 42,
-   "frames": 23323,
+   "frames": 23290,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_C2_v1_1.wav",
-   "bytes": 11887,
+   "bytes": 11858,
    "tune": -7
   },
   {
@@ -74,9 +74,9 @@
    "hikey": 50,
    "lovel": 1,
    "hivel": 42,
-   "frames": 23568,
+   "frames": 22830,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_D2_v1_1.wav",
-   "bytes": 12751,
+   "bytes": 12432,
    "tune": -1
   },
   {
@@ -86,9 +86,9 @@
    "hikey": 52,
    "lovel": 1,
    "hivel": 42,
-   "frames": 22387,
+   "frames": 22279,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_D#2_v1_1.wav",
-   "bytes": 12462,
+   "bytes": 12393,
    "tune": -1
   },
   {
@@ -98,9 +98,9 @@
    "hikey": 54,
    "lovel": 1,
    "hivel": 42,
-   "frames": 21968,
+   "frames": 18549,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_F2_v1_1.wav",
-   "bytes": 12182,
+   "bytes": 11082,
    "tune": 0
   },
   {
@@ -110,9 +110,9 @@
    "hikey": 56,
    "lovel": 1,
    "hivel": 42,
-   "frames": 24769,
+   "frames": 21479,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_G2_v1_1.wav",
-   "bytes": 13235,
+   "bytes": 11959,
    "tune": 2
   },
   {
@@ -122,9 +122,9 @@
    "hikey": 57,
    "lovel": 1,
    "hivel": 42,
-   "frames": 26541,
+   "frames": 23661,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_A2_v1_1.wav",
-   "bytes": 16084,
+   "bytes": 15204,
    "tune": 0
   },
   {
@@ -134,9 +134,9 @@
    "hikey": 59,
    "lovel": 1,
    "hivel": 42,
-   "frames": 27364,
+   "frames": 24322,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_A#2_v1_1.wav",
-   "bytes": 17878,
+   "bytes": 16619,
    "tune": 0
   },
   {
@@ -146,9 +146,9 @@
    "hikey": 61,
    "lovel": 1,
    "hivel": 42,
-   "frames": 25327,
+   "frames": 21444,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_C3_v1_1.wav",
-   "bytes": 17123,
+   "bytes": 15861,
    "tune": -1
   },
   {
@@ -158,9 +158,9 @@
    "hikey": 62,
    "lovel": 1,
    "hivel": 42,
-   "frames": 26407,
+   "frames": 24000,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_D3_v1_1.wav",
-   "bytes": 17586,
+   "bytes": 16832,
    "tune": -4
   },
   {
@@ -170,9 +170,9 @@
    "hikey": 64,
    "lovel": 1,
    "hivel": 42,
-   "frames": 22985,
+   "frames": 19128,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_D#3_v1_1.wav",
-   "bytes": 16192,
+   "bytes": 14794,
    "tune": 0
   },
   {
@@ -182,9 +182,9 @@
    "hikey": 77,
    "lovel": 1,
    "hivel": 42,
-   "frames": 26494,
+   "frames": 22441,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_F3_v1_1.wav",
-   "bytes": 17570,
+   "bytes": 16351,
    "tune": 11
   },
   {
@@ -194,9 +194,9 @@
    "hikey": 42,
    "lovel": 43,
    "hivel": 85,
-   "frames": 34624,
+   "frames": 33670,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_F1_v2_1.wav",
-   "bytes": 25789,
+   "bytes": 25659,
    "tune": -1
   },
   {
@@ -206,9 +206,9 @@
    "hikey": 44,
    "lovel": 43,
    "hivel": 85,
-   "frames": 34958,
+   "frames": 33539,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_G1_v2_1.wav",
-   "bytes": 25366,
+   "bytes": 24587,
    "tune": -2
   },
   {
@@ -218,9 +218,9 @@
    "hikey": 45,
    "lovel": 43,
    "hivel": 85,
-   "frames": 27290,
+   "frames": 25656,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_A1_v2_1.wav",
-   "bytes": 25938,
+   "bytes": 24341,
    "tune": -2
   },
   {
@@ -230,9 +230,9 @@
    "hikey": 47,
    "lovel": 43,
    "hivel": 85,
-   "frames": 17697,
+   "frames": 14083,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_A#1_v2_1.wav",
-   "bytes": 12956,
+   "bytes": 11177,
    "tune": -2
   },
   {
@@ -242,9 +242,9 @@
    "hikey": 49,
    "lovel": 43,
    "hivel": 85,
-   "frames": 20334,
+   "frames": 20442,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_C2_v2_1.wav",
-   "bytes": 15713,
+   "bytes": 15727,
    "tune": 2
   },
   {
@@ -254,9 +254,9 @@
    "hikey": 50,
    "lovel": 43,
    "hivel": 85,
-   "frames": 30696,
+   "frames": 27532,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_D2_v2_1.wav",
-   "bytes": 21528,
+   "bytes": 20564,
    "tune": -3
   },
   {
@@ -266,9 +266,9 @@
    "hikey": 52,
    "lovel": 43,
    "hivel": 85,
-   "frames": 24419,
+   "frames": 24564,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_D#2_v2_1.wav",
-   "bytes": 19065,
+   "bytes": 19080,
    "tune": -2
   },
   {
@@ -278,9 +278,9 @@
    "hikey": 54,
    "lovel": 43,
    "hivel": 85,
-   "frames": 26775,
+   "frames": 24902,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_F2_v2_1.wav",
-   "bytes": 21473,
+   "bytes": 20599,
    "tune": 0
   },
   {
@@ -290,9 +290,9 @@
    "hikey": 56,
    "lovel": 43,
    "hivel": 85,
-   "frames": 30038,
+   "frames": 28853,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_G2_v2_1.wav",
-   "bytes": 23390,
+   "bytes": 22368,
    "tune": -1
   },
   {
@@ -302,9 +302,9 @@
    "hikey": 57,
    "lovel": 43,
    "hivel": 85,
-   "frames": 31284,
+   "frames": 30496,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_A2_v2_1.wav",
-   "bytes": 24755,
+   "bytes": 24242,
    "tune": 0
   },
   {
@@ -314,9 +314,9 @@
    "hikey": 59,
    "lovel": 43,
    "hivel": 85,
-   "frames": 36720,
+   "frames": 33492,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_A#2_v2_1.wav",
-   "bytes": 29833,
+   "bytes": 28675,
    "tune": 0
   },
   {
@@ -338,9 +338,9 @@
    "hikey": 62,
    "lovel": 43,
    "hivel": 85,
-   "frames": 34226,
+   "frames": 31296,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_D3_v2_1.wav",
-   "bytes": 29218,
+   "bytes": 28337,
    "tune": 0
   },
   {
@@ -350,9 +350,9 @@
    "hikey": 64,
    "lovel": 43,
    "hivel": 85,
-   "frames": 30018,
+   "frames": 27803,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_D#3_v2_1.wav",
-   "bytes": 28113,
+   "bytes": 27233,
    "tune": 1
   },
   {
@@ -362,9 +362,9 @@
    "hikey": 77,
    "lovel": 43,
    "hivel": 85,
-   "frames": 29617,
+   "frames": 29605,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_F3_v2_1.wav",
-   "bytes": 34459,
+   "bytes": 34507,
    "tune": 0
   },
   {
@@ -374,9 +374,9 @@
    "hikey": 42,
    "lovel": 86,
    "hivel": 127,
-   "frames": 18870,
+   "frames": 16048,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_F1_v3_1.wav",
-   "bytes": 23735,
+   "bytes": 20919,
    "tune": 7
   },
   {
@@ -386,9 +386,9 @@
    "hikey": 44,
    "lovel": 86,
    "hivel": 127,
-   "frames": 18212,
+   "frames": 16724,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_G1_v3_1.wav",
-   "bytes": 27594,
+   "bytes": 26468,
    "tune": -5
   },
   {
@@ -398,9 +398,9 @@
    "hikey": 45,
    "lovel": 86,
    "hivel": 127,
-   "frames": 18055,
+   "frames": 17256,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_A1_v3_1.wav",
-   "bytes": 26862,
+   "bytes": 26234,
    "tune": -8
   },
   {
@@ -422,9 +422,9 @@
    "hikey": 49,
    "lovel": 86,
    "hivel": 127,
-   "frames": 12773,
+   "frames": 12878,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_C2_v3_1.wav",
-   "bytes": 25357,
+   "bytes": 25347,
    "tune": -2
   },
   {
@@ -434,9 +434,9 @@
    "hikey": 50,
    "lovel": 86,
    "hivel": 127,
-   "frames": 13987,
+   "frames": 13939,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_D2_v3_1.wav",
-   "bytes": 24239,
+   "bytes": 24243,
    "tune": 6
   },
   {
@@ -446,9 +446,9 @@
    "hikey": 52,
    "lovel": 86,
    "hivel": 127,
-   "frames": 13602,
+   "frames": 13424,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_D#2_v3_1.wav",
-   "bytes": 27459,
+   "bytes": 27411,
    "tune": 0
   },
   {
@@ -458,9 +458,9 @@
    "hikey": 54,
    "lovel": 86,
    "hivel": 127,
-   "frames": 16164,
+   "frames": 16066,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_F2_v3_1.wav",
-   "bytes": 32824,
+   "bytes": 32865,
    "tune": -8
   },
   {
@@ -470,9 +470,9 @@
    "hikey": 56,
    "lovel": 86,
    "hivel": 127,
-   "frames": 15861,
+   "frames": 15492,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_G2_v3_1.wav",
-   "bytes": 32557,
+   "bytes": 31655,
    "tune": -3
   },
   {
@@ -482,9 +482,9 @@
    "hikey": 57,
    "lovel": 86,
    "hivel": 127,
-   "frames": 16233,
+   "frames": 16200,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_A2_v3_1.wav",
-   "bytes": 33083,
+   "bytes": 32740,
    "tune": -2
   },
   {
@@ -494,9 +494,9 @@
    "hikey": 59,
    "lovel": 86,
    "hivel": 127,
-   "frames": 15263,
+   "frames": 15162,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_A#2_v3_1.wav",
-   "bytes": 33955,
+   "bytes": 33689,
    "tune": 0
   },
   {
@@ -506,9 +506,9 @@
    "hikey": 61,
    "lovel": 86,
    "hivel": 127,
-   "frames": 17024,
+   "frames": 16877,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_C3_v3_1.wav",
-   "bytes": 31521,
+   "bytes": 31539,
    "tune": -2
   },
   {
@@ -518,9 +518,9 @@
    "hikey": 62,
    "lovel": 86,
    "hivel": 127,
-   "frames": 18283,
+   "frames": 17998,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_D3_v3_1.wav",
-   "bytes": 33092,
+   "bytes": 33136,
    "tune": 1
   },
   {
@@ -530,9 +530,9 @@
    "hikey": 64,
    "lovel": 86,
    "hivel": 127,
-   "frames": 17948,
+   "frames": 17877,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_D#3_v3_1.wav",
-   "bytes": 32818,
+   "bytes": 32864,
    "tune": 2
   },
   {
@@ -542,11 +542,11 @@
    "hikey": 77,
    "lovel": 86,
    "hivel": 127,
-   "frames": 17156,
+   "frames": 16188,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Short/Trombone_Short_F3_v3_1.wav",
-   "bytes": 32515,
+   "bytes": 31921,
    "tune": -4
   }
  ],
- "total_bytes": 1008663
+ "total_bytes": 981983
 }

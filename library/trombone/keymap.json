@@ -14,13 +14,13 @@
    "hikey": 42,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_F1_v1_1.wav",
-   "bytes": 114949,
+   "bytes": 89543,
    "tune": -1,
-   "loop_start": 94475,
-   "loop_end": 168682,
-   "loop_score": 0.973
+   "loop_start": 68604,
+   "loop_end": 131197,
+   "loop_score": 0.994
   },
   {
    "file": "trombone_043_G2_v1.flac",
@@ -29,13 +29,13 @@
    "hikey": 44,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_G1_v1_1.wav",
-   "bytes": 118640,
+   "bytes": 92018,
    "tune": 0,
-   "loop_start": 105238,
-   "loop_end": 168682,
-   "loop_score": 0.986
+   "loop_start": 71351,
+   "loop_end": 131197,
+   "loop_score": 0.994
   },
   {
    "file": "trombone_045_A2_v1.flac",
@@ -44,13 +44,13 @@
    "hikey": 45,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_A1_v1_1.wav",
-   "bytes": 120209,
+   "bytes": 93897,
    "tune": -1,
-   "loop_start": 105354,
-   "loop_end": 168682,
-   "loop_score": 0.995
+   "loop_start": 83908,
+   "loop_end": 131197,
+   "loop_score": 0.99
   },
   {
    "file": "trombone_046_As2_v1.flac",
@@ -59,12 +59,12 @@
    "hikey": 47,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_A#1_v1_1.wav",
-   "bytes": 114834,
+   "bytes": 88611,
    "tune": 0,
-   "loop_start": 90351,
-   "loop_end": 168682,
+   "loop_start": 61949,
+   "loop_end": 131197,
    "loop_score": 0.996
   },
   {
@@ -74,13 +74,13 @@
    "hikey": 49,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_C2_v1_1.wav",
-   "bytes": 115185,
+   "bytes": 89582,
    "tune": 0,
-   "loop_start": 88779,
-   "loop_end": 168682,
-   "loop_score": 0.994
+   "loop_start": 52312,
+   "loop_end": 131197,
+   "loop_score": 0.986
   },
   {
    "file": "trombone_050_D3_v1.flac",
@@ -89,13 +89,13 @@
    "hikey": 50,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_D2_v1_1.wav",
-   "bytes": 114537,
+   "bytes": 89007,
    "tune": 0,
-   "loop_start": 83977,
-   "loop_end": 168682,
-   "loop_score": 0.995
+   "loop_start": 83741,
+   "loop_end": 131197,
+   "loop_score": 0.996
   },
   {
    "file": "trombone_051_Ds3_v1.flac",
@@ -104,13 +104,13 @@
    "hikey": 52,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_D#2_v1_1.wav",
-   "bytes": 117493,
+   "bytes": 91386,
    "tune": 0,
-   "loop_start": 108295,
-   "loop_end": 168682,
-   "loop_score": 0.997
+   "loop_start": 58620,
+   "loop_end": 131197,
+   "loop_score": 0.995
   },
   {
    "file": "trombone_053_F3_v1.flac",
@@ -119,13 +119,13 @@
    "hikey": 54,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_F2_v1_1.wav",
-   "bytes": 118155,
+   "bytes": 91712,
    "tune": 0,
-   "loop_start": 60098,
-   "loop_end": 168682,
-   "loop_score": 0.994
+   "loop_start": 62509,
+   "loop_end": 131197,
+   "loop_score": 0.996
   },
   {
    "file": "trombone_055_G3_v1.flac",
@@ -134,13 +134,13 @@
    "hikey": 56,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_G2_v1_1.wav",
-   "bytes": 117496,
+   "bytes": 91978,
    "tune": 0,
-   "loop_start": 92403,
-   "loop_end": 168682,
-   "loop_score": 0.994
+   "loop_start": 72924,
+   "loop_end": 131197,
+   "loop_score": 0.997
   },
   {
    "file": "trombone_057_A3_v1.flac",
@@ -149,13 +149,13 @@
    "hikey": 57,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_A2_v1_1.wav",
-   "bytes": 124803,
+   "bytes": 97461,
    "tune": 0,
-   "loop_start": 85300,
-   "loop_end": 168682,
-   "loop_score": 0.989
+   "loop_start": 78282,
+   "loop_end": 131197,
+   "loop_score": 0.996
   },
   {
    "file": "trombone_058_As3_v1.flac",
@@ -164,13 +164,13 @@
    "hikey": 59,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_A#2_v1_1.wav",
-   "bytes": 127901,
+   "bytes": 99973,
    "tune": 0,
-   "loop_start": 88839,
-   "loop_end": 168682,
-   "loop_score": 0.993
+   "loop_start": 83712,
+   "loop_end": 131197,
+   "loop_score": 0.998
   },
   {
    "file": "trombone_060_C4_v1.flac",
@@ -179,13 +179,13 @@
    "hikey": 61,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_C3_v1_1.wav",
-   "bytes": 135745,
+   "bytes": 105529,
    "tune": 0,
-   "loop_start": 103775,
-   "loop_end": 168682,
-   "loop_score": 0.996
+   "loop_start": 83144,
+   "loop_end": 131197,
+   "loop_score": 0.999
   },
   {
    "file": "trombone_062_D4_v1.flac",
@@ -194,13 +194,13 @@
    "hikey": 62,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_D3_v1_1.wav",
-   "bytes": 150210,
+   "bytes": 115672,
    "tune": 0,
-   "loop_start": 81434,
-   "loop_end": 168682,
-   "loop_score": 0.978
+   "loop_start": 82541,
+   "loop_end": 131197,
+   "loop_score": 0.985
   },
   {
    "file": "trombone_063_Ds4_v1.flac",
@@ -209,13 +209,13 @@
    "hikey": 64,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_D#3_v1_1.wav",
-   "bytes": 154146,
+   "bytes": 120298,
    "tune": 0,
-   "loop_start": 103905,
-   "loop_end": 168682,
-   "loop_score": 0.979
+   "loop_start": 46440,
+   "loop_end": 131197,
+   "loop_score": 0.981
   },
   {
    "file": "trombone_065_F4_v1.flac",
@@ -224,13 +224,13 @@
    "hikey": 77,
    "lovel": 1,
    "hivel": 42,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_F3_v1_1.wav",
-   "bytes": 161083,
+   "bytes": 125074,
    "tune": -1,
-   "loop_start": 78699,
-   "loop_end": 168682,
-   "loop_score": 0.993
+   "loop_start": 61868,
+   "loop_end": 131197,
+   "loop_score": 0.994
   },
   {
    "file": "trombone_041_F2_v2.flac",
@@ -239,13 +239,13 @@
    "hikey": 42,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_F1_v3_1.wav",
-   "bytes": 123047,
+   "bytes": 96364,
    "tune": 0,
-   "loop_start": 98973,
-   "loop_end": 168682,
-   "loop_score": 0.989
+   "loop_start": 57955,
+   "loop_end": 131197,
+   "loop_score": 0.974
   },
   {
    "file": "trombone_043_G2_v2.flac",
@@ -254,13 +254,13 @@
    "hikey": 44,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_G1_v3_1.wav",
-   "bytes": 124909,
+   "bytes": 97140,
    "tune": 0,
-   "loop_start": 99824,
-   "loop_end": 168682,
-   "loop_score": 0.988
+   "loop_start": 47486,
+   "loop_end": 131197,
+   "loop_score": 0.974
   },
   {
    "file": "trombone_045_A2_v2.flac",
@@ -269,13 +269,13 @@
    "hikey": 45,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_A1_v3_1.wav",
-   "bytes": 125652,
+   "bytes": 98424,
    "tune": -1,
-   "loop_start": 85309,
-   "loop_end": 168682,
-   "loop_score": 0.997
+   "loop_start": 71885,
+   "loop_end": 131197,
+   "loop_score": 0.994
   },
   {
    "file": "trombone_046_As2_v2.flac",
@@ -284,13 +284,13 @@
    "hikey": 47,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_A#1_v3_1.wav",
-   "bytes": 133162,
+   "bytes": 103941,
    "tune": 0,
-   "loop_start": 88445,
-   "loop_end": 168682,
-   "loop_score": 0.994
+   "loop_start": 75180,
+   "loop_end": 131197,
+   "loop_score": 0.993
   },
   {
    "file": "trombone_048_C3_v2.flac",
@@ -299,13 +299,13 @@
    "hikey": 49,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_C2_v3_1.wav",
-   "bytes": 125608,
+   "bytes": 98379,
    "tune": 0,
-   "loop_start": 91478,
-   "loop_end": 168682,
-   "loop_score": 0.997
+   "loop_start": 60403,
+   "loop_end": 131197,
+   "loop_score": 0.996
   },
   {
    "file": "trombone_050_D3_v2.flac",
@@ -314,13 +314,13 @@
    "hikey": 50,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_D2_v3_1.wav",
-   "bytes": 119527,
+   "bytes": 93072,
    "tune": 0,
-   "loop_start": 92998,
-   "loop_end": 168682,
-   "loop_score": 0.996
+   "loop_start": 65426,
+   "loop_end": 131197,
+   "loop_score": 0.994
   },
   {
    "file": "trombone_051_Ds3_v2.flac",
@@ -329,13 +329,13 @@
    "hikey": 52,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_D#2_v3_1.wav",
-   "bytes": 122233,
+   "bytes": 95337,
    "tune": 0,
-   "loop_start": 105459,
-   "loop_end": 168682,
-   "loop_score": 0.997
+   "loop_start": 63446,
+   "loop_end": 131197,
+   "loop_score": 0.99
   },
   {
    "file": "trombone_053_F3_v2.flac",
@@ -344,13 +344,13 @@
    "hikey": 54,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_F2_v3_1.wav",
-   "bytes": 127956,
+   "bytes": 99987,
    "tune": 0,
-   "loop_start": 93688,
-   "loop_end": 168682,
-   "loop_score": 0.998
+   "loop_start": 77677,
+   "loop_end": 131197,
+   "loop_score": 0.996
   },
   {
    "file": "trombone_055_G3_v2.flac",
@@ -359,13 +359,13 @@
    "hikey": 56,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_G2_v3_1.wav",
-   "bytes": 126801,
+   "bytes": 97419,
    "tune": 0,
-   "loop_start": 108612,
-   "loop_end": 168682,
-   "loop_score": 0.992
+   "loop_start": 82594,
+   "loop_end": 131197,
+   "loop_score": 0.989
   },
   {
    "file": "trombone_057_A3_v2.flac",
@@ -374,13 +374,13 @@
    "hikey": 57,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_A2_v3_1.wav",
-   "bytes": 134037,
+   "bytes": 105771,
    "tune": 0,
-   "loop_start": 90316,
-   "loop_end": 168682,
-   "loop_score": 0.997
+   "loop_start": 75880,
+   "loop_end": 131197,
+   "loop_score": 0.998
   },
   {
    "file": "trombone_058_As3_v2.flac",
@@ -389,13 +389,13 @@
    "hikey": 59,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_A#2_v3_1.wav",
-   "bytes": 133982,
+   "bytes": 103257,
    "tune": 0,
-   "loop_start": 107570,
-   "loop_end": 168682,
-   "loop_score": 0.996
+   "loop_start": 75939,
+   "loop_end": 131197,
+   "loop_score": 0.998
   },
   {
    "file": "trombone_060_C4_v2.flac",
@@ -404,12 +404,12 @@
    "hikey": 61,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_C3_v3_1.wav",
-   "bytes": 144291,
+   "bytes": 112531,
    "tune": 0,
-   "loop_start": 104972,
-   "loop_end": 168682,
+   "loop_start": 67483,
+   "loop_end": 131197,
    "loop_score": 0.997
   },
   {
@@ -419,13 +419,13 @@
    "hikey": 62,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_D3_v3_1.wav",
-   "bytes": 143715,
+   "bytes": 113803,
    "tune": 0,
-   "loop_start": 64915,
-   "loop_end": 168682,
-   "loop_score": 0.973
+   "loop_start": 74882,
+   "loop_end": 131197,
+   "loop_score": 0.987
   },
   {
    "file": "trombone_063_Ds4_v2.flac",
@@ -434,13 +434,13 @@
    "hikey": 64,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_D#3_v3_1.wav",
-   "bytes": 167663,
+   "bytes": 129238,
    "tune": 0,
-   "loop_start": 107884,
-   "loop_end": 168682,
-   "loop_score": 0.998
+   "loop_start": 83018,
+   "loop_end": 131197,
+   "loop_score": 0.993
   },
   {
    "file": "trombone_065_F4_v2.flac",
@@ -449,12 +449,12 @@
    "hikey": 77,
    "lovel": 43,
    "hivel": 85,
-   "frames": 168682,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_F3_v3_1.wav",
-   "bytes": 178908,
+   "bytes": 141194,
    "tune": 0,
-   "loop_start": 81802,
-   "loop_end": 168682,
+   "loop_start": 82831,
+   "loop_end": 131197,
    "loop_score": 0.998
   },
   {
@@ -464,13 +464,13 @@
    "hikey": 42,
    "lovel": 86,
    "hivel": 127,
-   "frames": 122182,
+   "frames": 119576,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_F1_v5_1.wav",
-   "bytes": 182585,
+   "bytes": 180457,
    "tune": 0,
-   "loop_start": 78244,
-   "loop_end": 122182,
-   "loop_score": 0.952
+   "loop_start": 75638,
+   "loop_end": 119576,
+   "loop_score": 0.956
   },
   {
    "file": "trombone_043_G2_v3.flac",
@@ -479,12 +479,12 @@
    "hikey": 44,
    "lovel": 86,
    "hivel": 127,
-   "frames": 98446,
+   "frames": 97019,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_G1_v5_1.wav",
-   "bytes": 138814,
+   "bytes": 138377,
    "tune": 0,
-   "loop_start": 60646,
-   "loop_end": 98446,
+   "loop_start": 58319,
+   "loop_end": 97019,
    "loop_score": 0.981
   },
   {
@@ -494,12 +494,12 @@
    "hikey": 45,
    "lovel": 86,
    "hivel": 127,
-   "frames": 114270,
+   "frames": 113426,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_A1_v5_1.wav",
-   "bytes": 120904,
+   "bytes": 120331,
    "tune": 0,
-   "loop_start": 68576,
-   "loop_end": 114270,
+   "loop_start": 67732,
+   "loop_end": 113426,
    "loop_score": 0.995
   },
   {
@@ -509,13 +509,13 @@
    "hikey": 47,
    "lovel": 86,
    "hivel": 127,
-   "frames": 154782,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_A#1_v5_1.wav",
-   "bytes": 241777,
+   "bytes": 206055,
    "tune": 0,
-   "loop_start": 99538,
-   "loop_end": 154782,
-   "loop_score": 0.989
+   "loop_start": 83901,
+   "loop_end": 131197,
+   "loop_score": 0.983
   },
   {
    "file": "trombone_048_C3_v3.flac",
@@ -524,13 +524,13 @@
    "hikey": 49,
    "lovel": 86,
    "hivel": 127,
-   "frames": 146384,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_C2_v5_1.wav",
-   "bytes": 168814,
+   "bytes": 152220,
    "tune": 0,
-   "loop_start": 94131,
-   "loop_end": 146384,
-   "loop_score": 0.995
+   "loop_start": 84338,
+   "loop_end": 131197,
+   "loop_score": 0.986
   },
   {
    "file": "trombone_050_D3_v3.flac",
@@ -539,13 +539,13 @@
    "hikey": 50,
    "lovel": 86,
    "hivel": 127,
-   "frames": 134555,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_D2_v5_1.wav",
-   "bytes": 170132,
+   "bytes": 166282,
    "tune": 0,
-   "loop_start": 69679,
-   "loop_end": 134555,
-   "loop_score": 0.991
+   "loop_start": 58513,
+   "loop_end": 131197,
+   "loop_score": 0.989
   },
   {
    "file": "trombone_051_Ds3_v3.flac",
@@ -554,13 +554,13 @@
    "hikey": 52,
    "lovel": 86,
    "hivel": 127,
-   "frames": 148139,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_D#2_v5_1.wav",
-   "bytes": 223182,
+   "bytes": 199514,
    "tune": 0,
-   "loop_start": 84075,
-   "loop_end": 148139,
-   "loop_score": 0.986
+   "loop_start": 70531,
+   "loop_end": 131197,
+   "loop_score": 0.994
   },
   {
    "file": "trombone_053_F3_v3.flac",
@@ -569,13 +569,13 @@
    "hikey": 54,
    "lovel": 86,
    "hivel": 127,
-   "frames": 161625,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_F2_v5_1.wav",
-   "bytes": 265509,
+   "bytes": 215727,
    "tune": -1,
-   "loop_start": 87644,
-   "loop_end": 161625,
-   "loop_score": 0.988
+   "loop_start": 81962,
+   "loop_end": 131197,
+   "loop_score": 0.996
   },
   {
    "file": "trombone_055_G3_v3.flac",
@@ -584,13 +584,13 @@
    "hikey": 56,
    "lovel": 86,
    "hivel": 127,
-   "frames": 159969,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_G2_v5_1.wav",
-   "bytes": 252127,
+   "bytes": 203786,
    "tune": 0,
-   "loop_start": 100116,
-   "loop_end": 159969,
-   "loop_score": 0.993
+   "loop_start": 84401,
+   "loop_end": 131197,
+   "loop_score": 0.995
   },
   {
    "file": "trombone_057_A3_v3.flac",
@@ -599,12 +599,12 @@
    "hikey": 57,
    "lovel": 86,
    "hivel": 127,
-   "frames": 111525,
+   "frames": 111350,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_A2_v5_1.wav",
-   "bytes": 183266,
+   "bytes": 182904,
    "tune": 0,
-   "loop_start": 71033,
-   "loop_end": 111525,
+   "loop_start": 70858,
+   "loop_end": 111350,
    "loop_score": 0.994
   },
   {
@@ -614,12 +614,12 @@
    "hikey": 59,
    "lovel": 86,
    "hivel": 127,
-   "frames": 121637,
+   "frames": 121605,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_A#2_v5_1.wav",
-   "bytes": 208872,
+   "bytes": 208767,
    "tune": 0,
-   "loop_start": 74902,
-   "loop_end": 121637,
+   "loop_start": 74870,
+   "loop_end": 121605,
    "loop_score": 0.996
   },
   {
@@ -629,13 +629,13 @@
    "hikey": 61,
    "lovel": 86,
    "hivel": 127,
-   "frames": 143356,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_C3_v5_1.wav",
-   "bytes": 238961,
+   "bytes": 219046,
    "tune": 0,
-   "loop_start": 60258,
-   "loop_end": 143356,
-   "loop_score": 0.988
+   "loop_start": 58044,
+   "loop_end": 131197,
+   "loop_score": 0.985
   },
   {
    "file": "trombone_062_D4_v3.flac",
@@ -644,12 +644,12 @@
    "hikey": 62,
    "lovel": 86,
    "hivel": 127,
-   "frames": 117736,
+   "frames": 117562,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_D3_v5_1.wav",
-   "bytes": 208222,
+   "bytes": 208208,
    "tune": 0,
-   "loop_start": 74181,
-   "loop_end": 117736,
+   "loop_start": 74007,
+   "loop_end": 117562,
    "loop_score": 0.993
   },
   {
@@ -659,12 +659,12 @@
    "hikey": 64,
    "lovel": 86,
    "hivel": 127,
-   "frames": 114675,
+   "frames": 114691,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_D#3_v5_1.wav",
-   "bytes": 186764,
+   "bytes": 186806,
    "tune": 0,
-   "loop_start": 61095,
-   "loop_end": 114675,
+   "loop_start": 61111,
+   "loop_end": 114691,
    "loop_score": 0.991
   },
   {
@@ -674,13 +674,13 @@
    "hikey": 66,
    "lovel": 86,
    "hivel": 127,
-   "frames": 158992,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_F3_v5_1.wav",
-   "bytes": 273871,
+   "bytes": 228634,
    "tune": 0,
-   "loop_start": 60359,
-   "loop_end": 158992,
-   "loop_score": 0.992
+   "loop_start": 76763,
+   "loop_end": 131197,
+   "loop_score": 0.995
   },
   {
    "file": "trombone_067_G4_v3.flac",
@@ -689,14 +689,14 @@
    "hikey": 79,
    "lovel": 86,
    "hivel": 127,
-   "frames": 140992,
+   "frames": 131197,
    "orig": "raw/VSCO-2-CE/Brass/OldTrombone/Sustain/Trombone_Sustain_G3_v5_1.wav",
-   "bytes": 254738,
+   "bytes": 237241,
    "tune": 0,
-   "loop_start": 73491,
-   "loop_end": 140992,
-   "loop_score": 0.992
+   "loop_start": 70671,
+   "loop_end": 131197,
+   "loop_score": 0.997
   }
  ],
- "total_bytes": 7255415
+ "total_bytes": 6121953
 }

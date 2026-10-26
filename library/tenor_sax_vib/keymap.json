@@ -14,13 +14,13 @@
    "hikey": 47,
    "lovel": 1,
    "hivel": 127,
-   "frames": 142884,
+   "frames": 111132,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_A#1_var2.wav",
-   "bytes": 258833,
+   "bytes": 106559,
    "tune": 1,
-   "loop_start": 100680,
-   "loop_end": 142884,
-   "loop_score": 0.985
+   "loop_start": 72953,
+   "loop_end": 111132,
+   "loop_score": 0.991
   },
   {
    "file": "tenor_sax_vib_048_C3_v1.flac",
@@ -29,13 +29,13 @@
    "hikey": 49,
    "lovel": 1,
    "hivel": 127,
-   "frames": 166698,
+   "frames": 142002,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_C2_var4.wav",
-   "bytes": 285710,
+   "bytes": 124339,
    "tune": -3,
-   "loop_start": 115890,
-   "loop_end": 166698,
-   "loop_score": 0.997
+   "loop_start": 76373,
+   "loop_end": 142002,
+   "loop_score": 0.99
   },
   {
    "file": "tenor_sax_vib_050_D3_v1.flac",
@@ -44,13 +44,13 @@
    "hikey": 51,
    "lovel": 1,
    "hivel": 127,
-   "frames": 158760,
+   "frames": 129654,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_D2_var2.wav",
-   "bytes": 293239,
+   "bytes": 121816,
    "tune": -9,
-   "loop_start": 119493,
-   "loop_end": 158760,
-   "loop_score": 0.998
+   "loop_start": 92172,
+   "loop_end": 129654,
+   "loop_score": 0.997
   },
   {
    "file": "tenor_sax_vib_052_E3_v1.flac",
@@ -59,13 +59,13 @@
    "hikey": 53,
    "lovel": 1,
    "hivel": 127,
-   "frames": 158760,
+   "frames": 135828,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_E2_var2.wav",
-   "bytes": 281191,
+   "bytes": 123721,
    "tune": 0,
-   "loop_start": 88081,
-   "loop_end": 158760,
-   "loop_score": 0.996
+   "loop_start": 82790,
+   "loop_end": 135828,
+   "loop_score": 0.998
   },
   {
    "file": "tenor_sax_vib_054_Fs3_v1.flac",
@@ -74,13 +74,13 @@
    "hikey": 56,
    "lovel": 1,
    "hivel": 127,
-   "frames": 150822,
+   "frames": 129654,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_F#2_var3.wav",
-   "bytes": 245102,
+   "bytes": 109147,
    "tune": -2,
-   "loop_start": 113134,
-   "loop_end": 150822,
-   "loop_score": 0.991
+   "loop_start": 92195,
+   "loop_end": 129654,
+   "loop_score": 0.979
   },
   {
    "file": "tenor_sax_vib_058_As3_v1.flac",
@@ -89,13 +89,13 @@
    "hikey": 59,
    "lovel": 1,
    "hivel": 127,
-   "frames": 166698,
+   "frames": 129654,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_A#2_var4.wav",
-   "bytes": 239899,
+   "bytes": 94916,
    "tune": -1,
-   "loop_start": 129774,
-   "loop_end": 166698,
-   "loop_score": 0.998
+   "loop_start": 68999,
+   "loop_end": 129654,
+   "loop_score": 0.973
   },
   {
    "file": "tenor_sax_vib_060_C4_v1.flac",
@@ -104,13 +104,13 @@
    "hikey": 61,
    "lovel": 1,
    "hivel": 127,
-   "frames": 166698,
+   "frames": 123480,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_C3_var1.wav",
-   "bytes": 257619,
+   "bytes": 95775,
    "tune": -1,
-   "loop_start": 123325,
-   "loop_end": 166698,
-   "loop_score": 0.993
+   "loop_start": 80031,
+   "loop_end": 123480,
+   "loop_score": 0.996
   },
   {
    "file": "tenor_sax_vib_062_D4_v1.flac",
@@ -119,13 +119,13 @@
    "hikey": 63,
    "lovel": 1,
    "hivel": 127,
-   "frames": 182574,
+   "frames": 135828,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_D3_var1.wav",
-   "bytes": 298445,
+   "bytes": 112200,
    "tune": -1,
-   "loop_start": 146314,
-   "loop_end": 182574,
-   "loop_score": 0.995
+   "loop_start": 81327,
+   "loop_end": 135828,
+   "loop_score": 0.992
   },
   {
    "file": "tenor_sax_vib_064_E4_v1.flac",
@@ -134,12 +134,12 @@
    "hikey": 65,
    "lovel": 1,
    "hivel": 127,
-   "frames": 174636,
+   "frames": 142002,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_E3_var3.wav",
-   "bytes": 278209,
+   "bytes": 115150,
    "tune": -1,
-   "loop_start": 103508,
-   "loop_end": 174636,
+   "loop_start": 105936,
+   "loop_end": 142002,
    "loop_score": 1.0
   },
   {
@@ -149,12 +149,12 @@
    "hikey": 68,
    "lovel": 1,
    "hivel": 127,
-   "frames": 182574,
+   "frames": 135828,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_F#3_var2.wav",
-   "bytes": 279345,
+   "bytes": 108642,
    "tune": -1,
-   "loop_start": 144830,
-   "loop_end": 182574,
+   "loop_start": 97811,
+   "loop_end": 135828,
    "loop_score": 0.999
   },
   {
@@ -164,13 +164,13 @@
    "hikey": 71,
    "lovel": 1,
    "hivel": 127,
-   "frames": 166698,
+   "frames": 135828,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_A#3_var3.wav",
-   "bytes": 312022,
+   "bytes": 133960,
    "tune": 1,
-   "loop_start": 118537,
-   "loop_end": 166698,
-   "loop_score": 0.993
+   "loop_start": 98733,
+   "loop_end": 135828,
+   "loop_score": 0.987
   },
   {
    "file": "tenor_sax_vib_072_C5_v1.flac",
@@ -179,13 +179,13 @@
    "hikey": 73,
    "lovel": 1,
    "hivel": 127,
-   "frames": 142884,
+   "frames": 142002,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_C4_var2.wav",
-   "bytes": 306026,
+   "bytes": 152791,
    "tune": -2,
-   "loop_start": 92646,
-   "loop_end": 142884,
-   "loop_score": 0.981
+   "loop_start": 91681,
+   "loop_end": 142002,
+   "loop_score": 0.983
   },
   {
    "file": "tenor_sax_vib_074_D5_v1.flac",
@@ -194,13 +194,13 @@
    "hikey": 75,
    "lovel": 1,
    "hivel": 127,
-   "frames": 158760,
+   "frames": 117306,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_D4_var1.wav",
-   "bytes": 353294,
+   "bytes": 134451,
    "tune": -4,
-   "loop_start": 109375,
-   "loop_end": 158760,
-   "loop_score": 0.994
+   "loop_start": 81413,
+   "loop_end": 117306,
+   "loop_score": 0.992
   },
   {
    "file": "tenor_sax_vib_076_E5_v1.flac",
@@ -209,13 +209,13 @@
    "hikey": 77,
    "lovel": 1,
    "hivel": 127,
-   "frames": 158760,
+   "frames": 142002,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_E4_var4.wav",
-   "bytes": 308312,
+   "bytes": 140067,
    "tune": -2,
-   "loop_start": 73956,
-   "loop_end": 158760,
-   "loop_score": 0.994
+   "loop_start": 41615,
+   "loop_end": 142002,
+   "loop_score": 0.992
   },
   {
    "file": "tenor_sax_vib_079_G5_v1.flac",
@@ -224,12 +224,12 @@
    "hikey": 79,
    "lovel": 1,
    "hivel": 127,
-   "frames": 141899,
+   "frames": 135828,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_G4_var3.wav",
-   "bytes": 316736,
+   "bytes": 153577,
    "tune": -3,
-   "loop_start": 91951,
-   "loop_end": 141899,
+   "loop_start": 61828,
+   "loop_end": 135828,
    "loop_score": 0.993
   },
   {
@@ -239,13 +239,13 @@
    "hikey": 81,
    "lovel": 1,
    "hivel": 127,
-   "frames": 174636,
+   "frames": 135828,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_G#4_var3.wav",
-   "bytes": 333664,
+   "bytes": 134172,
    "tune": -3,
-   "loop_start": 132389,
-   "loop_end": 174636,
-   "loop_score": 0.986
+   "loop_start": 74401,
+   "loop_end": 135828,
+   "loop_score": 0.981
   },
   {
    "file": "tenor_sax_vib_082_As5_v1.flac",
@@ -254,13 +254,13 @@
    "hikey": 83,
    "lovel": 1,
    "hivel": 127,
-   "frames": 158760,
+   "frames": 129654,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_A#4_var2.wav",
-   "bytes": 356675,
+   "bytes": 148590,
    "tune": -1,
-   "loop_start": 121926,
-   "loop_end": 158760,
-   "loop_score": 0.991
+   "loop_start": 83821,
+   "loop_end": 129654,
+   "loop_score": 0.981
   },
   {
    "file": "tenor_sax_vib_084_C6_v1.flac",
@@ -269,13 +269,13 @@
    "hikey": 85,
    "lovel": 1,
    "hivel": 127,
-   "frames": 135738,
+   "frames": 135828,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_C5_var2.wav",
-   "bytes": 316302,
+   "bytes": 160580,
    "tune": -2,
-   "loop_start": 81476,
-   "loop_end": 135738,
-   "loop_score": 0.996
+   "loop_start": 81524,
+   "loop_end": 135828,
+   "loop_score": 0.995
   },
   {
    "file": "tenor_sax_vib_086_D6_v1.flac",
@@ -284,14 +284,14 @@
    "hikey": 98,
    "lovel": 1,
    "hivel": 127,
-   "frames": 182574,
+   "frames": 129654,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Vibrato/BrettTenor_Vib_Main_D5_var3.wav",
-   "bytes": 483525,
+   "bytes": 172517,
    "tune": -5,
-   "loop_start": 120129,
-   "loop_end": 182574,
-   "loop_score": 0.989
+   "loop_start": 56148,
+   "loop_end": 129654,
+   "loop_score": 0.986
   }
  ],
- "total_bytes": 5804148
+ "total_bytes": 2442970
 }

@@ -146,9 +146,9 @@
    "hikey": 55,
    "lovel": 43,
    "hivel": 85,
-   "frames": 47606,
+   "frames": 47562,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/stac/Sum_SHTrumpet_stac_F2_v2_rr1.wav",
-   "bytes": 35015,
+   "bytes": 34972,
    "tune": 20
   },
   {
@@ -244,7 +244,7 @@
    "hivel": 85,
    "frames": 52920,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/stac/Sum_SHTrumpet_stac_F4_v2_rr1.wav",
-   "bytes": 49112,
+   "bytes": 49100,
    "tune": -9
   },
   {
@@ -256,7 +256,7 @@
    "hivel": 85,
    "frames": 52920,
    "orig": "raw/VSCO-2-CE/Brass/Trumpet/stac/Sum_SHTrumpet_stac_A4_v2_rr1.wav",
-   "bytes": 55706,
+   "bytes": 55618,
    "tune": 0
   },
   {
@@ -404,5 +404,5 @@
    "tune": -1
   }
  ],
- "total_bytes": 1407878
+ "total_bytes": 1407735
 }

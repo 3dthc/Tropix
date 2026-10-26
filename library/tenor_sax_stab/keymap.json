@@ -38,9 +38,9 @@
    "hikey": 55,
    "lovel": 1,
    "hivel": 64,
-   "frames": 20414,
+   "frames": 20400,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_F#2_vl1_rr4.wav",
-   "bytes": 27848,
+   "bytes": 27788,
    "tune": 9
   },
   {
@@ -50,9 +50,9 @@
    "hikey": 56,
    "lovel": 1,
    "hivel": 64,
-   "frames": 21234,
+   "frames": 20779,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_G#2_vl1_rr1.wav",
-   "bytes": 30701,
+   "bytes": 29884,
    "tune": 5
   },
   {
@@ -62,9 +62,9 @@
    "hikey": 58,
    "lovel": 1,
    "hivel": 64,
-   "frames": 21148,
+   "frames": 21087,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_A2_vl1_rr1.wav",
-   "bytes": 27507,
+   "bytes": 27369,
    "tune": 5
   },
   {
@@ -74,9 +74,9 @@
    "hikey": 61,
    "lovel": 1,
    "hivel": 64,
-   "frames": 19661,
+   "frames": 19471,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_C3_vl1_rr4.wav",
-   "bytes": 23205,
+   "bytes": 22872,
    "tune": 0
   },
   {
@@ -86,9 +86,9 @@
    "hikey": 63,
    "lovel": 1,
    "hivel": 64,
-   "frames": 25237,
+   "frames": 25041,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_D3_vl1_rr1.wav",
-   "bytes": 31301,
+   "bytes": 30880,
    "tune": 0
   },
   {
@@ -98,9 +98,9 @@
    "hikey": 65,
    "lovel": 1,
    "hivel": 64,
-   "frames": 21717,
+   "frames": 21678,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_E3_vl1_rr4.wav",
-   "bytes": 25317,
+   "bytes": 25263,
    "tune": 3
   },
   {
@@ -110,9 +110,9 @@
    "hikey": 67,
    "lovel": 1,
    "hivel": 64,
-   "frames": 23515,
+   "frames": 23426,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_F#3_vl1_rr3.wav",
-   "bytes": 30920,
+   "bytes": 30714,
    "tune": 2
   },
   {
@@ -122,9 +122,9 @@
    "hikey": 69,
    "lovel": 1,
    "hivel": 64,
-   "frames": 25761,
+   "frames": 25726,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_G#3_vl1_rr1.wav",
-   "bytes": 34589,
+   "bytes": 34528,
    "tune": 2
   },
   {
@@ -218,9 +218,9 @@
    "hikey": 45,
    "lovel": 65,
    "hivel": 127,
-   "frames": 27244,
+   "frames": 27224,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_G#1_vl2_rr1.wav",
-   "bytes": 34705,
+   "bytes": 34661,
    "tune": 9
   },
   {
@@ -302,9 +302,9 @@
    "hikey": 61,
    "lovel": 65,
    "hivel": 127,
-   "frames": 21230,
+   "frames": 21222,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_C3_vl2_rr4.wav",
-   "bytes": 30100,
+   "bytes": 30081,
    "tune": 3
   },
   {
@@ -314,9 +314,9 @@
    "hikey": 63,
    "lovel": 65,
    "hivel": 127,
-   "frames": 22501,
+   "frames": 22488,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_D3_vl2_rr5.wav",
-   "bytes": 34052,
+   "bytes": 34034,
    "tune": 5
   },
   {
@@ -326,9 +326,9 @@
    "hikey": 65,
    "lovel": 65,
    "hivel": 127,
-   "frames": 20768,
+   "frames": 20714,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_E3_vl2_rr3.wav",
-   "bytes": 30145,
+   "bytes": 29996,
    "tune": 3
   },
   {
@@ -338,9 +338,9 @@
    "hikey": 67,
    "lovel": 65,
    "hivel": 127,
-   "frames": 22264,
+   "frames": 21877,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_F#3_vl2_rr6.wav",
-   "bytes": 31091,
+   "bytes": 30414,
    "tune": 0
   },
   {
@@ -350,9 +350,9 @@
    "hikey": 69,
    "lovel": 65,
    "hivel": 127,
-   "frames": 21571,
+   "frames": 20972,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_G#3_vl2_rr1.wav",
-   "bytes": 34648,
+   "bytes": 33656,
    "tune": -2
   },
   {
@@ -362,9 +362,9 @@
    "hikey": 71,
    "lovel": 65,
    "hivel": 127,
-   "frames": 21824,
+   "frames": 21572,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_A#3_vl2_rr4.wav",
-   "bytes": 33472,
+   "bytes": 33068,
    "tune": -7
   },
   {
@@ -374,9 +374,9 @@
    "hikey": 73,
    "lovel": 65,
    "hivel": 127,
-   "frames": 20979,
+   "frames": 20505,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_C4_vl2_rr3.wav",
-   "bytes": 37556,
+   "bytes": 36753,
    "tune": -4
   },
   {
@@ -386,9 +386,9 @@
    "hikey": 75,
    "lovel": 65,
    "hivel": 127,
-   "frames": 22318,
+   "frames": 22007,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_D4_vl2_rr2.wav",
-   "bytes": 39393,
+   "bytes": 38662,
    "tune": -1
   },
   {
@@ -398,9 +398,9 @@
    "hikey": 76,
    "lovel": 65,
    "hivel": 127,
-   "frames": 20718,
+   "frames": 20628,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_E4_vl2_rr4.wav",
-   "bytes": 39625,
+   "bytes": 39473,
    "tune": 2
   },
   {
@@ -410,9 +410,9 @@
    "hikey": 78,
    "lovel": 65,
    "hivel": 127,
-   "frames": 21454,
+   "frames": 21287,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_F4_vl2_rr1.wav",
-   "bytes": 42948,
+   "bytes": 42687,
    "tune": 4
   },
   {
@@ -422,9 +422,9 @@
    "hikey": 80,
    "lovel": 65,
    "hivel": 127,
-   "frames": 20004,
+   "frames": 19936,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_G#4_vl2_rr2.wav",
-   "bytes": 34331,
+   "bytes": 34208,
    "tune": 3
   },
   {
@@ -434,9 +434,9 @@
    "hikey": 82,
    "lovel": 65,
    "hivel": 127,
-   "frames": 20264,
+   "frames": 20203,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_A4_vl2_rr3.wav",
-   "bytes": 32867,
+   "bytes": 32950,
    "tune": -1
   },
   {
@@ -446,9 +446,9 @@
    "hikey": 85,
    "lovel": 65,
    "hivel": 127,
-   "frames": 20080,
+   "frames": 19968,
    "orig": "raw/VCSL/Aerophones/Reed Aerophones/Tenor Saxophone/Staccato/BrettTenor_Staccato_Main_C5_vl2_rr1.wav",
-   "bytes": 37637,
+   "bytes": 37496,
    "tune": 0
   },
   {
@@ -476,5 +476,5 @@
    "tune": -8
   }
  ],
- "total_bytes": 1287785
+ "total_bytes": 1281264
 }

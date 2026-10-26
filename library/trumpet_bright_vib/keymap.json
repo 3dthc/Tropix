@@ -14,13 +14,13 @@
    "hikey": 53,
    "lovel": 1,
    "hivel": 42,
-   "frames": 134064,
+   "frames": 123480,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.E3.wav",
-   "bytes": 64883,
+   "bytes": 59940,
    "tune": -2,
-   "loop_start": 75534,
-   "loop_end": 134064,
-   "loop_score": 0.995
+   "loop_start": 75085,
+   "loop_end": 123480,
+   "loop_score": 0.996
   },
   {
    "file": "trumpet_bright_vib_054_Fs3_v1.flac",
@@ -29,12 +29,12 @@
    "hikey": 55,
    "lovel": 1,
    "hivel": 42,
-   "frames": 127008,
+   "frames": 111132,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.Fs3.wav",
-   "bytes": 60240,
+   "bytes": 52826,
    "tune": 22,
-   "loop_start": 84989,
-   "loop_end": 127008,
+   "loop_start": 51020,
+   "loop_end": 111132,
    "loop_score": 0.996
   },
   {
@@ -44,13 +44,13 @@
    "hikey": 57,
    "lovel": 1,
    "hivel": 42,
-   "frames": 155232,
+   "frames": 117306,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.Gs3.wav",
-   "bytes": 73752,
+   "bytes": 56101,
    "tune": 6,
-   "loop_start": 106870,
-   "loop_end": 155232,
-   "loop_score": 0.994
+   "loop_start": 81970,
+   "loop_end": 117306,
+   "loop_score": 0.998
   },
   {
    "file": "trumpet_bright_vib_058_As3_v1.flac",
@@ -59,13 +59,13 @@
    "hikey": 59,
    "lovel": 1,
    "hivel": 42,
-   "frames": 162288,
+   "frames": 117306,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.As3.wav",
-   "bytes": 80196,
+   "bytes": 58286,
    "tune": 10,
-   "loop_start": 94968,
-   "loop_end": 162288,
-   "loop_score": 0.996
+   "loop_start": 79262,
+   "loop_end": 117306,
+   "loop_score": 0.998
   },
   {
    "file": "trumpet_bright_vib_060_C4_v1.flac",
@@ -74,13 +74,13 @@
    "hikey": 61,
    "lovel": 1,
    "hivel": 42,
-   "frames": 148176,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.C4.wav",
-   "bytes": 75327,
+   "bytes": 72092,
    "tune": -2,
-   "loop_start": 82365,
-   "loop_end": 148176,
-   "loop_score": 0.995
+   "loop_start": 94032,
+   "loop_end": 142002,
+   "loop_score": 0.998
   },
   {
    "file": "trumpet_bright_vib_062_D4_v1.flac",
@@ -89,13 +89,13 @@
    "hikey": 63,
    "lovel": 1,
    "hivel": 42,
-   "frames": 134064,
+   "frames": 135828,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.D4.wav",
-   "bytes": 67654,
+   "bytes": 68560,
    "tune": -4,
-   "loop_start": 96478,
-   "loop_end": 134064,
-   "loop_score": 0.998
+   "loop_start": 97644,
+   "loop_end": 135828,
+   "loop_score": 0.997
   },
   {
    "file": "trumpet_bright_vib_064_E4_v1.flac",
@@ -104,13 +104,13 @@
    "hikey": 65,
    "lovel": 1,
    "hivel": 42,
-   "frames": 148176,
+   "frames": 135828,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.E4.wav",
-   "bytes": 76220,
+   "bytes": 69849,
    "tune": 13,
-   "loop_start": 108414,
-   "loop_end": 148176,
-   "loop_score": 0.999
+   "loop_start": 97548,
+   "loop_end": 135828,
+   "loop_score": 0.997
   },
   {
    "file": "trumpet_bright_vib_066_Fs4_v1.flac",
@@ -119,13 +119,13 @@
    "hikey": 67,
    "lovel": 1,
    "hivel": 42,
-   "frames": 134064,
+   "frames": 111132,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.Fs4.wav",
-   "bytes": 71863,
+   "bytes": 59715,
    "tune": 3,
-   "loop_start": 72266,
-   "loop_end": 134064,
-   "loop_score": 0.998
+   "loop_start": 70120,
+   "loop_end": 111132,
+   "loop_score": 0.999
   },
   {
    "file": "trumpet_bright_vib_068_Gs4_v1.flac",
@@ -134,12 +134,12 @@
    "hikey": 69,
    "lovel": 1,
    "hivel": 42,
-   "frames": 141120,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.Gs4.wav",
-   "bytes": 76371,
+   "bytes": 76852,
    "tune": 10,
-   "loop_start": 93141,
-   "loop_end": 141120,
+   "loop_start": 93916,
+   "loop_end": 142002,
    "loop_score": 0.999
   },
   {
@@ -149,13 +149,13 @@
    "hikey": 71,
    "lovel": 1,
    "hivel": 42,
-   "frames": 134064,
+   "frames": 135828,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.As4.wav",
-   "bytes": 75981,
+   "bytes": 77005,
    "tune": 7,
-   "loop_start": 96955,
-   "loop_end": 134064,
-   "loop_score": 1.0
+   "loop_start": 98908,
+   "loop_end": 135828,
+   "loop_score": 0.998
   },
   {
    "file": "trumpet_bright_vib_072_C5_v1.flac",
@@ -164,13 +164,13 @@
    "hikey": 73,
    "lovel": 1,
    "hivel": 42,
-   "frames": 127008,
+   "frames": 123480,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.C5.wav",
-   "bytes": 71780,
+   "bytes": 69817,
    "tune": 2,
-   "loop_start": 64656,
-   "loop_end": 127008,
-   "loop_score": 0.999
+   "loop_start": 69986,
+   "loop_end": 123480,
+   "loop_score": 0.998
   },
   {
    "file": "trumpet_bright_vib_074_D5_v1.flac",
@@ -179,12 +179,12 @@
    "hikey": 75,
    "lovel": 1,
    "hivel": 42,
-   "frames": 134064,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.D5.wav",
-   "bytes": 72321,
+   "bytes": 76710,
    "tune": -6,
-   "loop_start": 94410,
-   "loop_end": 134064,
+   "loop_start": 81775,
+   "loop_end": 142002,
    "loop_score": 0.999
   },
   {
@@ -194,12 +194,12 @@
    "hikey": 77,
    "lovel": 1,
    "hivel": 42,
-   "frames": 134064,
+   "frames": 129654,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.E5.wav",
-   "bytes": 80668,
+   "bytes": 77954,
    "tune": -24,
-   "loop_start": 54345,
-   "loop_end": 134064,
+   "loop_start": 55010,
+   "loop_end": 129654,
    "loop_score": 0.999
   },
   {
@@ -209,13 +209,13 @@
    "hikey": 79,
    "lovel": 1,
    "hivel": 42,
-   "frames": 155232,
+   "frames": 129654,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.Fs5.wav",
-   "bytes": 97863,
+   "bytes": 81683,
    "tune": -21,
-   "loop_start": 88463,
-   "loop_end": 155232,
-   "loop_score": 0.998
+   "loop_start": 83419,
+   "loop_end": 129654,
+   "loop_score": 0.999
   },
   {
    "file": "trumpet_bright_vib_080_Gs5_v1.flac",
@@ -224,13 +224,13 @@
    "hikey": 81,
    "lovel": 1,
    "hivel": 42,
-   "frames": 155232,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.Gs5.wav",
-   "bytes": 99064,
+   "bytes": 90482,
    "tune": -18,
-   "loop_start": 66463,
-   "loop_end": 155232,
-   "loop_score": 0.997
+   "loop_start": 105340,
+   "loop_end": 142002,
+   "loop_score": 0.996
   },
   {
    "file": "trumpet_bright_vib_082_As5_v1.flac",
@@ -239,13 +239,13 @@
    "hikey": 83,
    "lovel": 1,
    "hivel": 42,
-   "frames": 134064,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.As5.wav",
-   "bytes": 89349,
+   "bytes": 94545,
    "tune": -16,
-   "loop_start": 94568,
-   "loop_end": 134064,
-   "loop_score": 0.999
+   "loop_start": 102088,
+   "loop_end": 142002,
+   "loop_score": 0.997
   },
   {
    "file": "trumpet_bright_vib_084_C6_v1.flac",
@@ -254,13 +254,13 @@
    "hikey": 85,
    "lovel": 1,
    "hivel": 42,
-   "frames": 134064,
+   "frames": 117306,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.C6.wav",
-   "bytes": 90659,
+   "bytes": 79117,
    "tune": -19,
-   "loop_start": 61041,
-   "loop_end": 134064,
-   "loop_score": 0.998
+   "loop_start": 49417,
+   "loop_end": 117306,
+   "loop_score": 0.999
   },
   {
    "file": "trumpet_bright_vib_086_D6_v1.flac",
@@ -269,12 +269,12 @@
    "hikey": 98,
    "lovel": 1,
    "hivel": 42,
-   "frames": 162288,
+   "frames": 135828,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.pp.D6.wav",
-   "bytes": 111430,
+   "bytes": 92615,
    "tune": 4,
-   "loop_start": 99880,
-   "loop_end": 162288,
+   "loop_start": 94369,
+   "loop_end": 135828,
    "loop_score": 0.999
   },
   {
@@ -284,12 +284,12 @@
    "hikey": 53,
    "lovel": 43,
    "hivel": 85,
-   "frames": 162288,
+   "frames": 129654,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.E3.wav",
-   "bytes": 87882,
+   "bytes": 70711,
    "tune": 11,
-   "loop_start": 114979,
-   "loop_end": 162288,
+   "loop_start": 77690,
+   "loop_end": 129654,
    "loop_score": 0.995
   },
   {
@@ -299,13 +299,13 @@
    "hikey": 55,
    "lovel": 43,
    "hivel": 85,
-   "frames": 134064,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.Fs3.wav",
-   "bytes": 76779,
+   "bytes": 81160,
    "tune": 16,
-   "loop_start": 95151,
-   "loop_end": 134064,
-   "loop_score": 0.996
+   "loop_start": 99984,
+   "loop_end": 142002,
+   "loop_score": 0.997
   },
   {
    "file": "trumpet_bright_vib_056_Gs3_v2.flac",
@@ -314,12 +314,12 @@
    "hikey": 57,
    "lovel": 43,
    "hivel": 85,
-   "frames": 127008,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.Gs3.wav",
-   "bytes": 77897,
+   "bytes": 86531,
    "tune": 16,
-   "loop_start": 90141,
-   "loop_end": 127008,
+   "loop_start": 103855,
+   "loop_end": 142002,
    "loop_score": 0.999
   },
   {
@@ -329,13 +329,13 @@
    "hikey": 59,
    "lovel": 43,
    "hivel": 85,
-   "frames": 148176,
+   "frames": 117306,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.As3.wav",
-   "bytes": 93901,
+   "bytes": 74740,
    "tune": 15,
-   "loop_start": 110822,
-   "loop_end": 148176,
-   "loop_score": 0.998
+   "loop_start": 53305,
+   "loop_end": 117306,
+   "loop_score": 0.996
   },
   {
    "file": "trumpet_bright_vib_060_C4_v2.flac",
@@ -344,12 +344,12 @@
    "hikey": 61,
    "lovel": 43,
    "hivel": 85,
-   "frames": 127008,
+   "frames": 123480,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.C4.wav",
-   "bytes": 83630,
+   "bytes": 81269,
    "tune": 6,
-   "loop_start": 90459,
-   "loop_end": 127008,
+   "loop_start": 87100,
+   "loop_end": 123480,
    "loop_score": 0.999
   },
   {
@@ -359,13 +359,13 @@
    "hikey": 63,
    "lovel": 43,
    "hivel": 85,
-   "frames": 162288,
+   "frames": 129654,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.D4.wav",
-   "bytes": 113802,
+   "bytes": 91041,
    "tune": 2,
-   "loop_start": 79219,
-   "loop_end": 162288,
-   "loop_score": 0.997
+   "loop_start": 84573,
+   "loop_end": 129654,
+   "loop_score": 0.998
   },
   {
    "file": "trumpet_bright_vib_064_E4_v2.flac",
@@ -374,13 +374,13 @@
    "hikey": 65,
    "lovel": 43,
    "hivel": 85,
-   "frames": 148176,
+   "frames": 123480,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.E4.wav",
-   "bytes": 106248,
+   "bytes": 88990,
    "tune": 12,
-   "loop_start": 104617,
-   "loop_end": 148176,
-   "loop_score": 0.998
+   "loop_start": 69645,
+   "loop_end": 123480,
+   "loop_score": 0.999
   },
   {
    "file": "trumpet_bright_vib_066_Fs4_v2.flac",
@@ -389,13 +389,13 @@
    "hikey": 67,
    "lovel": 43,
    "hivel": 85,
-   "frames": 141120,
+   "frames": 111132,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.Fs4.wav",
-   "bytes": 102238,
+   "bytes": 81102,
    "tune": 12,
-   "loop_start": 78732,
-   "loop_end": 141120,
-   "loop_score": 0.998
+   "loop_start": 64793,
+   "loop_end": 111132,
+   "loop_score": 0.999
   },
   {
    "file": "trumpet_bright_vib_068_Gs4_v2.flac",
@@ -404,12 +404,12 @@
    "hikey": 69,
    "lovel": 43,
    "hivel": 85,
-   "frames": 162288,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.Gs4.wav",
-   "bytes": 119157,
+   "bytes": 104129,
    "tune": 6,
-   "loop_start": 114792,
-   "loop_end": 162288,
+   "loop_start": 43796,
+   "loop_end": 142002,
    "loop_score": 0.999
   },
   {
@@ -419,13 +419,13 @@
    "hikey": 71,
    "lovel": 43,
    "hivel": 85,
-   "frames": 141120,
+   "frames": 123480,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.As4.wav",
-   "bytes": 108011,
+   "bytes": 94393,
    "tune": 3,
-   "loop_start": 87264,
-   "loop_end": 141120,
-   "loop_score": 0.998
+   "loop_start": 87163,
+   "loop_end": 123480,
+   "loop_score": 0.999
   },
   {
    "file": "trumpet_bright_vib_072_C5_v2.flac",
@@ -434,13 +434,13 @@
    "hikey": 73,
    "lovel": 43,
    "hivel": 85,
-   "frames": 134064,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.C5.wav",
-   "bytes": 115193,
+   "bytes": 122048,
    "tune": 3,
-   "loop_start": 89326,
-   "loop_end": 134064,
-   "loop_score": 0.998
+   "loop_start": 51407,
+   "loop_end": 142002,
+   "loop_score": 0.999
   },
   {
    "file": "trumpet_bright_vib_074_D5_v2.flac",
@@ -449,12 +449,12 @@
    "hikey": 75,
    "lovel": 43,
    "hivel": 85,
-   "frames": 148176,
+   "frames": 111132,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.D5.wav",
-   "bytes": 131087,
+   "bytes": 97873,
    "tune": 11,
-   "loop_start": 103404,
-   "loop_end": 148176,
+   "loop_start": 75676,
+   "loop_end": 111132,
    "loop_score": 0.998
   },
   {
@@ -464,12 +464,12 @@
    "hikey": 77,
    "lovel": 43,
    "hivel": 85,
-   "frames": 127008,
+   "frames": 111132,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.E5.wav",
-   "bytes": 110082,
+   "bytes": 96107,
    "tune": -5,
-   "loop_start": 82053,
-   "loop_end": 127008,
+   "loop_start": 75179,
+   "loop_end": 111132,
    "loop_score": 0.999
   },
   {
@@ -479,13 +479,13 @@
    "hikey": 79,
    "lovel": 43,
    "hivel": 85,
-   "frames": 155232,
+   "frames": 111132,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.Fs5.wav",
-   "bytes": 145476,
+   "bytes": 103234,
    "tune": 0,
-   "loop_start": 118831,
-   "loop_end": 155232,
-   "loop_score": 0.997
+   "loop_start": 73217,
+   "loop_end": 111132,
+   "loop_score": 0.996
   },
   {
    "file": "trumpet_bright_vib_080_Gs5_v2.flac",
@@ -494,13 +494,13 @@
    "hikey": 81,
    "lovel": 43,
    "hivel": 85,
-   "frames": 141120,
+   "frames": 135828,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.Gs5.wav",
-   "bytes": 133880,
+   "bytes": 128955,
    "tune": 5,
-   "loop_start": 63362,
-   "loop_end": 141120,
-   "loop_score": 0.996
+   "loop_start": 66664,
+   "loop_end": 135828,
+   "loop_score": 0.999
   },
   {
    "file": "trumpet_bright_vib_082_As5_v2.flac",
@@ -509,12 +509,12 @@
    "hikey": 83,
    "lovel": 43,
    "hivel": 85,
-   "frames": 141120,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.As5.wav",
-   "bytes": 140003,
+   "bytes": 140877,
    "tune": 2,
-   "loop_start": 69378,
-   "loop_end": 141120,
+   "loop_start": 106465,
+   "loop_end": 142002,
    "loop_score": 0.997
   },
   {
@@ -524,12 +524,12 @@
    "hikey": 85,
    "lovel": 43,
    "hivel": 85,
-   "frames": 162288,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.C6.wav",
-   "bytes": 166915,
+   "bytes": 145436,
    "tune": -6,
-   "loop_start": 97061,
-   "loop_end": 162288,
+   "loop_start": 94827,
+   "loop_end": 142002,
    "loop_score": 0.999
   },
   {
@@ -539,13 +539,13 @@
    "hikey": 98,
    "lovel": 43,
    "hivel": 85,
-   "frames": 134064,
+   "frames": 123480,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.mf.D6.wav",
-   "bytes": 143733,
+   "bytes": 132372,
    "tune": 15,
-   "loop_start": 86432,
-   "loop_end": 134064,
-   "loop_score": 0.999
+   "loop_start": 77232,
+   "loop_end": 123480,
+   "loop_score": 0.998
   },
   {
    "file": "trumpet_bright_vib_052_E3_v3.flac",
@@ -554,13 +554,13 @@
    "hikey": 53,
    "lovel": 86,
    "hivel": 127,
-   "frames": 144882,
+   "frames": 123480,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.E3.wav",
-   "bytes": 113501,
+   "bytes": 96638,
    "tune": -17,
-   "loop_start": 106563,
-   "loop_end": 144882,
-   "loop_score": 0.998
+   "loop_start": 75084,
+   "loop_end": 123480,
+   "loop_score": 0.997
   },
   {
    "file": "trumpet_bright_vib_054_Fs3_v3.flac",
@@ -569,13 +569,13 @@
    "hikey": 55,
    "lovel": 86,
    "hivel": 127,
-   "frames": 162288,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.Fs3.wav",
-   "bytes": 132091,
+   "bytes": 116613,
    "tune": 11,
-   "loop_start": 116721,
-   "loop_end": 162288,
-   "loop_score": 0.999
+   "loop_start": 70575,
+   "loop_end": 142002,
+   "loop_score": 0.994
   },
   {
    "file": "trumpet_bright_vib_056_Gs3_v3.flac",
@@ -584,13 +584,13 @@
    "hikey": 57,
    "lovel": 86,
    "hivel": 127,
-   "frames": 148176,
+   "frames": 111132,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.Gs3.wav",
-   "bytes": 117093,
+   "bytes": 89486,
    "tune": 11,
-   "loop_start": 103410,
-   "loop_end": 148176,
-   "loop_score": 0.995
+   "loop_start": 38413,
+   "loop_end": 111132,
+   "loop_score": 0.998
   },
   {
    "file": "trumpet_bright_vib_058_As3_v3.flac",
@@ -599,13 +599,13 @@
    "hikey": 59,
    "lovel": 86,
    "hivel": 127,
-   "frames": 127008,
+   "frames": 123480,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.As3.wav",
-   "bytes": 106777,
+   "bytes": 103980,
    "tune": 14,
-   "loop_start": 71117,
-   "loop_end": 127008,
-   "loop_score": 0.998
+   "loop_start": 50018,
+   "loop_end": 123480,
+   "loop_score": 0.999
   },
   {
    "file": "trumpet_bright_vib_060_C4_v3.flac",
@@ -614,12 +614,12 @@
    "hikey": 61,
    "lovel": 86,
    "hivel": 127,
-   "frames": 141120,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.C4.wav",
-   "bytes": 119768,
+   "bytes": 120533,
    "tune": -5,
-   "loop_start": 105009,
-   "loop_end": 141120,
+   "loop_start": 105891,
+   "loop_end": 142002,
    "loop_score": 0.999
   },
   {
@@ -629,12 +629,12 @@
    "hikey": 63,
    "lovel": 86,
    "hivel": 127,
-   "frames": 162288,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.D4.wav",
-   "bytes": 142224,
+   "bytes": 124444,
    "tune": -5,
-   "loop_start": 105678,
-   "loop_end": 162288,
+   "loop_start": 103802,
+   "loop_end": 142002,
    "loop_score": 0.998
   },
   {
@@ -644,12 +644,12 @@
    "hikey": 65,
    "lovel": 86,
    "hivel": 127,
-   "frames": 127008,
+   "frames": 123480,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.E4.wav",
-   "bytes": 115665,
+   "bytes": 112492,
    "tune": -10,
-   "loop_start": 81741,
-   "loop_end": 127008,
+   "loop_start": 87260,
+   "loop_end": 123480,
    "loop_score": 0.999
   },
   {
@@ -659,13 +659,13 @@
    "hikey": 67,
    "lovel": 86,
    "hivel": 127,
-   "frames": 127008,
+   "frames": 129654,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.Fs4.wav",
-   "bytes": 118584,
+   "bytes": 120863,
    "tune": -1,
-   "loop_start": 78604,
-   "loop_end": 127008,
-   "loop_score": 0.998
+   "loop_start": 81253,
+   "loop_end": 129654,
+   "loop_score": 0.999
   },
   {
    "file": "trumpet_bright_vib_068_Gs4_v3.flac",
@@ -674,13 +674,13 @@
    "hikey": 69,
    "lovel": 86,
    "hivel": 127,
-   "frames": 127008,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.Gs4.wav",
-   "bytes": 126355,
+   "bytes": 141091,
    "tune": -4,
-   "loop_start": 89817,
-   "loop_end": 127008,
-   "loop_score": 0.998
+   "loop_start": 95907,
+   "loop_end": 142002,
+   "loop_score": 0.996
   },
   {
    "file": "trumpet_bright_vib_070_As4_v3.flac",
@@ -689,12 +689,12 @@
    "hikey": 71,
    "lovel": 86,
    "hivel": 127,
-   "frames": 134064,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.As4.wav",
-   "bytes": 124035,
+   "bytes": 131565,
    "tune": -4,
-   "loop_start": 90628,
-   "loop_end": 134064,
+   "loop_start": 79879,
+   "loop_end": 142002,
    "loop_score": 0.997
   },
   {
@@ -704,12 +704,12 @@
    "hikey": 73,
    "lovel": 86,
    "hivel": 127,
-   "frames": 141120,
+   "frames": 129654,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.C5.wav",
-   "bytes": 137414,
+   "bytes": 126745,
    "tune": -7,
-   "loop_start": 105192,
-   "loop_end": 141120,
+   "loop_start": 69153,
+   "loop_end": 129654,
    "loop_score": 0.998
   },
   {
@@ -719,13 +719,13 @@
    "hikey": 75,
    "lovel": 86,
    "hivel": 127,
-   "frames": 134064,
+   "frames": 117306,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.D5.wav",
-   "bytes": 133785,
+   "bytes": 116350,
    "tune": -4,
-   "loop_start": 97392,
-   "loop_end": 134064,
-   "loop_score": 0.998
+   "loop_start": 71524,
+   "loop_end": 117306,
+   "loop_score": 0.996
   },
   {
    "file": "trumpet_bright_vib_076_E5_v3.flac",
@@ -734,13 +734,13 @@
    "hikey": 77,
    "lovel": 86,
    "hivel": 127,
-   "frames": 134064,
+   "frames": 135828,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.E5.wav",
-   "bytes": 140553,
+   "bytes": 142582,
    "tune": -16,
-   "loop_start": 88459,
-   "loop_end": 134064,
-   "loop_score": 0.997
+   "loop_start": 81271,
+   "loop_end": 135828,
+   "loop_score": 0.998
   },
   {
    "file": "trumpet_bright_vib_078_Fs5_v3.flac",
@@ -749,13 +749,13 @@
    "hikey": 79,
    "lovel": 86,
    "hivel": 127,
-   "frames": 134064,
+   "frames": 111132,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.Fs5.wav",
-   "bytes": 146211,
+   "bytes": 120766,
    "tune": -14,
-   "loop_start": 78915,
-   "loop_end": 134064,
-   "loop_score": 0.995
+   "loop_start": 48345,
+   "loop_end": 111132,
+   "loop_score": 0.996
   },
   {
    "file": "trumpet_bright_vib_080_Gs5_v3.flac",
@@ -764,13 +764,13 @@
    "hikey": 81,
    "lovel": 86,
    "hivel": 127,
-   "frames": 155232,
+   "frames": 117306,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.Gs5.wav",
-   "bytes": 170204,
+   "bytes": 126205,
    "tune": -19,
-   "loop_start": 119282,
-   "loop_end": 155232,
-   "loop_score": 0.994
+   "loop_start": 62405,
+   "loop_end": 117306,
+   "loop_score": 0.997
   },
   {
    "file": "trumpet_bright_vib_082_As5_v3.flac",
@@ -779,13 +779,13 @@
    "hikey": 83,
    "lovel": 86,
    "hivel": 127,
-   "frames": 148176,
+   "frames": 135828,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.As5.wav",
-   "bytes": 176233,
+   "bytes": 161003,
    "tune": -12,
-   "loop_start": 93489,
-   "loop_end": 148176,
-   "loop_score": 0.999
+   "loop_start": 80761,
+   "loop_end": 135828,
+   "loop_score": 0.997
   },
   {
    "file": "trumpet_bright_vib_084_C6_v3.flac",
@@ -794,13 +794,13 @@
    "hikey": 85,
    "lovel": 86,
    "hivel": 127,
-   "frames": 148176,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.C6.wav",
-   "bytes": 182501,
+   "bytes": 174580,
    "tune": -9,
-   "loop_start": 90391,
-   "loop_end": 148176,
-   "loop_score": 0.999
+   "loop_start": 84881,
+   "loop_end": 142002,
+   "loop_score": 0.998
   },
   {
    "file": "trumpet_bright_vib_086_D6_v3.flac",
@@ -809,14 +809,14 @@
    "hikey": 98,
    "lovel": 86,
    "hivel": 127,
-   "frames": 134064,
+   "frames": 142002,
    "orig": "raw/IowaMIS-notes/Brass/Bbtrumpet/Trumpet.vib.ff.D6.wav",
-   "bytes": 173261,
+   "bytes": 183867,
    "tune": 5,
-   "loop_start": 98562,
-   "loop_end": 134064,
+   "loop_start": 106509,
+   "loop_end": 142002,
    "loop_score": 0.999
   }
  ],
- "total_bytes": 5967790
+ "total_bytes": 5444920
 }

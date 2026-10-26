@@ -59,13 +59,13 @@
    "hikey": 57,
    "lovel": 1,
    "hivel": 42,
-   "frames": 116355,
+   "frames": 111132,
    "orig": "raw/IowaMIS-notes/Woodwinds/altosaxophone/AltoSax.NoVib.pp.Gs3.wav",
-   "bytes": 60350,
+   "bytes": 57748,
    "tune": 1,
-   "loop_start": 71692,
-   "loop_end": 116355,
-   "loop_score": 0.992
+   "loop_start": 72851,
+   "loop_end": 111132,
+   "loop_score": 0.998
   },
   {
    "file": "alto_sax_058_As3_v1.flac",
@@ -74,13 +74,13 @@
    "hikey": 59,
    "lovel": 1,
    "hivel": 42,
-   "frames": 115629,
+   "frames": 111132,
    "orig": "raw/IowaMIS-notes/Woodwinds/altosaxophone/AltoSax.NoVib.pp.As3.wav",
-   "bytes": 57340,
+   "bytes": 55206,
    "tune": -7,
-   "loop_start": 50032,
-   "loop_end": 115629,
-   "loop_score": 0.91
+   "loop_start": 50438,
+   "loop_end": 111132,
+   "loop_score": 0.956
   },
   {
    "file": "alto_sax_060_C4_v1.flac",
@@ -179,13 +179,13 @@
    "hikey": 73,
    "lovel": 1,
    "hivel": 42,
-   "frames": 113867,
+   "frames": 111132,
    "orig": "raw/IowaMIS-notes/Woodwinds/altosaxophone/AltoSax.NoVib.pp.C5.wav",
-   "bytes": 80165,
+   "bytes": 78184,
    "tune": -47,
-   "loop_start": 61343,
-   "loop_end": 113867,
-   "loop_score": 0.993
+   "loop_start": 67463,
+   "loop_end": 111132,
+   "loop_score": 0.996
   },
   {
    "file": "alto_sax_074_D5_v1.flac",
@@ -224,13 +224,13 @@
    "hikey": 79,
    "lovel": 1,
    "hivel": 42,
-   "frames": 113626,
+   "frames": 111132,
    "orig": "raw/IowaMIS-notes/Woodwinds/altosaxophone/AltoSax.NoVib.pp.Fs5.wav",
-   "bytes": 70649,
+   "bytes": 68987,
    "tune": -39,
-   "loop_start": 65074,
-   "loop_end": 113626,
-   "loop_score": 0.997
+   "loop_start": 64563,
+   "loop_end": 111132,
+   "loop_score": 0.996
   },
   {
    "file": "alto_sax_080_Gs5_v1.flac",
@@ -239,12 +239,12 @@
    "hikey": 92,
    "lovel": 1,
    "hivel": 42,
-   "frames": 134064,
+   "frames": 117306,
    "orig": "raw/IowaMIS-notes/Woodwinds/altosaxophone/AltoSax.NoVib.pp.Gs5.wav",
-   "bytes": 84980,
+   "bytes": 75321,
    "tune": -52,
-   "loop_start": 47666,
-   "loop_end": 134064,
+   "loop_start": 46094,
+   "loop_end": 117306,
    "loop_score": 0.998
   },
   {
@@ -704,13 +704,13 @@
    "hikey": 79,
    "lovel": 86,
    "hivel": 127,
-   "frames": 120668,
+   "frames": 117306,
    "orig": "raw/IowaMIS-notes/Woodwinds/altosaxophone/AltoSax.NoVib.ff.Fs5.wav",
-   "bytes": 158468,
+   "bytes": 154212,
    "tune": -4,
-   "loop_start": 85164,
-   "loop_end": 120668,
-   "loop_score": 0.947
+   "loop_start": 81846,
+   "loop_end": 117306,
+   "loop_score": 0.974
   },
   {
    "file": "alto_sax_080_Gs5_v3.flac",
@@ -728,5 +728,5 @@
    "loop_score": 0.991
   }
  ],
- "total_bytes": 4423291
+ "total_bytes": 4400997
 }

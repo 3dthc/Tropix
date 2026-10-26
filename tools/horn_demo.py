@@ -157,7 +157,7 @@ def trumpet_solo():
         (8, 72, 1.5, "a"), (9.5, 69, 0.5, ""), (10, 65, 1, ""), (11, 67, 0.5, "x"), (11.5, 69, 0.5, "x"),
         (12, 67, 3, "v"),
     ]
-    sax_line(buf, 0, b, open_line, base_vel=0.7, stab="trumpet_stab", sus="trumpet", vib="trumpet_vib")
+    sax_line(buf, 0, b, open_line, base_vel=0.7, stab="trumpet_stab", sus="trumpet", vib=None)
     harmon_line = [(beat + 16, m, d, f.replace("v", "")) for beat, m, d, f in open_line[:-1]] + [(28, 65, 3, "f")]
     sax_line(buf, 0, b, harmon_line, base_vel=0.75, stab="trumpet_harmon", sus="trumpet_harmon", vib=None)
     return finish(buf)
@@ -186,7 +186,7 @@ def afrobeat():
         if rep == 0:
             continue  # the band plays one riff-length alone first
         off = [(beat + rep * 8, m, d, f) for beat, m, d, f in riff]
-        sax_line(buf, 0, b, off, 0.78, stab="trumpet_stab", sus="trumpet", vib="trumpet_vib")
+        sax_line(buf, 0, b, off, 0.78, stab="trumpet_stab", sus="trumpet_bright", vib="trumpet_bright_vib")
         sax_line(buf, 0, b, off, 0.8, transpose=-12)  # tenor sax an octave below
         # trombone: long tones under the riff, a stab and a fall at the end of each riff
         tb = [(rep * 8, 50, 2, "a"), (rep * 8 + 2, 48, 1.5, ""), (rep * 8 + 4, 53, 1.5, "s"),
@@ -234,12 +234,9 @@ if __name__ == "__main__":
     out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), "..", "docs", "demos")
     os.makedirs(out, exist_ok=True)
     jobs = {"horns_kompa_alto_sax": lambda: kompa("alto_sax", "alto_sax", "alto_sax_vib"),
-            "horns_compare_trumpets": lambda: compare([("trumpet_stab", "trumpet", "trumpet_vib"),
+            "horns_compare_trumpets": lambda: compare([("trumpet_stab", "trumpet", None),
                                                        ("trumpet_bright", "trumpet_bright", "trumpet_bright_vib")],
                                                       PHRASE),
-            "horns_compare_soprano": lambda: compare([("saxello", "saxello", "saxello_vib"),
-                                                      ("soprano_sax", "soprano_sax", "soprano_sax_vib")],
-                                                     [(beat, m + 5, d, f) for beat, m, d, f in PHRASE]),
             "horns_kompa_tenor_sax": kompa, "horns_trumpet_solo": trumpet_solo,
             "horns_afrobeat_section": afrobeat, "horns_soca_stabs": soca}
     for name in (sys.argv[2:] or jobs):

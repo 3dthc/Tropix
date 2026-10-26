@@ -659,13 +659,13 @@
    "hikey": 79,
    "lovel": 86,
    "hivel": 127,
-   "frames": 124825,
+   "frames": 123480,
    "orig": "raw/IowaMIS-notes/Woodwinds/sopranosaxophone/SopSax.NoVib.ff.Fs5.wav",
-   "bytes": 155768,
+   "bytes": 154156,
    "tune": -3,
-   "loop_start": 69186,
-   "loop_end": 124825,
-   "loop_score": 0.986
+   "loop_start": 72069,
+   "loop_end": 123480,
+   "loop_score": 0.987
   },
   {
    "file": "soprano_sax_080_Gs5_v3.flac",
@@ -728,5 +728,5 @@
    "loop_score": 0.952
   }
  ],
- "total_bytes": 4988654
+ "total_bytes": 4987042
 }
