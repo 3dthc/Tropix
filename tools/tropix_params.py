@@ -19,9 +19,9 @@ INSTRUMENTS = [d for _, d, _ in ORDER]
 LAYERS = "ab"
 GENRES = ["ALL", "AFROBEAT", "AMAPIANO", "KOMPA", "SOCA", "REGGAE", "HAWAIIAN"]   # 0 = every genre
 LIST_ROWS = 8                       # the BROWSE view's preset list: pages of 8
-VIEWS = ["Browse", "Sound", "Settings"]
-THEMES = ["Sunset", "Lagos", "Aloha", "Kingston", "Kanaval", "Jozi Night"]   # = make_skin.THEMES, in order
-WAVE_FRAMES = 17                    # the SOUND view's waveform: idle + 4 levels x 4 phases
+VIEWS = ["Browse", "Layers", "Settings"]
+THEMES = ["Sunset", "Lagos", "Aloha", "Jamaica", "Rasta", "Haiti", "Africa", "Kanaval", "Jozi Night"]   # = make_skin.THEMES, in order
+WAVE_FRAMES = 17                    # the LAYERS view's waveform: idle + 4 levels x 4 phases
 DELAY_TIMES = ["1/16", "1/8T", "1/8", "1/8.", "1/4T", "1/4", "1/4.", "1/2"]
 VOICE_MODES = ["Poly", "Mono", "Legato"]
 LFO_TARGETS = ["Tremolo", "Filter", "Auto-Pan"]
@@ -70,7 +70,7 @@ def spec():
     P = [knob("volume", "Volume", 0.8, fmt="VOL", preset=False),           # index 0: MPC toggles it on insert / STOP
          option("preset", "Preset", [p["name"] for p in PRESETS], PRESETS[0]["name"], preset=False)]
     P += [tap("prev", "Previous Preset"), tap("next", "Next Preset"), tap("go_browse", "Show Browser"),
-          tap("go_sound", "Show Sound"), tap("go_settings", "Show Settings"), tap("fav_tap", "Favourite"),
+          tap("go_layers", "Show Layers"), tap("go_settings", "Show Settings"), tap("fav_tap", "Favourite"),
           tap("favs_tap", "Favourites List"), tap("reset_tap", "Reset Preset"),
           option("view", "View", VIEWS, VIEWS[0], preset=False)]
     P += [knob("cutoff", "Cutoff", 1.0, fmt="CUTOFF"), knob("resonance", "Resonance", 0.0),
@@ -121,7 +121,9 @@ def spec():
           display("wave", "Waveform", WAVE_FRAMES - 1), display("fav", "Favourite Lit", 1),
           display("favs", "Favourites Shown", 1), display("edited", "Edited", 1), display("midi_led", "MIDI LED", 1),
           display("cpu", "CPU", 10), display("pgenre", "Preset Genre", len(GENRES) - 1),
-          display("ptype", "Preset Type", len(TYPES) - 1)]
+          display("ptype", "Preset Type", len(TYPES) - 1),
+          display("sel_genre", "Genre Lit", len(GENRES)), display("sel_type", "Type Lit", len(TYPES)),
+          display("sel_row", "Preset Row Lit", LIST_ROWS)]
     P += [display("act_" + l, "Layer %s Active" % l.upper(), 1) for l in LAYERS]
     P += [text(k, n) for k, n in (("hdr_info", "Header Info"), ("desc_1", "Description 1"), ("desc_2", "Description 2"),
                                   ("list_head", "List Heading"), ("cw_name", "Colorway Name"))]
@@ -141,7 +143,6 @@ def spec():
         P += [tap("t%s_%s" % (c, l), "Layer %s %s Pad" % (l.upper(), lab.title())) for c, _, lab in LAYER_CELLS]
         P += [tap("tname_" + l, "Layer %s Sound Pad" % l.upper())]
     P += [tap("set_" + k, "Setting Pad %s" % k) for k in SETTING_KEYS]
-    P += [tap("sw_%d" % (i + 1), "Colorway Pad %d" % (i + 1)) for i in range(len(THEMES))]
     return P
 
 

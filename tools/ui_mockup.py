@@ -26,8 +26,18 @@ THEMES = {
                   glass="#0a1912", ink="#fbf1d6", dim="#a7b896", sym="#f2b632", cap="#21422f", knobmark="#fbf1d6"),
     "aloha": dict(label="ALOHA", bg="#0b2a3a", bg2="#11586b", panel="#123a4d", accent="#ff5d8f", accent2="#f6d7a7",
                   glass="#08202d", ink="#eefaff", dim="#93b8c6", sym="#7fe3e0", cap="#1a4a60", knobmark="#eefaff"),
-    "kingston": dict(label="KINGSTON", bg="#141414", bg2="#2b2a1c", panel="#1e1e1d", accent="#f5c518", accent2="#2fa84f",
-                     glass="#0c0c0c", ink="#f6f1e2", dim="#a8a493", sym="#2fa84f", cap="#2b2b2a", knobmark="#f6f1e2"),
+    "jamaica": dict(label="JAMAICA", bg="#08130c", bg2="#0f4422", panel="#10241a", accent="#fed100", accent2="#2dbd5a",
+                    glass="#07120b", ink="#fbf6dc", dim="#a3b8a3", sym="#fed100", cap="#1d3626", knobmark="#fbf6dc",
+                    flag=["#1f9e47", "#fed100", "#111111", "#fed100", "#1f9e47"]),
+    "rasta": dict(label="RASTA", bg="#0e0d0a", bg2="#2a2410", panel="#1a1813", accent="#f5c518", accent2="#3fb950",
+                  glass="#0c0b08", ink="#f7f1df", dim="#aca68f", sym="#e0392b", cap="#2c2a22", knobmark="#f7f1df",
+                  flag=["#d7261e", "#f5c518", "#1e9e3e"]),
+    "haiti": dict(label="HAITI", bg="#0a1444", bg2="#15287a", panel="#122162", accent="#e0153a", accent2="#ffffff",
+                  glass="#0a1340", ink="#f4f6ff", dim="#a3add9", sym="#49a84a", cap="#1d2f78", knobmark="#f4f6ff",
+                  flag=["#00209f", "#d21034"]),
+    "africa": dict(label="AFRICA", bg="#100c0b", bg2="#3d1210", panel="#1c1514", accent="#e5372e", accent2="#33b864",
+                   glass="#0e0a09", ink="#f6eee8", dim="#b4a29c", sym="#33b864", cap="#2d2321", knobmark="#f6eee8",
+                   flag=["#e5372e", "#141414", "#1f9e47"]),
     "kanaval": dict(label="KANAVAL", bg="#0d1a4a", bg2="#3b1660", panel="#16245c", accent="#ff3b4f", accent2="#ffd23f",
                     glass="#09113a", ink="#f3f5ff", dim="#9aa6d6", sym="#ffd23f", cap="#23326e", knobmark="#f3f5ff"),
     "jozi": dict(label="JOZI NIGHT", bg="#120f1c", bg2="#3a1d5c", panel="#1d1830", accent="#b06cff", accent2="#3de0b0",
@@ -169,7 +179,7 @@ def screen_sound(t):
 
 def page_html(theme, view):
     t = THEMES[theme]
-    css_vars = ";".join(f"--{k}:{v}" for k, v in t.items() if k != "label")
+    css_vars = ";".join(f"--{k}:{v}" for k, v in t.items() if k not in ("label", "flag"))
     if view == "settings":
         center = settings_center(t, theme)
     else:

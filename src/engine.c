@@ -319,7 +319,7 @@ typedef struct {
     voice_t v[MAX_V];
     ev_t ev[MAX_EV]; int nev;
     int pedal;
-    float bend, mw;
+    float bend, mw, press;             /* pitch bend, mod wheel, pressure (channel / poly aftertouch) */
     float vol_smooth;
     uint32_t note_counter;
     int last_key;                    /* the last note played (glide starts there) */
@@ -426,6 +426,14 @@ static void sync_flags(inst_t *s) {
     float g = (float)PRESET_GENRE[pr], t = (float)PRESET_TYPE[pr];
     if (f != s->p[P_FAV] || l != s->p[P_FAVS] || e != s->p[P_EDITED] || g != s->p[P_PGENRE] || t != s->p[P_PTYPE]) {
         s->p[P_FAV] = f; s->p[P_FAVS] = l; s->p[P_EDITED] = e; s->p[P_PGENRE] = g; s->p[P_PTYPE] = t;
+        s->rev++;
+    }
+    /* the BROWSE lists' highlights (0 = none, else the lit row + 1): one picture per column, so each colorway has its own */
+    int row = 0;
+    for (int r = 0; r < LIST_ROWS; r++) if (list_preset(s, r) == pr) row = r + 1;
+    float sg = s->favs ? 0.0f : (float)(s->genre + 1), st = (s->favs || s->type < 0) ? 0.0f : (float)(s->type + 1);
+    if (sg != s->p[P_SEL_GENRE] || st != s->p[P_SEL_TYPE] || (float)row != s->p[P_SEL_ROW]) {
+        s->p[P_SEL_GENRE] = sg; s->p[P_SEL_TYPE] = st; s->p[P_SEL_ROW] = (float)row;
         s->rev++;
     }
 }
@@ -572,8 +580,10 @@ static void note_on(inst_t *s, int key, int vel) {
     float vn = powf(vel / 127.0f, CURVE_EXP[ival(s, P_VEL_CURVE, 0, 2)]);
     int zvel = (int)lroundf(vn * 127.0f);                      /* the curve also picks the sample layer */
     if (zvel < 1) zvel = 1;
+    /* velocity: a steady curve in dB (at full VELOCITY, amplitude = curve^1.3: -8.5 dB at 64, -16 dB at 32 on NORMAL);
+     * the sample layers it picks add tone, and only a little level (tools/pack_tropix.py, LAYER_KEEP) */
     float sens = clamp01(s->p[P_VEL_SENS]);
-    float vgain = (1.0f - sens) + sens * (0.08f + 0.92f * vn);
+    float vgain = powf(vn > 0.001f ? vn : 0.001f, 1.3f * sens);
     float lg = 1.0f / sqrtf((float)playing);                  /* stacked layers keep about the level of one */
     int scoop = ival(s, P_SCOOP, 0, 2);
     float sdepth = scoop == 0 ? 0.0f : (scoop == 1 ? 0.7f : 1.6f) * (0.55f + 0.6f * vn);
@@ -661,6 +671,10 @@ static void handle_event(inst_t *s, const ev_t *e) {
             s->pedal = down;
         } else if (e->d1 == 120) all_off(s, 1);
         else if (e->d1 == 123) all_off(s, 0);
+    } else if (type == 0xD0) s->press = (e->d1 & 127) / 127.0f;      /* channel pressure */
+    else if (type == 0xA0) {                                              /* poly pressure: the strongest key counts */
+        float p = (e->d2 & 127) / 127.0f;
+        if (p > s->press || p < 0.01f) s->press = p;
     } else if (type == 0xE0) {
         int pb = ((e->d2 & 127) << 7 | (e->d1 & 127)) - 8192;
         s->bend = pb / 8192.0f;
@@ -775,10 +789,11 @@ static void eng_midi(void *inst, const uint8_t *msg, int len) {
 static int is_computed(int i) {      /* the engine's own displays: never set from outside */
     if (PINFO[i].kind == K_TEXT) return 1;
     return i == P_LOOK || i == P_WAVE || i == P_FAV || i == P_FAVS || i == P_EDITED || i == P_MIDI_LED ||
-           i == P_CPU || i == P_PGENRE || i == P_PTYPE || i == P_ACT_A || i == P_ACT_B;
+           i == P_CPU || i == P_PGENRE || i == P_PTYPE || i == P_ACT_A || i == P_ACT_B ||
+           i == P_SEL_GENRE || i == P_SEL_TYPE || i == P_SEL_ROW;
 }
 
-/* a SOUND view cell or SETTINGS row: the data wheel moves its value one step */
+/* a LAYERS view cell or SETTINGS row: the data wheel moves its value one step */
 static int cell_param(int i, int *layer) {
     for (int l = 0; l < NLAYER; l++) {
         int o = l * (P_TLV_B - P_TLV_A);
@@ -814,7 +829,7 @@ static void nudge(inst_t *s, int i, int dir) {
 static void pad_tapped(inst_t *s, int i) {
     int l;
     if (i == P_PREV || i == P_NEXT) step_preset(s, i == P_NEXT ? 1 : -1);
-    else if (i == P_GO_BROWSE || i == P_GO_SOUND || i == P_GO_SETTINGS) set_view(s, i - P_GO_BROWSE);
+    else if (i == P_GO_BROWSE || i == P_GO_LAYERS || i == P_GO_SETTINGS) set_view(s, i - P_GO_BROWSE);
     else if (i == P_FAV_TAP) fav_set(s, cur_preset(s), !fav_get(s, cur_preset(s)));
     else if (i == P_FAVS_TAP) { s->favs = !s->favs; set_view(s, 0); }
     else if (i == P_RESET_TAP) apply_preset(s, cur_preset(s));
@@ -831,8 +846,7 @@ static void pad_tapped(inst_t *s, int i) {
             step_option(s, q, 1, 1);
             if (q == P_VOICE_MODE) s->nheld = 0;
         }
-    } else if (i >= P_SW_1 && i < P_SW_1 + NTHEME) { s->p[P_THEME] = (float)(i - P_SW_1); sync_view(s); }
-    else if (cell_param(i, &l) >= 0 || i == P_TNAME_A || i == P_TNAME_B) { /* a tap only gives the cell the wheel */ }
+    } else if (cell_param(i, &l) >= 0 || i == P_TNAME_A || i == P_TNAME_B) { /* a tap only gives the cell the wheel */ }
     sync_flags(s);
     s->rev++;
 }
@@ -851,8 +865,7 @@ static void pad_wheel(inst_t *s, int i, int dir) {
         q = SETTING_PARAM[i - P_SET_VOICE_MODE];
         nudge(s, q, dir);
         if (q == P_VOICE_MODE) s->nheld = 0;
-    } else if (i >= P_SW_1 && i < P_SW_1 + NTHEME) { step_option(s, P_THEME, dir, 1); sync_view(s); }
-    else step_preset(s, dir);
+    } else step_preset(s, dir);
     sync_flags(s);
     s->rev++;
 }
@@ -880,8 +893,9 @@ static void eng_set_param(void *inst, const char *key, const char *val) {
     if (i < 0 || is_computed(i)) return;
     if (is_tap(i)) { tap_pad(s, i, x); return; }
     if (PINFO[i].kind == K_MOMENTARY) {
+        float was = s->p[i];
         s->p[i] = x;
-        if (!tapped(s, i)) return;
+        if (x < 0.5f || was >= 0.5f || !tapped(s, i)) return;   /* the press only: its release (0) steps nothing */
         if (i == P_THEME_PREV || i == P_THEME_NEXT) { step_option(s, P_THEME, i == P_THEME_NEXT ? 1 : -1, 1); sync_view(s); }
         else for (int l = 0; l < NLAYER; l++)
             if (i == LP(P_INST_A_PREV, l) || i == LP(P_INST_A_NEXT, l)) {
@@ -923,7 +937,7 @@ static int fmt_display(const inst_t *s, int i, char *buf, int n) {
     float x = s->p[i];
     if (PINFO[i].kind == K_OPTION && OPT_OF[i]) return snprintf(buf, n, "%s", OPT_OF[i][ival(s, i, 0, (int)PINFO[i].hi)]);
     switch (PINFO[i].fmt) {
-    case F_VOL: return x <= 0.001f ? snprintf(buf, n, "-inf dB") : snprintf(buf, n, "%.1f dB", 40.0f * log10f(x));
+    case F_VOL: return x <= 0.001f ? snprintf(buf, n, "-inf dB") : snprintf(buf, n, "%+.1f dB", 20.0f * log10f(2.0f * x * x));
     case F_LEVEL: return x <= 0.001f ? snprintf(buf, n, "OFF") : snprintf(buf, n, "%.0f dB", 40.0f * log10f(x / 0.8f) + 0.0f);
     case F_PCT: return snprintf(buf, n, "%d%%", (int)lroundf(clamp01(x) * 100));
     case F_DB: return snprintf(buf, n, "%+.1f dB", x);
@@ -1066,13 +1080,14 @@ static void eng_render(void *inst, int16_t *out, int frames) {
     float a4 = s->p[P_A4_REF];
     if (!(a4 >= 400 && a4 <= 480)) a4 = 440;
     int mwmode = ival(s, P_MOD_WHEEL, 0, 2);
+    float mw = s->mw > s->press ? s->mw : s->press;                     /* pressing into a pad works like the wheel */
     float lfo_rate = lfo_hz(s->p[P_LFO_RATE]);
     s->lfo_ph += lfo_rate * dt; s->lfo_ph -= floorf(s->lfo_ph);
     s->vib_ph += 5.3f * dt; s->vib_ph -= floorf(s->vib_ph);
     float lfo = sinf(2 * PI_F * s->lfo_ph);
     float vib_wave = sinf(2 * PI_F * s->vib_ph);
     float vib_semis = vib_ct(s->p[P_VIBRATO]) * 0.01f;                          /* delayed, per voice */
-    float wheel_vib = mwmode == 0 ? s->mw * 0.5f * vib_wave : 0.0f;               /* at once */
+    float wheel_vib = mwmode == 0 ? mw * 0.5f * vib_wave : 0.0f;                  /* at once */
     float global_semis = ival(s, P_TRANSPOSE, -24, 24) + s->bend * ival(s, P_BEND_RANGE, 0, 24) + wheel_vib;
     float pitch_base = a4 / 440.0f;
     float gl = glide_s(s->p[P_GLIDE]);
@@ -1091,7 +1106,7 @@ static void eng_render(void *inst, int16_t *out, int frames) {
     /* filter: cutoff, +/- 5 octaves of envelope (centre = none), key track, velocity, the LFO, the mod wheel */
     int target = ival(s, P_LFO_TARGET, 0, 2);
     float depth = clamp01(s->p[P_LFO_DEPTH]);
-    float cut_oct = log2f(cutoff_hz(s->p[P_CUTOFF])) + (mwmode == 1 ? s->mw * 4.0f : 0.0f);
+    float cut_oct = log2f(cutoff_hz(s->p[P_CUTOFF])) + (mwmode == 1 ? mw * 4.0f : 0.0f);
     float env_oct = (clamp01(s->p[P_ENV_AMT]) - 0.5f) * 10.0f;
     float lfo_span = target == LFO_FILTER ? depth * 3.0f : 0.0f;
     float lfo_oct = lfo_span * lfo;

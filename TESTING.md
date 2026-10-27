@@ -19,15 +19,16 @@
 | 6 | Turn each of the 16 knobs (touch and Q-Links) | the sound changes; the value under the knob updates; header says EDITED; RESET lights |
 | 7 | RESET | the preset's own settings come back, EDITED goes away |
 | 8 | ★ FAV, then ★ LIST | the star shows by the name; the list shows the favourite; ★ LIST again goes back |
-| 9 | SOUND view | waveform moves while playing; both layer cards show their sounds |
+| 9 | LAYERS view | waveform moves while playing; both layer cards show their sounds |
 | 10 | ◀ ▶ on a layer; touch its name and turn the wheel | the layer's sound changes |
 | 11 | Touch LEVEL / PAN / OCTAVE / FINE, turn the wheel | the value steps; the sound follows |
 | 12 | ON and SOLO on each layer | the layer turns off / plays alone |
 | 13 | "Alto Lead Kompa": play a legato line | notes slide into each other with a scoop; vibrato comes in on held notes |
 | 14 | "Kompa Percussion": play C2 up, and C6 up | island kit from C2; timbales from C6 |
 | 15 | SETTINGS: tap VOICE MODE; touch A4 REFERENCE and turn the wheel | POLY / MONO / LEGATO step; 440 Hz moves by 1 |
-| 16 | Colorway ◀ ▶ and each swatch | the whole page changes colour; the ring moves |
-| 17 | Mod wheel, pitch bend, sustain pedal | vibrato (default), bend ±2, sustain |
+| 16 | Colorway ◀ ▶, one tap at a time | one colorway per tap, all nine, the whole page changes |
+| 17 | Mod wheel, pressing into a pad, pitch bend, sustain pedal | vibrato (default) from wheel and pressure, bend ±2, sustain |
+| 17b | Play one key soft to hard | it gets louder smoothly all the way, no jump |
 | 18 | Save the project, reload it | preset, edits, favourites and colorway come back |
 | 19 | Two Tropix tracks at once | both play; no glitches |
 | 20 | MPC's PRESET menu in the plugin header | lists all 128; picking one loads it and the browser shows it |

@@ -27,7 +27,7 @@ jobs:
       build: bash tools/ci_build.sh
       host_test: 'mkdir -p vst/build/engine && cp engine/* vst/build/engine/ && "$MPC_VST/tools/test_port.sh" vst/vst.json'
       extra: engine:engine
-      about: Island and afro sounds - 128 presets and 65 instruments for afrobeat, amapiano, kompa, soca, reggae and Hawaiian music. Two layers, glide, scoop, vibrato, filter, drive, chorus, delay, reverb, six colorways.
+      about: Island and afro sounds - 128 presets and 65 instruments for afrobeat, amapiano, kompa, soca, reggae and Hawaiian music. Two layers, glide, scoop, vibrato, filter, drive, chorus, delay, reverb, nine colorways.
       plugin_id: tropix
       license: MIT
       dry_run: ${{ inputs.dry_run }}

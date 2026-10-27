@@ -5,7 +5,7 @@ enum {
     P_PREV,
     P_NEXT,
     P_GO_BROWSE,
-    P_GO_SOUND,
+    P_GO_LAYERS,
     P_GO_SETTINGS,
     P_FAV_TAP,
     P_FAVS_TAP,
@@ -81,6 +81,9 @@ enum {
     P_CPU,
     P_PGENRE,
     P_PTYPE,
+    P_SEL_GENRE,
+    P_SEL_TYPE,
+    P_SEL_ROW,
     P_ACT_A,
     P_ACT_B,
     P_HDR_INFO,
@@ -188,12 +191,6 @@ enum {
     P_SET_MOD_WHEEL,
     P_SET_SPREAD,
     P_SET_ANIM,
-    P_SW_1,
-    P_SW_2,
-    P_SW_3,
-    P_SW_4,
-    P_SW_5,
-    P_SW_6,
     NP
 };
 static const char *const PKEY[NP] = {
@@ -202,7 +199,7 @@ static const char *const PKEY[NP] = {
     "prev",
     "next",
     "go_browse",
-    "go_sound",
+    "go_layers",
     "go_settings",
     "fav_tap",
     "favs_tap",
@@ -278,6 +275,9 @@ static const char *const PKEY[NP] = {
     "cpu",
     "pgenre",
     "ptype",
+    "sel_genre",
+    "sel_type",
+    "sel_row",
     "act_a",
     "act_b",
     "hdr_info",
@@ -385,12 +385,6 @@ static const char *const PKEY[NP] = {
     "set_mod_wheel",
     "set_spread",
     "set_anim",
-    "sw_1",
-    "sw_2",
-    "sw_3",
-    "sw_4",
-    "sw_5",
-    "sw_6",
 };
 static const char *const PNAME[NP] = {
     "VOLUME",
@@ -398,7 +392,7 @@ static const char *const PNAME[NP] = {
     "PREVIOUS PRESET",
     "NEXT PRESET",
     "SHOW BROWSER",
-    "SHOW SOUND",
+    "SHOW LAYERS",
     "SHOW SETTINGS",
     "FAVOURITE",
     "FAVOURITES LIST",
@@ -474,6 +468,9 @@ static const char *const PNAME[NP] = {
     "CPU",
     "PRESET GENRE",
     "PRESET TYPE",
+    "GENRE LIT",
+    "TYPE LIT",
+    "PRESET ROW LIT",
     "LAYER A ACTIVE",
     "LAYER B ACTIVE",
     "HEADER INFO",
@@ -581,12 +578,6 @@ static const char *const PNAME[NP] = {
     "SETTING PAD MOD_WHEEL",
     "SETTING PAD SPREAD",
     "SETTING PAD ANIM",
-    "COLORWAY PAD 1",
-    "COLORWAY PAD 2",
-    "COLORWAY PAD 3",
-    "COLORWAY PAD 4",
-    "COLORWAY PAD 5",
-    "COLORWAY PAD 6",
 };
 enum { K_KNOB, K_OPTION, K_MOMENTARY, K_DISPLAY, K_TEXT };
 enum { F_ATTACK, F_BIPOLAR, F_BRIGHT, F_BROWSE, F_CENTS, F_CUTOFF, F_DB, F_GLIDE, F_HZINT, F_INT, F_LEVEL, F_LFO, F_LOOK, F_NONE, F_OCT, F_OPT, F_PAN, F_PCT, F_PREDELAY, F_SEMI, F_TAP, F_TIME, F_TONE, F_VIB, F_VOL };
@@ -597,7 +588,7 @@ static const pinfo_t PINFO[NP] = {
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* prev */
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* next */
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* go_browse */
-    { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* go_sound */
+    { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* go_layers */
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* go_settings */
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* fav_tap */
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* favs_tap */
@@ -660,11 +651,11 @@ static const pinfo_t PINFO[NP] = {
     { K_OPTION, F_OPT, 0.0f, 2.0f, 1.0f, 1, 0 },  /* vel_curve */
     { K_OPTION, F_OPT, 0.0f, 2.0f, 0.0f, 1, 0 },  /* mod_wheel */
     { K_OPTION, F_OPT, 0.0f, 2.0f, 2.0f, 1, 0 },  /* anim */
-    { K_OPTION, F_OPT, 0.0f, 5.0f, 0.0f, 1, 0 },  /* theme */
+    { K_OPTION, F_OPT, 0.0f, 8.0f, 0.0f, 1, 0 },  /* theme */
     { K_MOMENTARY, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* theme_prev */
     { K_MOMENTARY, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* theme_next */
     { K_KNOB, F_BROWSE, 0.0f, 1000.0f, 500.0f, 1, 0 },  /* browse */
-    { K_OPTION, F_LOOK, 0.0f, 17.0f, 0.0f, 1, 0 },  /* look */
+    { K_OPTION, F_LOOK, 0.0f, 26.0f, 0.0f, 1, 0 },  /* look */
     { K_DISPLAY, F_NONE, 0.0f, 16.0f, 0.0f, 0, 0 },  /* wave */
     { K_DISPLAY, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* fav */
     { K_DISPLAY, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* favs */
@@ -673,6 +664,9 @@ static const pinfo_t PINFO[NP] = {
     { K_DISPLAY, F_NONE, 0.0f, 10.0f, 0.0f, 0, 0 },  /* cpu */
     { K_DISPLAY, F_NONE, 0.0f, 6.0f, 0.0f, 0, 0 },  /* pgenre */
     { K_DISPLAY, F_NONE, 0.0f, 7.0f, 0.0f, 0, 0 },  /* ptype */
+    { K_DISPLAY, F_NONE, 0.0f, 7.0f, 0.0f, 0, 0 },  /* sel_genre */
+    { K_DISPLAY, F_NONE, 0.0f, 8.0f, 0.0f, 0, 0 },  /* sel_type */
+    { K_DISPLAY, F_NONE, 0.0f, 8.0f, 0.0f, 0, 0 },  /* sel_row */
     { K_DISPLAY, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* act_a */
     { K_DISPLAY, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* act_b */
     { K_TEXT, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* hdr_info */
@@ -780,15 +774,9 @@ static const pinfo_t PINFO[NP] = {
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* set_mod_wheel */
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* set_spread */
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* set_anim */
-    { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* sw_1 */
-    { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* sw_2 */
-    { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* sw_3 */
-    { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* sw_4 */
-    { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* sw_5 */
-    { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* sw_6 */
 };
 /* option labels (for the SETTINGS rows and the colorway name) */
-static const char *const OPT_VIEW[] __attribute__((unused)) = { "BROWSE", "SOUND", "SETTINGS" };
+static const char *const OPT_VIEW[] __attribute__((unused)) = { "BROWSE", "LAYERS", "SETTINGS" };
 static const char *const OPT_VOICE_MODE[] __attribute__((unused)) = { "POLY", "MONO", "LEGATO" };
 static const char *const OPT_LFO_TARGET[] __attribute__((unused)) = { "TREMOLO", "FILTER", "AUTO-PAN" };
 static const char *const OPT_SCOOP[] __attribute__((unused)) = { "OFF", "LIGHT", "DEEP" };
@@ -800,7 +788,7 @@ static const char *const OPT_SOLO_B[] __attribute__((unused)) = { "OFF", "ON" };
 static const char *const OPT_VEL_CURVE[] __attribute__((unused)) = { "SOFT", "NORMAL", "HARD" };
 static const char *const OPT_MOD_WHEEL[] __attribute__((unused)) = { "VIBRATO", "FILTER", "OFF" };
 static const char *const OPT_ANIM[] __attribute__((unused)) = { "OFF", "LOW", "SMOOTH" };
-static const char *const OPT_THEME[] __attribute__((unused)) = { "SUNSET", "LAGOS", "ALOHA", "KINGSTON", "KANAVAL", "JOZI NIGHT" };
+static const char *const OPT_THEME[] __attribute__((unused)) = { "SUNSET", "LAGOS", "ALOHA", "JAMAICA", "RASTA", "HAITI", "AFRICA", "KANAVAL", "JOZI NIGHT" };
 static const char *const *const OPT_OF[NP] = {
     0,
     0,
@@ -993,12 +981,9 @@ static const char *const *const OPT_OF[NP] = {
     0,
     0,
     0,
-    0,
-    0,
-    0,
 };
 #define LIST_ROWS 8
-#define NTHEME 6
+#define NTHEME 9
 #define NVIEW 3
 #define NGENRE 7
 static const char *const GENRE_NAME[NGENRE] = { "ALL", "AFROBEAT", "AMAPIANO", "KOMPA", "SOCA", "REGGAE", "HAWAIIAN" };

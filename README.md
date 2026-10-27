@@ -10,7 +10,7 @@ plugin, built on [sd88me/mpc-vst-plugins](https://github.com/sd88me/mpc-vst-plug
 
 - **128 presets**, browsed by genre (afrobeat, amapiano, kompa, soca, reggae, Hawaiian) and type (keys, guitars,
   horns, steel pan, mallets, bass, percussion, synths & FX). They also appear in MPC's own PRESET list.
-- **65 instruments** from open recordings and original synthesis, about 200 MB: modeled steel pans (tenor, double
+- **65 instruments** from open recordings and original synthesis, about 220 MB: modeled steel pans (tenor, double
   second, cello, bass and a sustained roll), five amapiano log drums, saxes (alto, tenor, soprano, with and without
   vibrato) and trumpets (open, bright, harmon, stabs), trombones, harmonica and melodica; hollow-body and archtop
   electrics for kompa and highlife, slack-key steel, palm-wine nylon, ukulele, pedal and lap steel; grand and upright
@@ -23,7 +23,7 @@ plugin, built on [sd88me/mpc-vst-plugins](https://github.com/sd88me/mpc-vst-plug
 - **Sound shaping:** cutoff, resonance, bright (a treble tilt), drive, the amp envelope, an LFO for tremolo, filter
   or auto-pan, chorus, a tempo-synced delay and reverb.
 - **Favourites:** star any preset and find them all in one list.
-- **Six colorways:** Sunset, Lagos, Aloha, Kingston, Kanaval, Jozi Night.
+- **Nine colorways:** Sunset, Lagos, Aloha, Jamaica, Rasta, Haiti, Africa (the flag colorways carry a flag band across the screen), Kanaval, Jozi Night.
 - **Made for the MPC:** the 16 knobs are the Q-Links in four columns of four, on every view; big knobs and
   buttons, everything on one page; edits, favourites and the colorway are saved with the project.
 
@@ -38,9 +38,9 @@ Tap a genre, then a type, then a preset. Tap the lit type again to see every typ
 8 presets at a time; ◀ ▶ in the header (or the data wheel, or touching the preset's name and dragging) steps through
 the list and its pages follow.
 
-### SOUND
+### LAYERS
 
-![The SOUND view](docs/images/sound.jpg)
+![The LAYERS view](docs/images/layers.jpg)
 
 The waveform, both layers and the preset's description. For each layer: ◀ ▶ change its sound (or touch the name and
 turn the data wheel), ON, SOLO, and LEVEL, PAN, OCTAVE and FINE (touch one, then turn the data wheel). On a
@@ -52,18 +52,18 @@ percussion kit, OCTAVE moves the kit along the keyboard instead of retuning it.
 
 THIS PRESET (voice mode, LFO target, horn scoop: saved in the preset), TUNING (A4 reference, transpose, bend
 range), PLAYING (polyphony, velocity curve, velocity), CONTROL (mod wheel, stereo spread, wave animation) and the
-colorway. Touch a row and turn the data wheel; a tap steps a row that has a list of choices.
+colorway (◀ ▶). Pressing into a pad (aftertouch) does what the mod wheel does. Touch a row and turn the data wheel; a tap steps a row that has a list of choices.
 
 | Button | What it does |
 | --- | --- |
-| BROWSE, SOUND, SETTINGS | the screen's three views |
+| BROWSE, LAYERS, SETTINGS | the screen's three views |
 | ★ FAV | mark or unmark the current preset as a favourite |
 | ★ LIST | list every favourite; tap again to go back |
 | RESET | undo your edits to the current preset (it lights when there are some) |
 
 ### Colorways
 
-![The six colorways](docs/images/colorways.jpg)
+![The colorways](docs/images/colorways.jpg)
 
 ## Install
 

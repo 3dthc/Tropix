@@ -167,8 +167,8 @@
       "default": 0.5
     },
     {
-      "key": "go_sound",
-      "name": "Show Sound",
+      "key": "go_layers",
+      "name": "Show Layers",
       "min": 0.0,
       "max": 1.0,
       "default": 0.5
@@ -206,7 +206,7 @@
       "name": "View",
       "options": [
         "Browse",
-        "Sound",
+        "Layers",
         "Settings"
       ],
       "default": "Browse"
@@ -821,7 +821,10 @@
         "Sunset",
         "Lagos",
         "Aloha",
-        "Kingston",
+        "Jamaica",
+        "Rasta",
+        "Haiti",
+        "Africa",
         "Kanaval",
         "Jozi Night"
       ],
@@ -851,22 +854,31 @@
       "name": "Look",
       "options": [
         "Sunset Browse",
-        "Sunset Sound",
+        "Sunset Layers",
         "Sunset Settings",
         "Lagos Browse",
-        "Lagos Sound",
+        "Lagos Layers",
         "Lagos Settings",
         "Aloha Browse",
-        "Aloha Sound",
+        "Aloha Layers",
         "Aloha Settings",
-        "Kingston Browse",
-        "Kingston Sound",
-        "Kingston Settings",
+        "Jamaica Browse",
+        "Jamaica Layers",
+        "Jamaica Settings",
+        "Rasta Browse",
+        "Rasta Layers",
+        "Rasta Settings",
+        "Haiti Browse",
+        "Haiti Layers",
+        "Haiti Settings",
+        "Africa Browse",
+        "Africa Layers",
+        "Africa Settings",
         "Kanaval Browse",
-        "Kanaval Sound",
+        "Kanaval Layers",
         "Kanaval Settings",
         "Jozi Night Browse",
-        "Jozi Night Sound",
+        "Jozi Night Layers",
         "Jozi Night Settings"
       ],
       "default": "Sunset Browse"
@@ -932,6 +944,30 @@
       "name": "Preset Type",
       "min": 0,
       "max": 7,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "sel_genre",
+      "name": "Genre Lit",
+      "min": 0,
+      "max": 7,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "sel_type",
+      "name": "Type Lit",
+      "min": 0,
+      "max": 8,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "sel_row",
+      "name": "Preset Row Lit",
+      "min": 0,
+      "max": 8,
       "default": 0,
       "display": "int"
     },
@@ -1742,48 +1778,6 @@
     {
       "key": "set_anim",
       "name": "Setting Pad anim",
-      "min": 0.0,
-      "max": 1.0,
-      "default": 0.5
-    },
-    {
-      "key": "sw_1",
-      "name": "Colorway Pad 1",
-      "min": 0.0,
-      "max": 1.0,
-      "default": 0.5
-    },
-    {
-      "key": "sw_2",
-      "name": "Colorway Pad 2",
-      "min": 0.0,
-      "max": 1.0,
-      "default": 0.5
-    },
-    {
-      "key": "sw_3",
-      "name": "Colorway Pad 3",
-      "min": 0.0,
-      "max": 1.0,
-      "default": 0.5
-    },
-    {
-      "key": "sw_4",
-      "name": "Colorway Pad 4",
-      "min": 0.0,
-      "max": 1.0,
-      "default": 0.5
-    },
-    {
-      "key": "sw_5",
-      "name": "Colorway Pad 5",
-      "min": 0.0,
-      "max": 1.0,
-      "default": 0.5
-    },
-    {
-      "key": "sw_6",
-      "name": "Colorway Pad 6",
       "min": 0.0,
       "max": 1.0,
       "default": 0.5

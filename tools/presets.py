@@ -2,7 +2,7 @@
 vst/params.json (the PRESET list MPC shows) and src/presets.h (what the engine sets when one is picked).
 
 Each preset has a type (the browser's TYPE column), one or more genres (its first genre is the one its header chip
-shows; the GENRE column lists it under every one), a name, a description (two lines on the SOUND view), up to two
+shows; the GENRE column lists it under every one), a name, a description (two lines on the LAYERS view), up to two
 layers and the sound settings. Values are written in musical units here and converted to the engine's knob
 positions below. The global settings (volume, tuning, playing, colorway) are not part of a preset.
 
@@ -476,8 +476,8 @@ assert [p["type"] for p in PRESETS] == sorted((p["type"] for p in PRESETS), key=
 assert len({p["name"] for p in PRESETS}) == len(PRESETS), "duplicate preset names"
 
 
-def desc_lines(desc, width_px=640, size_px=19):
-    """Split a description into the SOUND view's two lines, measured in the font MPC draws them in."""
+def desc_lines(desc, width_px=650, size_px=21):
+    """Split a description into the LAYERS view's two lines, measured in the font MPC draws them in."""
     from PIL import ImageFont
     font = os.path.join(os.environ.get("MPC_VST", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
         __file__))), "..", "mpc-vst-plugins")), "tools", "html_art", "fonts", "TitilliumWeb-Regular.ttf")

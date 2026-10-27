@@ -16,7 +16,7 @@ import soundfile as sf
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 MPC = os.environ.get("MPC_VST", os.path.join(REPO, "..", "mpc-vst-plugins"))
-TARGET_DB, PEAK_DB, LO, HI = -21.0, -1.5, -9.0, 9.0
+TARGET_DB, PEAK_DB, LO, HI = -18.0, -1.0, -9.0, 12.0
 
 
 def main():

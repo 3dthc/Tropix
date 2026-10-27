@@ -26,7 +26,7 @@ python3 "$MPC_VST/tools/release.py" \
   --version "$VERSION" \
   --repo 3dthc/Tropix --id tropix --license MIT \
   --extra "$HERE/engine:engine" \
-  --about "Island and afro sounds: 128 presets and 65 instruments for afrobeat, amapiano, kompa, soca, reggae and Hawaiian music - steel pans, log drums, saxes and trumpets, kompa and slack-key guitars, steels, keys, mallets, basses and percussion. Two layers, glide, scoop, vibrato, filter, drive, chorus, delay, reverb, six colorways." \
+  --about "Island and afro sounds: 128 presets and 65 instruments for afrobeat, amapiano, kompa, soca, reggae and Hawaiian music - steel pans, log drums, saxes and trumpets, kompa and slack-key guitars, steels, keys, mallets, basses and percussion. Two layers, glide, scoop, vibrato, filter, drive, chorus, delay, reverb, nine colorways." \
   -o "$HERE/dist"
 
 echo

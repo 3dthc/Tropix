@@ -67,9 +67,11 @@ ORDER = [
 ]
 KITS = {"island_perc", "west_africa", "timbales", "ipu"}
 
-LIBRARY_VERSION = "0.1.0"   # written to engine/LIBRARY_VERSION; install.sh repacks the instruments when it differs
+LIBRARY_VERSION = "0.2.0"   # written to engine/LIBRARY_VERSION; install.sh repacks the instruments when it differs
 
 REF_DB = -20.0      # every instrument is trimmed so its typical loud-note attack sits near this loudness,
+LAYER_KEEP = 1 / 3  # velocity layers keep this share of their natural loudness gap (their tone stays): the engine's
+                    # velocity curve makes the dynamics, so playing softer gets quieter smoothly, with no jump at a layer
 PEAK_MAX = 0.4      # unless that would push a single hard-played note's peak above this (a 4-note chord then stays
                     # clear of the output limiter: plucked and struck sounds have a high peak for their loudness)
 
@@ -150,6 +152,29 @@ def attack_db(audio, rate=44100):
     return best
 
 
+def level_layers(samples, zones, rate):
+    """Bring each softer velocity layer up toward the loudest layer of the same note (same root), keeping LAYER_KEEP of
+    the natural gap; scaled in place (never past full scale)."""
+    by_root = {}
+    for z in zones:
+        by_root.setdefault(z[2], []).append(z)
+    for root, zs in by_root.items():
+        if len({(z[3], z[4]) for z in zs}) < 2:
+            continue
+        top = max(zs, key=lambda z: z[4])
+        ref = attack_db(samples[top[6]][0], rate)
+        for z in zs:
+            if z is top:
+                continue
+            a, ls, le = samples[z[6]]
+            gap = ref - attack_db(a, rate)
+            if gap <= 0.5:
+                continue
+            g = 10 ** (gap * (1 - LAYER_KEEP) / 20)
+            g = min(g, 32000 / max(1, np.abs(a.astype(np.int32)).max()))
+            samples[z[6]] = (np.round(a.astype(np.float64) * g).clip(-32768, 32767).astype(np.int16), ls, le)
+
+
 def pack(name):
     k = json.load(open(os.path.join(LIB, name, "keymap.json")))
     rate = k["samplerate"]
@@ -172,6 +197,9 @@ def pack(name):
         if z["hivel"] >= 100:
             levels.append(attack_db(a, rate))
             peaks.append(np.abs(a.astype(np.int32)).max() / 32768)
+    level_layers(samples, zones, rate)
+    levels = [attack_db(samples[z[6]][0], rate) for z in zones if z[4] >= 100]
+    peaks = [np.abs(samples[z[6]][0].astype(np.int32)).max() / 32768 for z in zones if z[4] >= 100]
     gain = float(np.clip(10 ** ((REF_DB - np.median(levels)) / 20), 0.25, 8.0)) if levels else 1.0
     if peaks:
         gain = min(gain, PEAK_MAX / np.percentile(peaks, 90))

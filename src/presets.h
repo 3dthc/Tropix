@@ -137,11 +137,11 @@ static const char *const PRESET_DESC1[NPRESET] = {
     "A mellow, jazzy grand for private school amapiano:",
     "Reed e-piano with a slow tremolo and a quiet",
     "A bright, close grand that cuts through a",
-    "Tine e-piano with chorus and a lazy tremolo, made for slow gouyad grooves.",
+    "Tine e-piano with chorus and a lazy",
     "Full drawbar organ through a spinning speaker,",
     "The reggae organ shuffle: short, percussive organ chops.",
     "Upright piano clipped short for offbeat skanks: tight, woody and dry.",
-    "Percussive organ thrown into a long echo. Hit one chord and ride the delay.",
+    "Percussive organ thrown into a long",
     "A plucky reed e-piano with a short echo.",
     "An honest upright piano in a small room,",
     "Reed e-piano pushed into a little grit with",
@@ -181,14 +181,14 @@ static const char *const PRESET_DESC1[NPRESET] = {
     "Tenor sax and trumpet in unison, a little",
     "Tenor sax for long solos: deep scoops, legato",
     "Open trumpet with vibrato, bright and singing, for highlife melodies.",
-    "Trumpet and tenor stabs together: tight accents for afrobeat and afro-soca.",
+    "Trumpet and tenor stabs together: tight",
     "Harmon-muted trumpet in a dark room with",
     "Alto sax with vibrato, wrapped in echo and a big",
     "Bright trumpet and trombone together, for fast soca horn riffs.",
     "Trumpet and trombone stabs, driven hard. Big carnival brass hits.",
     "A trombone that falls off every note: drop it at the end of a phrase.",
     "Open trumpet with a light scoop, warm and round, for calypso lines.",
-    "Trumpet with trombone an octave below, for ska and rocksteady horn lines.",
+    "Trumpet with trombone an octave",
     "Mellow trombone with a gentle scoop and vibrato, for roots melodies.",
     "Reedy melodica floating in echo and room: the far-east roots sound.",
     "Trumpet sent into a long, dark echo. One phrase, then let it repeat.",
@@ -196,11 +196,11 @@ static const char *const PRESET_DESC1[NPRESET] = {
     "Harmonica with vibrato in a soft room, for easy island tunes.",
     "Melodica over a soft bubble organ: a one-man roots band.",
     "Trumpet and trombone that swell in slowly",
-    "The lead steel pan: bright, ringing and sweet. Play melodies with two hands.",
+    "The lead steel pan: bright, ringing and",
     "Double second pans, a little lower and rounder",
     "Cello pans for chord strums in the middle of the steelband.",
     "The deep booming bass pans that drive a steelband.",
-    "Tenor pan with cello pan an octave below, a whole section under your fingers.",
+    "Tenor pan with cello pan an octave below,",
     "Sustained pan rolls that hold as long as you do, soft and shimmering.",
     "A struck tenor pan with a quiet roll sustaining behind it.",
     "Tenor pan with a dotted echo, for laid-back reggae melodies.",
@@ -220,7 +220,7 @@ static const char *const PRESET_DESC1[NPRESET] = {
     "Short marimba with a quarter-note echo, for dub melodies.",
     "Bright marimba with kalimba on top, a ringing bell melody.",
     "Kalimba and mbira together, a shimmering cloud of tines.",
-    "The amapiano log drum: a pitched, sliding thud. Program the bass line on it.",
+    "The amapiano log drum: a pitched,",
     "A deeper, longer log drum with more sub.",
     "A short, knocking log drum that punches through the mix.",
     "A log drum that bends like a talking drum.",
@@ -239,10 +239,10 @@ static const char *const PRESET_DESC1[NPRESET] = {
     "Congas, bongos, shakers, cabasa, agogo, cowbells,",
     "The island kit from C2, with timbales from C6",
     "Bobobo bass, tenor and treble drums from C2, cajon slaps from C3.",
-    "West African drums from C2 with the island kit (shakers, bells, congas) from C4.",
+    "West African drums from C2 with the",
     "Modeled timbales from C2: open, rim and",
     "Hawaiian ipu gourd (heel, tip, slap) at C2, with the island kit from C3.",
-    "The island kit through a dotted echo: shakers and congas that ripple. From C2.",
+    "The island kit through a dotted echo:",
     "The island kit in a long echo and a big room, for dub fills. From C2.",
     "The big detuned soca lead that leads the road. Play the riff high.",
     "Bright synth brass stabs for power soca hooks.",
@@ -250,7 +250,7 @@ static const char *const PRESET_DESC1[NPRESET] = {
     "A soft, round synth pluck for afrobeats chords and melodies.",
     "The afro pluck in a dotted echo, for rippling, bouncing melodies.",
     "A pianoey synth pluck, the bright chord stab of amapiano.",
-    "The piano pluck with a triplet echo and a long room, for spacey amapiano hooks.",
+    "The piano pluck with a triplet echo and a",
     "A warm, slow pad, wide and soft.",
     "A darker pad with chorus and a long room, for deep amapiano.",
     "A pluck on top of a slow pad, chords that strike and bloom.",
@@ -258,7 +258,7 @@ static const char *const PRESET_DESC1[NPRESET] = {
     "A softened lead with vibrato and echo, for dancehall and reggae melodies.",
     "Driven synth brass for dancehall stabs.",
     "A singing mono synth lead with glide and vibrato, for kompa melodies.",
-    "Synth brass with a real trumpet blended in, the modern kompa horn sound.",
+    "Synth brass with a real trumpet blended",
     "A soft, whistly lead that slides and wobbles, with a long echo. Play it high.",
     "A slow pad with pedal steel swelling inside it.",
 };
@@ -267,11 +267,11 @@ static const char *const PRESET_DESC2[NPRESET] = {
     "soft hammers, long room, gentle sustain.",
     "pad underneath, for deep, late-night chords.",
     "kompa band. Montunos and fast chord stabs.",
-    "",
+    "tremolo, made for slow gouyad grooves.",
     "driven a little. Holds the chords behind the horns.",
     "Play the bubble rhythm between the guitar skanks.",
     "",
-    "",
+    "echo. Hit one chord and ride the delay.",
     "Snappy offbeat chords for roots and lovers rock.",
     "for highlife chord rolls and afrobeat vamps.",
     "tremolo, the classic afrobeat keyboard bite.",
@@ -311,14 +311,14 @@ static const char *const PRESET_DESC2[NPRESET] = {
     "driven: the afrobeat horn line, big and raw.",
     "glide and a slow vibrato on held notes.",
     "",
-    "",
+    "accents for afrobeat and afro-soca.",
     "a soft echo, for late-night jazzy amapiano.",
     "room: the soulful sax of private school amapiano.",
     "",
     "",
     "",
     "",
-    "",
+    "below, for ska and rocksteady horn lines.",
     "",
     "",
     "",
@@ -326,10 +326,11 @@ static const char *const PRESET_DESC2[NPRESET] = {
     "",
     "",
     "and fade out long: brass pads behind a chorus.",
-    "",
+    "sweet. Play melodies with two hands.",
     "than the tenor, for strums and counter-melodies.",
     "",
     "",
+    "a whole section under your fingers.",
     "",
     "",
     "",
@@ -349,8 +350,7 @@ static const char *const PRESET_DESC2[NPRESET] = {
     "",
     "",
     "",
-    "",
-    "",
+    "sliding thud. Program the bass line on it.",
     "",
     "",
     "",
@@ -369,9 +369,10 @@ static const char *const PRESET_DESC2[NPRESET] = {
     "claves, guiro, slit drum and frame drums from C2.",
     "(open, rim, muted and shell on both drums).",
     "",
-    "",
+    "island kit (shakers, bells, congas) from C4.",
     "muted hits on both drums, plus the shells.",
     "",
+    "shakers and congas that ripple. From C2.",
     "",
     "",
     "",
@@ -379,6 +380,7 @@ static const char *const PRESET_DESC2[NPRESET] = {
     "",
     "",
     "",
+    "long room, for spacey amapiano hooks.",
     "",
     "",
     "",
@@ -386,9 +388,7 @@ static const char *const PRESET_DESC2[NPRESET] = {
     "",
     "",
     "",
-    "",
-    "",
-    "",
+    "in, the modern kompa horn sound.",
     "",
     "",
 };
@@ -396,132 +396,132 @@ static const unsigned char PRESET_TYPE[NPRESET] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 static const unsigned char PRESET_GENRE[NPRESET] = { 2, 2, 2, 3, 3, 3, 5, 5, 5, 5, 1, 1, 1, 1, 4, 4, 4, 6, 6, 3, 3, 3, 3, 3, 1, 1, 1, 1, 1, 2, 5, 5, 4, 4, 6, 6, 6, 6, 6, 3, 3, 3, 3, 3, 3, 1, 1, 1, 1, 2, 2, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 5, 4, 4, 4, 4, 4, 4, 4, 4, 5, 2, 4, 6, 1, 1, 1, 1, 2, 2, 1, 6, 6, 3, 5, 4, 1, 2, 2, 2, 2, 2, 2, 3, 1, 1, 5, 5, 4, 4, 5, 6, 2, 4, 3, 1, 1, 3, 6, 2, 5, 4, 4, 4, 1, 1, 2, 2, 6, 2, 1, 4, 5, 5, 3, 3, 2, 6 };
 static const unsigned char PRESET_GMASK[NPRESET] = { 4, 4, 6, 8, 8, 40, 32, 32, 32, 32, 2, 2, 2, 6, 16, 16, 18, 64, 64, 40, 8, 8, 8, 10, 2, 2, 2, 2, 2, 4, 32, 32, 16, 80, 64, 64, 64, 96, 64, 8, 8, 24, 8, 8, 8, 2, 2, 2, 18, 6, 4, 16, 16, 16, 16, 32, 32, 32, 32, 32, 64, 32, 24, 16, 16, 16, 16, 16, 80, 16, 48, 4, 16, 64, 2, 2, 2, 2, 4, 68, 2, 64, 64, 8, 32, 16, 2, 4, 4, 4, 4, 4, 4, 8, 2, 2, 32, 32, 16, 16, 32, 64, 4, 56, 8, 2, 2, 24, 64, 4, 32, 16, 16, 16, 2, 2, 4, 4, 64, 4, 2, 16, 32, 32, 8, 8, 4, 64 };
 static const float PRESET_VAL[NPRESET][NPRESET_KEYS] = {
-    { 0.784f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.25f, 0.15f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.3f, 0.55f, 0.8f, 0.7f, 0.4f, 0.1f, 1.0f, 1.3f, 1.0f, 2.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Keys */
-    { 0.826f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.683f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.4f, 0.5f, 0.3f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.75f, 0.55f, 0.1f, 1.0f, 2.8f, 1.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Private School Piano */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.751f, 0.22f, 0.15f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.3f, 1.0f, 3.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 64.0f, 0.357f, 0.0f, 0.0f, 0.0f },  /* Deep House Reed */
-    { 1.0f, 0.0f, 0.625f, 0.0f, 0.0f, 0.5f, 1.0f, 0.592f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.45f, 0.4f, 0.1f, 1.0f, 1.6f, 1.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Piano */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.731f, 0.15f, 0.35f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.9f, 1.0f, 2.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Gouyad E-Piano */
-    { 1.0f, 0.0f, 0.5f, 0.15f, 0.195f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -4.9f, 1.0f, 9.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Organ */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.119f, 0.5f, 1.0f, 0.347f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.12f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.4f, 0.4f, 0.1f, 1.0f, -5.6f, 1.0f, 7.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Bubble Organ */
-    { 0.748f, 0.0f, 0.5f, 0.0f, 0.0f, 0.559f, 0.3f, 0.394f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.12f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.4f, 1.0f, 1.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Skank Piano */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.35f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 6.0f, 0.55f, 0.4f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, -4.9f, 1.0f, 8.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Dub Organ */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.15f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 2.0f, 0.25f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -4.1f, 1.0f, 5.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Pluck E-Piano Skank */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.606f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.45f, 0.4f, 0.1f, 1.0f, -0.5f, 1.0f, 1.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Highlife Upright */
-    { 1.0f, 0.0f, 0.5f, 0.2f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.785f, 0.25f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -3.6f, 1.0f, 3.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Lagos Reed Piano */
-    { 1.0f, 0.0f, 0.583f, 0.28f, 0.0f, 0.5f, 1.0f, 0.394f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -5.9f, 1.0f, 8.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afrobeat Combo Organ */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.618f, 0.0f, 0.0f, 0.769f, 0.0f, 0.3f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.7f, 1.0f, 4.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afro Electric Grand */
-    { 1.0f, 0.0f, 0.667f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.0f, 1.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 6.0f, 0.401f, 0.0f, 0.0f, 0.0f },  /* Soca Piano */
-    { 1.0f, 0.0f, 0.625f, 0.1f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -5.3f, 1.0f, 9.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Carnival Organ */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.606f, 0.0f, 0.0f, 0.769f, 0.0f, 0.3f, 0.2f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -2.7f, 1.0f, 6.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Island FM Keys */
-    { 0.799f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.668f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.7f, 0.4f, 0.1f, 1.0f, 0.2f, 1.0f, 1.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Aloha Piano */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.668f, 0.0f, 0.0f, 0.731f, 0.2f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.2f, 1.0f, 2.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 44.0f, 0.45f, 0.0f, 0.0f, 0.0f },  /* Tiki Lounge Keys */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.25f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.32f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, -1.5f, 1.0f, 9.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Sunday Gospel Organ */
-    { 1.0f, 0.0f, 0.583f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.45f, 0.15f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.3f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.7f, 1.0f, 10.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Lead Guitar */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.365f, 0.0f, 0.0f, 0.769f, 0.0f, 0.35f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.6f, 1.0f, 11.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Rhythm Mute */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.0f, 1.0f, 15.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Twoubadou Guitar */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.6f, 0.1f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 2.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 6.4f, 1.0f, 12.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Mini-Jazz Chorus */
-    { 1.0f, 0.0f, 0.583f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.1f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 2.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.6f, 1.0f, 12.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Highlife Lead */
-    { 1.0f, 0.0f, 0.5f, 0.1f, 0.0f, 0.5f, 1.0f, 0.327f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.08f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.8f, 1.0f, 13.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afrobeat Scratch */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.5f, 0.4f, 0.1f, 1.0f, 4.0f, 1.0f, 15.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Palm-Wine Guitar */
-    { 1.0f, 0.0f, 0.667f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.3f, 0.18f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.3f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.9f, 1.0f, 10.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Soukous Sebene */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.347f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.12f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.5f, 1.0f, 11.0f, 0.8f, -0.45f, 0.0f, 0.0f, 1.0f, 13.0f, 0.635f, 0.45f, 0.0f, 0.0f },  /* Afro Interlock */
-    { 0.725f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.3f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.45f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, 9.0f, 1.0f, 12.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Guitar Pluck */
-    { 0.784f, 0.0f, 0.583f, 0.0f, 0.0f, 0.5f, 1.0f, 0.303f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.12f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 2.0f, 0.2f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.9f, 1.0f, 11.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Reggae Skank Guitar */
-    { 0.799f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.3f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 8.0f, 1.0f, 12.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Lovers Rock Guitar */
-    { 1.0f, 0.0f, 0.625f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.9f, 1.0f, 14.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Soca Strum */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.8f, 1.0f, 16.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 15.0f, 0.566f, 0.0f, 0.0f, 0.0f },  /* Calypso Cuatro */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.65f, 0.4f, 0.1f, 1.0f, 0.5f, 1.0f, 14.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Slack Key Sunset */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.9f, 1.0f, 16.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Island Ukulele */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.555f, 0.606f, 0.769f, 0.0f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 2.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.7f, 0.4f, 0.1f, 1.0f, -0.5f, 1.0f, 18.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Hawaiian Steel */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.599f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, -4.4f, 1.0f, 17.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Pedal Steel Swell */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.606f, 0.0f, 0.483f, 0.769f, 0.0f, 0.0f, 0.0f, 0.32f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -2.0f, 1.0f, 18.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 14.0f, 0.566f, 0.0f, 0.0f, 0.0f },  /* Aloha Steel Duo */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.351f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 2.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.6f, 1.0f, 28.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Alto Lead Kompa */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.6f, 1.0f, 27.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 20.0f, 0.6f, 0.0f, 0.0f, 0.0f },  /* Sax & Trumpet Section */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.9f, 1.0f, 22.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 25.0f, 0.673f, 0.0f, -1.0f, 0.0f },  /* Kompa Brass Hits */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.65f, 0.4f, 0.1f, 1.0f, -5.5f, 1.0f, 30.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Twoubadou Sax */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.2f, 1.0f, 19.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 27.0f, 0.673f, 0.0f, 0.0f, 0.0f },  /* Gala Horns */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.318f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.28f, 0.5f, 0.0f, 2.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.5f, 1.0f, 33.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Soprano */
-    { 1.0f, 0.0f, 0.5f, 0.12f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -5.1f, 1.0f, 29.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 19.0f, 0.673f, 0.0f, 0.0f, 0.0f },  /* Afrobeat Horn Section */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.38f, 0.548f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 2.0f, 0.0f, 2.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.0f, 1.0f, 29.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afro Tenor Solo */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -3.3f, 1.0f, 21.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Highlife Trumpet */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.394f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.3f, 1.0f, 22.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 31.0f, 0.713f, 0.0f, 0.0f, 0.0f },  /* Afro Brass Stabs */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.25f, 0.4f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 6.0f, 0.4f, 0.4f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, 1.3f, 1.0f, 23.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Harmon Night */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.318f, 0.0f, 0.769f, 0.0f, 0.0f, 0.2f, 0.4f, 0.5f, 0.0f, 2.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, -0.2f, 1.0f, 28.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Sax */
-    { 1.0f, 0.0f, 0.583f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.8f, 1.0f, 20.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 24.0f, 0.635f, 0.0f, 0.0f, 0.0f },  /* Soca Horn Riff */
-    { 1.0f, 0.0f, 0.583f, 0.12f, 0.0f, 0.5f, 1.0f, 0.394f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.1f, 1.0f, 22.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 25.0f, 0.713f, 0.0f, 0.0f, 0.0f },  /* Soca Brass Blast */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.1f, 1.0f, 26.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Carnival Trombone Fall */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.8f, 1.0f, 19.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Calypso Trumpet */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.2f, 1.0f, 19.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 24.0f, 0.713f, 0.0f, -1.0f, 0.0f },  /* Ska Horns */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.0f, 0.447f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.6f, 1.0f, 24.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Rockers Trombone */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.3f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 6.0f, 0.45f, 0.55f, 0.8f, 0.7f, 0.4f, 0.1f, 1.0f, -5.0f, 1.0f, 36.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Roots Melodica */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.45f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 6.0f, 0.58f, 0.35f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.8f, 1.0f, 19.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Dub Trumpet Echo */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -5.5f, 1.0f, 30.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Reggae Sax Lead */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.28f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.8f, 1.0f, 35.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Harmonica Breeze */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.471f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.15f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 6.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -2.8f, 1.0f, 36.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 7.0f, 0.477f, 0.0f, 0.0f, 0.0f },  /* Melodica & Organ */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.636f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.32f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.7f, 0.4f, 0.1f, 1.0f, -0.3f, 1.0f, 19.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 24.0f, 0.673f, 0.0f, 0.0f, 0.0f },  /* Brass Swell */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -2.5f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Tenor Pan */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -2.9f, 1.0f, 38.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Double Seconds */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.9f, 1.0f, 39.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Cello Pan Strum */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.1f, 1.0f, 40.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Bass Pan */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.4f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 39.0f, 0.635f, 0.0f, -1.0f, 0.0f },  /* Steelband Section */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.445f, 0.5f, 1.0f, 0.606f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.7f, 0.4f, 0.1f, 1.0f, -7.8f, 1.0f, 41.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Pan Roll Pad */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.9f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 41.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Pan & Roll */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.3f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -2.3f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Island Pan Echo */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.668f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.4f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.8f, 0.4f, 0.1f, 1.0f, 0.2f, 1.0f, 38.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 64.0f, 0.401f, 0.0f, 0.0f, 0.0f },  /* Pan Over Pads */
-    { 1.0f, 0.0f, 0.625f, 0.0f, 0.0f, 0.5f, 1.0f, 0.606f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -3.2f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Calypso Pan */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.668f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.4f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, 0.4f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 44.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Tiki Pan */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.9f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 45.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Afro Pan Melody */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.4f, 1.0f, 42.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afro Marimba */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.0f, 1.0f, 43.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Balafon Griot */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.0f, 1.0f, 43.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 42.0f, 0.566f, 0.0f, 0.0f, 0.0f },  /* Balafon & Marimba */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.25f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.35f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.1f, 1.0f, 42.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Marimba */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.606f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.3f, 0.4f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 4.0f, 0.4f, 0.55f, 0.8f, 0.8f, 0.4f, 0.1f, 1.0f, 2.7f, 1.0f, 45.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kalimba Dream */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.9f, 1.0f, 46.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Mbira Spirit */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.683f, 0.0f, 0.0f, 0.769f, 0.3f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.2f, 1.0f, 44.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Vibes Lounge */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.668f, 0.0f, 0.0f, 0.751f, 0.15f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.2f, 1.0f, 44.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 42.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Exotica Vibes */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.2f, 0.0f, 0.28f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -2.0f, 1.0f, 44.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Vibes */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.539f, 0.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.3f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 5.0f, 0.45f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.9f, 1.0f, 42.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Reggae Mallets */
-    { 1.0f, 0.0f, 0.667f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.6f, 1.0f, 42.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 45.0f, 0.566f, 0.0f, 0.0f, 0.0f },  /* Soca Marimba Bell */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.606f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.7f, 1.0f, 45.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 46.0f, 0.635f, 0.0f, 0.0f, 0.0f },  /* Thumb Piano Duo */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.6f, 1.0f, 51.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Log Drum Classic */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -3.8f, 1.0f, 52.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Log Drum Deep */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.4f, 1.0f, 53.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Log Drum Knock */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.4f, 1.0f, 54.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Log Drum Talking */
-    { 1.0f, 0.0f, 0.5f, 0.2f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.1f, 1.0f, 55.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Log Drum Gritty */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.9f, 1.0f, 51.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 50.0f, 0.566f, 0.0f, 0.0f, 0.0f },  /* Log Drum & Sub */
-    { 0.699f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.6f, 1.0f, 48.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Bass */
-    { 1.0f, 0.0f, 0.583f, 0.0f, 0.0f, 0.5f, 1.0f, 0.394f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.2f, 1.0f, 48.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afrobeat Finger Bass */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.05f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.5f, 1.0f, 47.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Highlife Bass */
-    { 0.551f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.0f, 1.0f, 47.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Reggae Bass */
-    { 0.504f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.394f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.6f, 1.0f, 50.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 47.0f, 0.566f, 0.0f, 0.0f, 0.0f },  /* Dub Sub */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.365f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.9f, 1.0f, 49.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 50.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Soca Bass */
-    { 0.593f, 0.2f, 0.5f, 0.3f, 0.0f, 0.5f, 1.0f, 0.365f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -3.5f, 1.0f, 50.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Power Soca Sub */
-    { 0.615f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.6f, 1.0f, 48.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Lovers Rock Bass */
-    { 0.651f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.08f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.6f, 1.0f, 47.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Island Flatwound */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.394f, 0.48f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -2.5f, 1.0f, 50.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Sub Glide */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.7f, 1.0f, 56.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Island Percussion */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 7.7f, 1.0f, 56.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 58.0f, 0.755f, 0.0f, 3.0f, 0.0f },  /* Kompa Percussion */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.4f, 1.0f, 57.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* West African Drums */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 7.4f, 1.0f, 57.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 56.0f, 0.713f, 0.0f, 2.0f, 0.0f },  /* Afrobeat Percussion */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.2f, 1.0f, 58.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Timbales */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.5f, 1.0f, 59.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 56.0f, 0.673f, 0.0f, 1.0f, 0.0f },  /* Ipu & Hula Perc */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.22f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.35f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.9f, 1.0f, 56.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Perc Echo */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.32f, 0.38f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 6.0f, 0.5f, 0.4f, 0.8f, 0.8f, 0.4f, 0.1f, 1.0f, 5.3f, 1.0f, 56.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Dub Percussion */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.12f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 2.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -3.9f, 1.0f, 60.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Soca Lead */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -5.0f, 1.0f, 61.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Power Soca Brass */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.2f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.6f, 1.0f, 60.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 61.0f, 0.635f, 0.0f, 0.0f, 0.0f },  /* Soca Saw Stack */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -3.8f, 1.0f, 62.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afro Pluck */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.35f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.45f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -3.8f, 1.0f, 62.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afro Pluck Echo */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.28f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -3.3f, 1.0f, 63.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Piano Pluck */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.35f, 0.4f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 4.0f, 0.45f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, -3.1f, 1.0f, 63.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Yanos Pluck Echo */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.619f, 0.5f, 1.0f, 0.721f, 0.0f, 0.0f, 0.769f, 0.0f, 0.2f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.7f, 1.0f, 64.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Island Pad */
-    { 0.725f, 0.0f, 0.5f, 0.0f, 0.651f, 0.5f, 1.0f, 0.741f, 0.0f, 0.0f, 0.769f, 0.0f, 0.3f, 0.0f, 0.45f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.8f, 0.4f, 0.1f, 1.0f, -0.2f, 1.0f, 64.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Sunset Pad */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.6f, 1.0f, 62.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 64.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Afro Pad & Pluck */
-    { 1.0f, 0.0f, 0.625f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -2.0f, 1.0f, 62.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 37.0f, 0.45f, 0.0f, 0.0f, 0.0f },  /* Soca Pluck */
-    { 0.699f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.5f, 0.769f, 0.0f, 0.0f, 0.3f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -2.9f, 1.0f, 60.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Reggae Synth Lead */
-    { 1.0f, 0.0f, 0.5f, 0.22f, 0.0f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -5.6f, 1.0f, 61.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Dancehall Brass Synth */
-    { 0.799f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.446f, 0.577f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 2.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.2f, 1.0f, 60.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Synth Lead */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.471f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -2.3f, 1.0f, 61.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 19.0f, 0.45f, 0.0f, 0.0f, 0.0f },  /* Kompa Synth Brass */
-    { 0.68f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.521f, 0.683f, 0.769f, 0.0f, 0.0f, 0.3f, 0.4f, 0.5f, 0.0f, 2.0f, 0.0f, 0.0f, 4.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.4f, 1.0f, 60.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Piano Whistle Lead */
-    { 1.0f, 0.0f, 0.5f, 0.0f, 0.651f, 0.5f, 1.0f, 0.721f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.4f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, 0.6f, 1.0f, 64.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 17.0f, 0.45f, 0.0f, 0.0f, 0.0f },  /* Hula Breeze Pad */
+    { 0.784f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.25f, 0.15f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.3f, 0.55f, 0.8f, 0.7f, 0.4f, 0.1f, 1.0f, 4.5f, 1.0f, 2.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Keys */
+    { 0.826f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.683f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.4f, 0.5f, 0.3f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.75f, 0.55f, 0.1f, 1.0f, 6.2f, 1.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Private School Piano */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.751f, 0.22f, 0.15f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.3f, 1.0f, 3.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 64.0f, 0.357f, 0.0f, 0.0f, 0.0f },  /* Deep House Reed */
+    { 1.0f, 0.0f, 0.625f, 0.0f, 0.0f, 0.5f, 1.0f, 0.592f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.45f, 0.4f, 0.1f, 1.0f, 5.4f, 1.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Piano */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.731f, 0.15f, 0.35f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.8f, 1.0f, 2.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Gouyad E-Piano */
+    { 1.0f, 0.0f, 0.5f, 0.15f, 0.195f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.9f, 1.0f, 9.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Organ */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.119f, 0.5f, 1.0f, 0.347f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.12f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.4f, 0.4f, 0.1f, 1.0f, -1.6f, 1.0f, 7.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Bubble Organ */
+    { 0.748f, 0.0f, 0.5f, 0.0f, 0.0f, 0.559f, 0.3f, 0.394f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.12f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.6f, 1.0f, 1.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Skank Piano */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.35f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 6.0f, 0.55f, 0.4f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, -0.9f, 1.0f, 8.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Dub Organ */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.15f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 2.0f, 0.25f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.0f, 1.0f, 5.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Pluck E-Piano Skank */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.606f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.45f, 0.4f, 0.1f, 1.0f, 2.4f, 1.0f, 1.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Highlife Upright */
+    { 1.0f, 0.0f, 0.5f, 0.2f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.785f, 0.25f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.4f, 1.0f, 3.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Lagos Reed Piano */
+    { 1.0f, 0.0f, 0.583f, 0.28f, 0.0f, 0.5f, 1.0f, 0.394f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.9f, 1.0f, 8.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afrobeat Combo Organ */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.618f, 0.0f, 0.0f, 0.769f, 0.0f, 0.3f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.1f, 1.0f, 4.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afro Electric Grand */
+    { 1.0f, 0.0f, 0.667f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 7.8f, 1.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 6.0f, 0.401f, 0.0f, 0.0f, 0.0f },  /* Soca Piano */
+    { 1.0f, 0.0f, 0.625f, 0.1f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.3f, 1.0f, 9.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Carnival Organ */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.606f, 0.0f, 0.0f, 0.769f, 0.0f, 0.3f, 0.2f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.1f, 1.0f, 6.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Island FM Keys */
+    { 0.799f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.668f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.7f, 0.4f, 0.1f, 1.0f, 3.4f, 1.0f, 1.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Aloha Piano */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.668f, 0.0f, 0.0f, 0.731f, 0.2f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.9f, 1.0f, 2.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 44.0f, 0.45f, 0.0f, 0.0f, 0.0f },  /* Tiki Lounge Keys */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.25f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.32f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, 2.5f, 1.0f, 9.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Sunday Gospel Organ */
+    { 1.0f, 0.0f, 0.583f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.45f, 0.15f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.3f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.8f, 1.0f, 10.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Lead Guitar */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.365f, 0.0f, 0.0f, 0.769f, 0.0f, 0.35f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 6.4f, 1.0f, 11.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Rhythm Mute */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 7.8f, 1.0f, 15.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Twoubadou Guitar */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.6f, 0.1f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 2.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 7.5f, 1.0f, 12.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Mini-Jazz Chorus */
+    { 1.0f, 0.0f, 0.583f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.1f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 2.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.7f, 1.0f, 12.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Highlife Lead */
+    { 1.0f, 0.0f, 0.5f, 0.1f, 0.0f, 0.5f, 1.0f, 0.327f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.08f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.0f, 1.0f, 13.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afrobeat Scratch */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.5f, 0.4f, 0.1f, 1.0f, 7.8f, 1.0f, 15.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Palm-Wine Guitar */
+    { 1.0f, 0.0f, 0.667f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.3f, 0.18f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.3f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.1f, 1.0f, 10.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Soukous Sebene */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.347f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.12f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 7.1f, 1.0f, 11.0f, 0.8f, -0.45f, 0.0f, 0.0f, 1.0f, 13.0f, 0.635f, 0.45f, 0.0f, 0.0f },  /* Afro Interlock */
+    { 0.725f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.3f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.45f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, 10.2f, 1.0f, 12.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Guitar Pluck */
+    { 0.784f, 0.0f, 0.583f, 0.0f, 0.0f, 0.5f, 1.0f, 0.303f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.12f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 2.0f, 0.2f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.7f, 1.0f, 11.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Reggae Skank Guitar */
+    { 0.799f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.3f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 8.8f, 1.0f, 12.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Lovers Rock Guitar */
+    { 1.0f, 0.0f, 0.625f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.9f, 1.0f, 14.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Soca Strum */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 7.5f, 1.0f, 16.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 15.0f, 0.566f, 0.0f, 0.0f, 0.0f },  /* Calypso Cuatro */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.65f, 0.4f, 0.1f, 1.0f, 4.2f, 1.0f, 14.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Slack Key Sunset */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.6f, 1.0f, 16.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Island Ukulele */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.555f, 0.606f, 0.769f, 0.0f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 2.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.7f, 0.4f, 0.1f, 1.0f, 3.3f, 1.0f, 18.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Hawaiian Steel */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.599f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, -0.4f, 1.0f, 17.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Pedal Steel Swell */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.606f, 0.0f, 0.483f, 0.769f, 0.0f, 0.0f, 0.0f, 0.32f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.0f, 1.0f, 18.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 14.0f, 0.566f, 0.0f, 0.0f, 0.0f },  /* Aloha Steel Duo */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.351f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 2.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.3f, 1.0f, 28.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Alto Lead Kompa */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.4f, 1.0f, 27.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 20.0f, 0.6f, 0.0f, 0.0f, 0.0f },  /* Sax & Trumpet Section */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 6.8f, 1.0f, 22.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 25.0f, 0.673f, 0.0f, -1.0f, 0.0f },  /* Kompa Brass Hits */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.65f, 0.4f, 0.1f, 1.0f, -1.5f, 1.0f, 30.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Twoubadou Sax */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.7f, 1.0f, 19.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 27.0f, 0.673f, 0.0f, 0.0f, 0.0f },  /* Gala Horns */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.318f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.28f, 0.5f, 0.0f, 2.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.5f, 1.0f, 33.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Soprano */
+    { 1.0f, 0.0f, 0.5f, 0.12f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.1f, 1.0f, 29.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 19.0f, 0.673f, 0.0f, 0.0f, 0.0f },  /* Afrobeat Horn Section */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.38f, 0.548f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 2.0f, 0.0f, 2.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.0f, 1.0f, 29.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afro Tenor Solo */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.7f, 1.0f, 21.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Highlife Trumpet */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.394f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 7.6f, 1.0f, 22.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 31.0f, 0.713f, 0.0f, 0.0f, 0.0f },  /* Afro Brass Stabs */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.25f, 0.4f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 6.0f, 0.4f, 0.4f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, 5.1f, 1.0f, 23.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Harmon Night */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.318f, 0.0f, 0.769f, 0.0f, 0.0f, 0.2f, 0.4f, 0.5f, 0.0f, 2.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, 3.7f, 1.0f, 28.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Sax */
+    { 1.0f, 0.0f, 0.583f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.0f, 1.0f, 20.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 24.0f, 0.635f, 0.0f, 0.0f, 0.0f },  /* Soca Horn Riff */
+    { 1.0f, 0.0f, 0.583f, 0.12f, 0.0f, 0.5f, 1.0f, 0.394f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 6.3f, 1.0f, 22.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 25.0f, 0.713f, 0.0f, 0.0f, 0.0f },  /* Soca Brass Blast */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.7f, 1.0f, 26.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Carnival Trombone Fall */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.8f, 1.0f, 19.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Calypso Trumpet */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.8f, 1.0f, 19.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 24.0f, 0.713f, 0.0f, -1.0f, 0.0f },  /* Ska Horns */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.0f, 0.447f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.0f, 1.0f, 24.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Rockers Trombone */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.3f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 6.0f, 0.45f, 0.55f, 0.8f, 0.7f, 0.4f, 0.1f, 1.0f, -1.0f, 1.0f, 36.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Roots Melodica */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.45f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 6.0f, 0.58f, 0.35f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.8f, 1.0f, 19.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Dub Trumpet Echo */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.5f, 1.0f, 30.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Reggae Sax Lead */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.28f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.7f, 1.0f, 35.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Harmonica Breeze */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.471f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.15f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 6.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.3f, 1.0f, 36.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 7.0f, 0.477f, 0.0f, 0.0f, 0.0f },  /* Melodica & Organ */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.636f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.32f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.7f, 0.4f, 0.1f, 1.0f, 3.7f, 1.0f, 19.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 24.0f, 0.673f, 0.0f, 0.0f, 0.0f },  /* Brass Swell */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.3f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Tenor Pan */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.1f, 1.0f, 38.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Double Seconds */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.4f, 1.0f, 39.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Cello Pan Strum */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.6f, 1.0f, 40.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Bass Pan */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.5f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 39.0f, 0.635f, 0.0f, -1.0f, 0.0f },  /* Steelband Section */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.445f, 0.5f, 1.0f, 0.606f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.7f, 0.4f, 0.1f, 1.0f, -3.8f, 1.0f, 41.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Pan Roll Pad */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.2f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 41.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Pan & Roll */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.3f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.5f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Island Pan Echo */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.668f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.4f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.8f, 0.4f, 0.1f, 1.0f, 4.0f, 1.0f, 38.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 64.0f, 0.401f, 0.0f, 0.0f, 0.0f },  /* Pan Over Pads */
+    { 1.0f, 0.0f, 0.625f, 0.0f, 0.0f, 0.5f, 1.0f, 0.606f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.7f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Calypso Pan */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.668f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.4f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, 3.9f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 44.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Tiki Pan */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.6f, 1.0f, 37.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 45.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Afro Pan Melody */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.3f, 1.0f, 42.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afro Marimba */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.8f, 1.0f, 43.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Balafon Griot */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.8f, 1.0f, 43.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 42.0f, 0.566f, 0.0f, 0.0f, 0.0f },  /* Balafon & Marimba */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.25f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.35f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.5f, 1.0f, 42.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Marimba */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.606f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.3f, 0.4f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 4.0f, 0.4f, 0.55f, 0.8f, 0.8f, 0.4f, 0.1f, 1.0f, 4.2f, 1.0f, 45.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kalimba Dream */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.63f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 6.3f, 1.0f, 46.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Mbira Spirit */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.683f, 0.0f, 0.0f, 0.769f, 0.3f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.7f, 1.0f, 44.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Vibes Lounge */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.668f, 0.0f, 0.0f, 0.751f, 0.15f, 0.0f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.4f, 1.0f, 44.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 42.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Exotica Vibes */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.2f, 0.0f, 0.28f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.1f, 1.0f, 44.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Vibes */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.539f, 0.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.3f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 5.0f, 0.45f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 7.9f, 1.0f, 42.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Reggae Mallets */
+    { 1.0f, 0.0f, 0.667f, 0.0f, 0.0f, 0.5f, 1.0f, 0.577f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.4f, 1.0f, 42.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 45.0f, 0.566f, 0.0f, 0.0f, 0.0f },  /* Soca Marimba Bell */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.606f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.2f, 1.0f, 45.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 46.0f, 0.635f, 0.0f, 0.0f, 0.0f },  /* Thumb Piano Duo */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.2f, 1.0f, 51.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Log Drum Classic */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.1f, 1.0f, 52.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Log Drum Deep */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 6.3f, 1.0f, 53.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Log Drum Knock */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.515f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.5f, 1.0f, 54.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Log Drum Talking */
+    { 1.0f, 0.0f, 0.5f, 0.2f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.7f, 1.0f, 55.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Log Drum Gritty */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.8f, 1.0f, 51.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 50.0f, 0.566f, 0.0f, 0.0f, 0.0f },  /* Log Drum & Sub */
+    { 0.699f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 6.3f, 1.0f, 48.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Bass */
+    { 1.0f, 0.0f, 0.583f, 0.0f, 0.0f, 0.5f, 1.0f, 0.394f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.0f, 1.0f, 48.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afrobeat Finger Bass */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.05f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.1f, 1.0f, 47.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Highlife Bass */
+    { 0.551f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.7f, 1.0f, 47.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Reggae Bass */
+    { 0.504f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.394f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.8f, 1.0f, 50.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 47.0f, 0.566f, 0.0f, 0.0f, 0.0f },  /* Dub Sub */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.365f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 7.8f, 1.0f, 49.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 50.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Soca Bass */
+    { 0.593f, 0.2f, 0.5f, 0.3f, 0.0f, 0.5f, 1.0f, 0.365f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.4f, 1.0f, 50.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Power Soca Sub */
+    { 0.615f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 6.3f, 1.0f, 48.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Lovers Rock Bass */
+    { 0.651f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.08f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.2f, 1.0f, 47.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Island Flatwound */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.394f, 0.48f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.7f, 1.0f, 50.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Sub Glide */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 7.4f, 1.0f, 56.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Island Percussion */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 10.4f, 1.0f, 56.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 58.0f, 0.755f, 0.0f, 3.0f, 0.0f },  /* Kompa Percussion */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.6f, 1.0f, 57.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* West African Drums */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 8.6f, 1.0f, 57.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 56.0f, 0.713f, 0.0f, 2.0f, 0.0f },  /* Afrobeat Percussion */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 4.8f, 1.0f, 58.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Timbales */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.18f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 8.1f, 1.0f, 59.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 56.0f, 0.673f, 0.0f, 1.0f, 0.0f },  /* Ipu & Hula Perc */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.22f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.35f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 7.8f, 1.0f, 56.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Perc Echo */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.32f, 0.38f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 6.0f, 0.5f, 0.4f, 0.8f, 0.8f, 0.4f, 0.1f, 1.0f, 8.1f, 1.0f, 56.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Dub Percussion */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.12f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 2.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.1f, 1.0f, 60.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Soca Lead */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.447f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.2f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.0f, 1.0f, 61.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Power Soca Brass */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.0f, 0.769f, 0.0f, 0.2f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.4f, 1.0f, 60.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 61.0f, 0.635f, 0.0f, 0.0f, 0.0f },  /* Soca Saw Stack */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.3f, 1.0f, 62.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afro Pluck */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.35f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.45f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -0.4f, 1.0f, 62.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Afro Pluck Echo */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.28f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 0.6f, 1.0f, 63.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Amapiano Piano Pluck */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.559f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.35f, 0.4f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 4.0f, 0.45f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, 0.8f, 1.0f, 63.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Yanos Pluck Echo */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.619f, 0.5f, 1.0f, 0.721f, 0.0f, 0.0f, 0.769f, 0.0f, 0.2f, 0.0f, 0.35f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 2.3f, 1.0f, 64.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Island Pad */
+    { 0.725f, 0.0f, 0.5f, 0.0f, 0.651f, 0.5f, 1.0f, 0.741f, 0.0f, 0.0f, 0.769f, 0.0f, 0.3f, 0.0f, 0.45f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.8f, 0.4f, 0.1f, 1.0f, 3.8f, 1.0f, 64.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Sunset Pad */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.65f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.3f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 3.1f, 1.0f, 62.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 64.0f, 0.505f, 0.0f, 0.0f, 0.0f },  /* Afro Pad & Pluck */
+    { 1.0f, 0.0f, 0.625f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.4f, 1.0f, 62.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 37.0f, 0.45f, 0.0f, 0.0f, 0.0f },  /* Soca Pluck */
+    { 0.699f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.0f, 0.5f, 0.769f, 0.0f, 0.0f, 0.3f, 0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.1f, 1.0f, 60.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Reggae Synth Lead */
+    { 1.0f, 0.0f, 0.5f, 0.22f, 0.0f, 0.5f, 1.0f, 0.418f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.15f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, -1.6f, 1.0f, 61.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Dancehall Brass Synth */
+    { 0.799f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.485f, 0.446f, 0.577f, 0.769f, 0.0f, 0.0f, 0.0f, 0.25f, 0.5f, 0.0f, 2.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 5.3f, 1.0f, 60.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Kompa Synth Lead */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.471f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.22f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 1.7f, 1.0f, 61.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 19.0f, 0.45f, 0.0f, 0.0f, 0.0f },  /* Kompa Synth Brass */
+    { 0.68f, 0.0f, 0.5f, 0.0f, 0.0f, 0.5f, 1.0f, 0.539f, 0.521f, 0.683f, 0.769f, 0.0f, 0.0f, 0.3f, 0.4f, 0.5f, 0.0f, 2.0f, 0.0f, 0.0f, 4.0f, 0.4f, 0.55f, 0.8f, 0.6f, 0.4f, 0.1f, 1.0f, 6.5f, 1.0f, 60.0f, 0.8f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.0f },  /* Piano Whistle Lead */
+    { 1.0f, 0.0f, 0.5f, 0.0f, 0.651f, 0.5f, 1.0f, 0.721f, 0.0f, 0.0f, 0.769f, 0.0f, 0.0f, 0.0f, 0.4f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f, 0.4f, 0.55f, 0.8f, 0.75f, 0.4f, 0.1f, 1.0f, 4.6f, 1.0f, 64.0f, 0.8f, 0.0f, 0.0f, 0.0f, 1.0f, 17.0f, 0.45f, 0.0f, 0.0f, 0.0f },  /* Hula Breeze Pad */
 };
