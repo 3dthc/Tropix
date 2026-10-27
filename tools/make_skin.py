@@ -165,7 +165,7 @@ FONTS_CSS = None
 
 
 def css_vars(th):
-    return ";".join(f"--{k}:{v}" for k, v in T[th].items() if k not in ("label", "flag"))
+    return ";".join(f"--{k}:{v}" for k, v in T[th].items() if k not in ("label", "flag", "split", "palm_op"))
 
 
 BASE_CSS = """
@@ -217,12 +217,19 @@ def chassis_html(th, view):
     t = T[th]
     out = []
     palm = M.svg_url(M.PALM, t["sym"])
-    out.append(f"""<div class='abs' style='inset:0;
-  background:radial-gradient(900px 520px at 50% 58%, color-mix(in srgb,var(--bg2) 85%,transparent), transparent 70%),
-             linear-gradient(180deg, color-mix(in srgb,var(--bg) 92%,#fff 8%), var(--bg))'></div>
+    pop = t.get("palm_op", ".10")
+    if t.get("split"):      # a flag split: one colour above, the other below, meeting in a soft band across the middle
+        top, bot = t["split"]
+        base = (f"radial-gradient(760px 420px at 50% 52%, rgba(255,255,255,.10), transparent 70%),"
+                f"linear-gradient(180deg, color-mix(in srgb,{top} 70%,#000) 0%, {top} 34%, color-mix(in srgb,{top} 55%,{bot}) 50%,"
+                f" {bot} 66%, color-mix(in srgb,{bot} 70%,#000) 100%)")
+    else:
+        base = ("radial-gradient(900px 520px at 50% 58%, color-mix(in srgb,var(--bg2) 85%,transparent), transparent 70%),"
+                "linear-gradient(180deg, color-mix(in srgb,var(--bg) 92%,#fff 8%), var(--bg))")
+    out.append(f"""<div class='abs' style='inset:0;background:{base}'></div>
 <div class='abs' style='inset:0;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%27160%27 height=%27160%27><filter id=%27n%27><feTurbulence type=%27fractalNoise%27 baseFrequency=%27.9%27 numOctaves=%272%27 stitchTiles=%27stitch%27/></filter><rect width=%27160%27 height=%27160%27 filter=%27url(%23n)%27/></svg>")'></div>
-<div class='abs' style='left:-38px;top:430px;width:150px;height:150px;opacity:.10;transform:rotate(12deg);background:url({palm}) center/contain no-repeat'></div>
-<div class='abs' style='left:1170px;top:-30px;width:150px;height:150px;opacity:.10;transform:scaleX(-1) rotate(10deg);background:url({palm}) center/contain no-repeat'></div>""")
+<div class='abs' style='left:-38px;top:430px;width:150px;height:150px;opacity:{pop};transform:rotate(12deg);background:url({palm}) center/contain no-repeat'></div>
+<div class='abs' style='left:1170px;top:-30px;width:150px;height:150px;opacity:{pop};transform:scaleX(-1) rotate(10deg);background:url({palm}) center/contain no-repeat'></div>""")
     # side panels: frames, titles with their motif, knob labels (the knobs themselves are the filmstrip)
     for x, y, title, ic, ks in SECTIONS:
         out.append(f"<div class='abs' style='left:{x}px;top:{y}px;width:{SIDE_W}px;height:{PANEL_H}px;border-radius:18px;"
@@ -245,7 +252,7 @@ def chassis_html(th, view):
 <div class='abs' style='left:284px;top:58px;width:712px;height:10px;opacity:.55;background:url({M.svg_url(M.WAVE, t["accent2"])}) repeat-x;background-size:60px 10px'></div>""")
     # the screen: glass tinted by the panel colour, so it reads as a lit display, not a black box
     x, y, w, h = SCR
-    flag = "".join(f"<div style='flex:1;background:{c}'></div>" for c in t.get("flag", []))
+    flag = "" if t.get("split") else "".join(f"<div style='flex:1;background:{c}'></div>" for c in t.get("flag", []))   # a split chassis is the flag already
     out.append(f"""<div class='abs' style='left:{x}px;top:{y}px;width:{w}px;height:{h}px;border-radius:20px;overflow:hidden;
   background:linear-gradient(180deg, color-mix(in srgb,var(--glass) 66%,var(--panel)), color-mix(in srgb,var(--glass) 78%,var(--panel)));box-shadow:inset 0 0 0 2px rgba(0,0,0,.6), inset 0 0 0 4px color-mix(in srgb,var(--ink) 10%,transparent),0 10px 24px rgba(0,0,0,.45)'>
 <div class='abs' style='left:0;top:0;width:{w}px;height:{RULE_Y - y if view != 2 else 120}px;

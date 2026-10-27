@@ -32,9 +32,9 @@ THEMES = {
     "rasta": dict(label="RASTA", bg="#0e0d0a", bg2="#2a2410", panel="#1a1813", accent="#f5c518", accent2="#3fb950",
                   glass="#0c0b08", ink="#f7f1df", dim="#aca68f", sym="#e0392b", cap="#2c2a22", knobmark="#f7f1df",
                   flag=["#d7261e", "#f5c518", "#1e9e3e"]),
-    "haiti": dict(label="HAITI", bg="#0a1444", bg2="#15287a", panel="#122162", accent="#e0153a", accent2="#ffffff",
-                  glass="#0a1340", ink="#f4f6ff", dim="#a3add9", sym="#49a84a", cap="#1d2f78", knobmark="#f4f6ff",
-                  flag=["#00209f", "#d21034"]),
+    "haiti": dict(label="HAITI", bg="#0b1660", bg2="#2a0f4a", panel="rgba(10,14,48,.74)", accent="#ffffff", accent2="#f5c84c",
+                  glass="#0a0f33", ink="#ffffff", dim="#c3cae8", sym="#3fae49", cap="#1c2c86", knobmark="#ffffff",
+                  flag=["#00209f", "#d21034"], split=["#0a2a9e", "#a30d2b"], palm_op=".2"),
     "africa": dict(label="AFRICA", bg="#100c0b", bg2="#3d1210", panel="#1c1514", accent="#e5372e", accent2="#33b864",
                    glass="#0e0a09", ink="#f6eee8", dim="#b4a29c", sym="#33b864", cap="#2d2321", knobmark="#f6eee8",
                    flag=["#e5372e", "#141414", "#1f9e47"]),
@@ -179,7 +179,7 @@ def screen_sound(t):
 
 def page_html(theme, view):
     t = THEMES[theme]
-    css_vars = ";".join(f"--{k}:{v}" for k, v in t.items() if k not in ("label", "flag"))
+    css_vars = ";".join(f"--{k}:{v}" for k, v in t.items() if k not in ("label", "flag", "split", "palm_op"))
     if view == "settings":
         center = settings_center(t, theme)
     else:
