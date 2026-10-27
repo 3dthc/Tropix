@@ -1,0 +1,36 @@
+# Publishes a draft release made by release.yml, after its zip has been installed and checked on an MPC:
+# Actions -> Publish release -> Run workflow, enter the version. The notes come from docs/releases/v<version>.md when
+# that file exists. Publishing creates the tag; the catalog then lists the release.
+name: Publish release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version of the draft to publish, e.g. 0.1.0
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish the draft
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: v${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          draft=$(gh release view "$TAG" --json isDraft --jq .isDraft)
+          [ "$draft" = "true" ] || { echo "$TAG is not a draft (already published?)"; exit 1; }
+          notes="docs/releases/$TAG.md"
+          if [ -f "$notes" ]; then
+            gh release edit "$TAG" --draft=false --latest --title "Tropix ${{ inputs.version }}" --notes-file "$notes"
+          else
+            gh release edit "$TAG" --draft=false --latest
+          fi
+          gh release view "$TAG" --json tagName,isDraft,url
