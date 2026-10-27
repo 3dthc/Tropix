@@ -1,0 +1,33 @@
+# Builds Tropix for MPC in GitHub Actions and attaches Tropix-<version>-mpc-armv7.zip to a DRAFT release.
+# Actions -> Release -> Run workflow, enter the version. Install that zip on an MPC, check it, then publish the draft.
+# mpc-vst-plugins is pinned to one commit in both places below.
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version, e.g. 0.1.0
+        required: true
+        type: string
+      dry_run:
+        description: Build and package only (zip as a run artifact), no draft release
+        type: boolean
+        default: false
+
+jobs:
+  vst:
+    uses: sd88me/mpc-vst-plugins/.github/workflows/vst-release.yml@8aa8d3552a55a93eb4034bb9bbb02cbe91d69b61
+    permissions: { contents: write }
+    with:
+      tag: v${{ inputs.version }}
+      version: ${{ inputs.version }}
+      tools_ref: 8aa8d3552a55a93eb4034bb9bbb02cbe91d69b61
+      vst_dir: vst
+      build: bash tools/ci_build.sh
+      host_test: 'mkdir -p vst/build/engine && cp engine/* vst/build/engine/ && "$MPC_VST/tools/test_port.sh" vst/vst.json'
+      extra: engine:engine
+      about: Island and afro sounds - 128 presets and 65 instruments for afrobeat, amapiano, kompa, soca, reggae and Hawaiian music. Two layers, glide, scoop, vibrato, filter, drive, chorus, delay, reverb, six colorways.
+      plugin_id: tropix
+      license: MIT
+      dry_run: ${{ inputs.dry_run }}

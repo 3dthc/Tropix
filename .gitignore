@@ -1,3 +1,9 @@
 __pycache__/
 *.wav
 raw/
+engine/*.tpx
+engine/LIBRARY_VERSION
+engine/LICENSES.md
+vst/build/
+dist/
+*.pyc

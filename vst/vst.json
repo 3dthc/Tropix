@@ -1,0 +1,34 @@
+{
+  "name": "Tropix",
+  "vendor": "3dthc",
+  "uid": "TrPx",
+  "version": 10,
+  "so": "tropix.so",
+  "params": "params.json",
+  "defines": {
+    "MODULE_SUBDIR": "\"engine\"",
+    "HAS_DISPLAY_REV": 1,
+    "DISPLAY_REV_NO_UPDATE": 1,
+    "HAS_LFO_BPM": 1,
+    "PARAM_TEXT_MAX": 64
+  },
+  "build": {
+    "root": "..",
+    "sources": [
+      "src/engine.c"
+    ],
+    "cflags": [
+      "-O2",
+      "-ffast-math"
+    ],
+    "libs": [
+      "-lm",
+      "-lpthread"
+    ]
+  },
+  "layout": "layout.conf",
+  "art": "html",
+  "programs": {
+    "param": "preset"
+  }
+}

@@ -1,0 +1,1792 @@
+{
+  "name": "Tropix",
+  "params": [
+    {
+      "key": "volume",
+      "name": "Volume",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.8,
+      "dynamic_display": true
+    },
+    {
+      "key": "preset",
+      "name": "Preset",
+      "options": [
+        "Amapiano Keys",
+        "Private School Piano",
+        "Deep House Reed",
+        "Kompa Piano",
+        "Gouyad E-Piano",
+        "Kompa Organ",
+        "Bubble Organ",
+        "Skank Piano",
+        "Dub Organ",
+        "Pluck E-Piano Skank",
+        "Highlife Upright",
+        "Lagos Reed Piano",
+        "Afrobeat Combo Organ",
+        "Afro Electric Grand",
+        "Soca Piano",
+        "Carnival Organ",
+        "Island FM Keys",
+        "Aloha Piano",
+        "Tiki Lounge Keys",
+        "Sunday Gospel Organ",
+        "Kompa Lead Guitar",
+        "Kompa Rhythm Mute",
+        "Twoubadou Guitar",
+        "Mini-Jazz Chorus",
+        "Highlife Lead",
+        "Afrobeat Scratch",
+        "Palm-Wine Guitar",
+        "Soukous Sebene",
+        "Afro Interlock",
+        "Amapiano Guitar Pluck",
+        "Reggae Skank Guitar",
+        "Lovers Rock Guitar",
+        "Soca Strum",
+        "Calypso Cuatro",
+        "Slack Key Sunset",
+        "Island Ukulele",
+        "Hawaiian Steel",
+        "Pedal Steel Swell",
+        "Aloha Steel Duo",
+        "Alto Lead Kompa",
+        "Sax & Trumpet Section",
+        "Kompa Brass Hits",
+        "Twoubadou Sax",
+        "Gala Horns",
+        "Kompa Soprano",
+        "Afrobeat Horn Section",
+        "Afro Tenor Solo",
+        "Highlife Trumpet",
+        "Afro Brass Stabs",
+        "Harmon Night",
+        "Amapiano Sax",
+        "Soca Horn Riff",
+        "Soca Brass Blast",
+        "Carnival Trombone Fall",
+        "Calypso Trumpet",
+        "Ska Horns",
+        "Rockers Trombone",
+        "Roots Melodica",
+        "Dub Trumpet Echo",
+        "Reggae Sax Lead",
+        "Harmonica Breeze",
+        "Melodica & Organ",
+        "Brass Swell",
+        "Tenor Pan",
+        "Double Seconds",
+        "Cello Pan Strum",
+        "Bass Pan",
+        "Steelband Section",
+        "Pan Roll Pad",
+        "Pan & Roll",
+        "Island Pan Echo",
+        "Pan Over Pads",
+        "Calypso Pan",
+        "Tiki Pan",
+        "Afro Pan Melody",
+        "Afro Marimba",
+        "Balafon Griot",
+        "Balafon & Marimba",
+        "Amapiano Marimba",
+        "Kalimba Dream",
+        "Mbira Spirit",
+        "Vibes Lounge",
+        "Exotica Vibes",
+        "Kompa Vibes",
+        "Reggae Mallets",
+        "Soca Marimba Bell",
+        "Thumb Piano Duo",
+        "Log Drum Classic",
+        "Log Drum Deep",
+        "Log Drum Knock",
+        "Log Drum Talking",
+        "Log Drum Gritty",
+        "Log Drum & Sub",
+        "Kompa Bass",
+        "Afrobeat Finger Bass",
+        "Highlife Bass",
+        "Reggae Bass",
+        "Dub Sub",
+        "Soca Bass",
+        "Power Soca Sub",
+        "Lovers Rock Bass",
+        "Island Flatwound",
+        "Amapiano Sub Glide",
+        "Island Percussion",
+        "Kompa Percussion",
+        "West African Drums",
+        "Afrobeat Percussion",
+        "Timbales",
+        "Ipu & Hula Perc",
+        "Amapiano Perc Echo",
+        "Dub Percussion",
+        "Soca Lead",
+        "Power Soca Brass",
+        "Soca Saw Stack",
+        "Afro Pluck",
+        "Afro Pluck Echo",
+        "Amapiano Piano Pluck",
+        "Yanos Pluck Echo",
+        "Island Pad",
+        "Sunset Pad",
+        "Afro Pad & Pluck",
+        "Soca Pluck",
+        "Reggae Synth Lead",
+        "Dancehall Brass Synth",
+        "Kompa Synth Lead",
+        "Kompa Synth Brass",
+        "Piano Whistle Lead",
+        "Hula Breeze Pad"
+      ],
+      "default": "Amapiano Keys",
+      "qlink_ticks": 2
+    },
+    {
+      "key": "prev",
+      "name": "Previous Preset",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "next",
+      "name": "Next Preset",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "go_browse",
+      "name": "Show Browser",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "go_sound",
+      "name": "Show Sound",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "go_settings",
+      "name": "Show Settings",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "fav_tap",
+      "name": "Favourite",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "favs_tap",
+      "name": "Favourites List",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "reset_tap",
+      "name": "Reset Preset",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "view",
+      "name": "View",
+      "options": [
+        "Browse",
+        "Sound",
+        "Settings"
+      ],
+      "default": "Browse"
+    },
+    {
+      "key": "cutoff",
+      "name": "Cutoff",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "resonance",
+      "name": "Resonance",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "bright",
+      "name": "Bright",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5,
+      "dynamic_display": true
+    },
+    {
+      "key": "drive",
+      "name": "Drive",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "attack",
+      "name": "Attack",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "decay",
+      "name": "Decay",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5,
+      "dynamic_display": true
+    },
+    {
+      "key": "sustain",
+      "name": "Sustain",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "release",
+      "name": "Release",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.55,
+      "dynamic_display": true
+    },
+    {
+      "key": "glide",
+      "name": "Glide",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "vibrato",
+      "name": "Vibrato",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "lfo_rate",
+      "name": "LFO Rate",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5,
+      "dynamic_display": true
+    },
+    {
+      "key": "lfo_depth",
+      "name": "LFO Depth",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "chorus",
+      "name": "Chorus",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "delay",
+      "name": "Delay",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "reverb",
+      "name": "Reverb",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.2,
+      "dynamic_display": true
+    },
+    {
+      "key": "env_amt",
+      "name": "Env Amount",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5,
+      "dynamic_display": true
+    },
+    {
+      "key": "key_track",
+      "name": "Key Track",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "voice_mode",
+      "name": "Voice Mode",
+      "options": [
+        "Poly",
+        "Mono",
+        "Legato"
+      ],
+      "default": "Poly"
+    },
+    {
+      "key": "lfo_target",
+      "name": "LFO Target",
+      "options": [
+        "Tremolo",
+        "Filter",
+        "Auto-Pan"
+      ],
+      "default": "Tremolo"
+    },
+    {
+      "key": "scoop",
+      "name": "Horn Scoop",
+      "options": [
+        "Off",
+        "Light",
+        "Deep"
+      ],
+      "default": "Off"
+    },
+    {
+      "key": "delay_time",
+      "name": "Delay Time",
+      "options": [
+        "1/16",
+        "1/8T",
+        "1/8",
+        "1/8.",
+        "1/4T",
+        "1/4",
+        "1/4.",
+        "1/2"
+      ],
+      "default": "1/8."
+    },
+    {
+      "key": "delay_fb",
+      "name": "Delay Feedback",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.4,
+      "dynamic_display": true
+    },
+    {
+      "key": "delay_tone",
+      "name": "Delay Tone",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.55,
+      "dynamic_display": true
+    },
+    {
+      "key": "delay_width",
+      "name": "Delay Width",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.8,
+      "dynamic_display": true
+    },
+    {
+      "key": "rev_size",
+      "name": "Reverb Size",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.6,
+      "dynamic_display": true
+    },
+    {
+      "key": "rev_damp",
+      "name": "Reverb Damping",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.4,
+      "dynamic_display": true
+    },
+    {
+      "key": "rev_predelay",
+      "name": "Reverb Pre-Delay",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.1,
+      "dynamic_display": true
+    },
+    {
+      "key": "rev_width",
+      "name": "Reverb Width",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "trim",
+      "name": "Preset Trim",
+      "min": -12.0,
+      "max": 12.0,
+      "default": 0.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "layer_a",
+      "name": "Layer A",
+      "options": [
+        "Off",
+        "On"
+      ],
+      "default": "On"
+    },
+    {
+      "key": "inst_a",
+      "name": "Layer A Sound",
+      "options": [
+        "Grand Piano",
+        "Upright Piano",
+        "Tine E-Piano",
+        "Reed E-Piano",
+        "Electric Grand",
+        "Pluck E-Piano",
+        "FM Keys",
+        "Organ Bubble",
+        "Organ Perc",
+        "Organ Full",
+        "Hollow Electric",
+        "Hollow Muted",
+        "Archtop Electric",
+        "Archtop Muted",
+        "Slack-Key Steel",
+        "Palm-Wine Nylon",
+        "Ukulele",
+        "Pedal Steel",
+        "Lap Steel",
+        "Trumpet",
+        "Bright Trumpet",
+        "Bright Trumpet Vibrato",
+        "Trumpet Stab",
+        "Harmon Trumpet",
+        "Trombone",
+        "Trombone Stab",
+        "Trombone Fall",
+        "Alto Sax",
+        "Alto Sax Vibrato",
+        "Tenor Sax",
+        "Tenor Sax Vibrato",
+        "Tenor Sax Stab",
+        "Soprano Sax",
+        "Soprano Sax Vibrato",
+        "Harmonica",
+        "Harmonica Vibrato",
+        "Melodica",
+        "Tenor Pan",
+        "Double Second Pan",
+        "Cello Pan",
+        "Bass Pan",
+        "Pan Roll",
+        "Marimba",
+        "Balafon",
+        "Vibraphone",
+        "Kalimba",
+        "Mbira",
+        "Flatwound Bass",
+        "Finger Bass",
+        "Finger Bass Short",
+        "Sub Bass",
+        "Log Drum Classic",
+        "Log Drum Deep",
+        "Log Drum Knock",
+        "Log Drum Talking",
+        "Log Drum Gritty",
+        "Island Percussion",
+        "West African Drums",
+        "Timbales",
+        "Ipu",
+        "Soca Lead",
+        "Soca Brass",
+        "Afro Pluck",
+        "Piano Pluck",
+        "Island Pad"
+      ],
+      "default": "Grand Piano"
+    },
+    {
+      "key": "level_a",
+      "name": "Layer A Level",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.8,
+      "dynamic_display": true
+    },
+    {
+      "key": "pan_a",
+      "name": "Layer A Pan",
+      "min": -1.0,
+      "max": 1.0,
+      "default": 0.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "octave_a",
+      "name": "Layer A Octave",
+      "min": -3,
+      "max": 3,
+      "default": 0,
+      "dynamic_display": true,
+      "display": "int"
+    },
+    {
+      "key": "fine_a",
+      "name": "Layer A Fine",
+      "min": -100,
+      "max": 100,
+      "default": 0,
+      "dynamic_display": true,
+      "display": "int"
+    },
+    {
+      "key": "solo_a",
+      "name": "Layer A Solo",
+      "options": [
+        "Off",
+        "On"
+      ],
+      "default": "Off"
+    },
+    {
+      "key": "inst_a_prev",
+      "name": "Layer A Previous",
+      "momentary": true
+    },
+    {
+      "key": "inst_a_next",
+      "name": "Layer A Next",
+      "momentary": true
+    },
+    {
+      "key": "layer_b",
+      "name": "Layer B",
+      "options": [
+        "Off",
+        "On"
+      ],
+      "default": "Off"
+    },
+    {
+      "key": "inst_b",
+      "name": "Layer B Sound",
+      "options": [
+        "Grand Piano",
+        "Upright Piano",
+        "Tine E-Piano",
+        "Reed E-Piano",
+        "Electric Grand",
+        "Pluck E-Piano",
+        "FM Keys",
+        "Organ Bubble",
+        "Organ Perc",
+        "Organ Full",
+        "Hollow Electric",
+        "Hollow Muted",
+        "Archtop Electric",
+        "Archtop Muted",
+        "Slack-Key Steel",
+        "Palm-Wine Nylon",
+        "Ukulele",
+        "Pedal Steel",
+        "Lap Steel",
+        "Trumpet",
+        "Bright Trumpet",
+        "Bright Trumpet Vibrato",
+        "Trumpet Stab",
+        "Harmon Trumpet",
+        "Trombone",
+        "Trombone Stab",
+        "Trombone Fall",
+        "Alto Sax",
+        "Alto Sax Vibrato",
+        "Tenor Sax",
+        "Tenor Sax Vibrato",
+        "Tenor Sax Stab",
+        "Soprano Sax",
+        "Soprano Sax Vibrato",
+        "Harmonica",
+        "Harmonica Vibrato",
+        "Melodica",
+        "Tenor Pan",
+        "Double Second Pan",
+        "Cello Pan",
+        "Bass Pan",
+        "Pan Roll",
+        "Marimba",
+        "Balafon",
+        "Vibraphone",
+        "Kalimba",
+        "Mbira",
+        "Flatwound Bass",
+        "Finger Bass",
+        "Finger Bass Short",
+        "Sub Bass",
+        "Log Drum Classic",
+        "Log Drum Deep",
+        "Log Drum Knock",
+        "Log Drum Talking",
+        "Log Drum Gritty",
+        "Island Percussion",
+        "West African Drums",
+        "Timbales",
+        "Ipu",
+        "Soca Lead",
+        "Soca Brass",
+        "Afro Pluck",
+        "Piano Pluck",
+        "Island Pad"
+      ],
+      "default": "Grand Piano"
+    },
+    {
+      "key": "level_b",
+      "name": "Layer B Level",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.8,
+      "dynamic_display": true
+    },
+    {
+      "key": "pan_b",
+      "name": "Layer B Pan",
+      "min": -1.0,
+      "max": 1.0,
+      "default": 0.0,
+      "dynamic_display": true
+    },
+    {
+      "key": "octave_b",
+      "name": "Layer B Octave",
+      "min": -3,
+      "max": 3,
+      "default": 0,
+      "dynamic_display": true,
+      "display": "int"
+    },
+    {
+      "key": "fine_b",
+      "name": "Layer B Fine",
+      "min": -100,
+      "max": 100,
+      "default": 0,
+      "dynamic_display": true,
+      "display": "int"
+    },
+    {
+      "key": "solo_b",
+      "name": "Layer B Solo",
+      "options": [
+        "Off",
+        "On"
+      ],
+      "default": "Off"
+    },
+    {
+      "key": "inst_b_prev",
+      "name": "Layer B Previous",
+      "momentary": true
+    },
+    {
+      "key": "inst_b_next",
+      "name": "Layer B Next",
+      "momentary": true
+    },
+    {
+      "key": "a4_ref",
+      "name": "A4 Ref",
+      "min": 400,
+      "max": 480,
+      "default": 440,
+      "dynamic_display": true,
+      "display": "int"
+    },
+    {
+      "key": "transpose",
+      "name": "Transpose",
+      "min": -24,
+      "max": 24,
+      "default": 0,
+      "dynamic_display": true,
+      "display": "int"
+    },
+    {
+      "key": "bend_range",
+      "name": "Bend Range",
+      "min": 0,
+      "max": 24,
+      "default": 2,
+      "dynamic_display": true,
+      "display": "int"
+    },
+    {
+      "key": "polyphony",
+      "name": "Polyphony",
+      "min": 1,
+      "max": 32,
+      "default": 24,
+      "dynamic_display": true,
+      "display": "int"
+    },
+    {
+      "key": "vel_sens",
+      "name": "Velocity",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.8,
+      "dynamic_display": true
+    },
+    {
+      "key": "vel_filter",
+      "name": "Vel > Filter",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.25,
+      "dynamic_display": true
+    },
+    {
+      "key": "spread",
+      "name": "Spread",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.3,
+      "dynamic_display": true
+    },
+    {
+      "key": "vel_curve",
+      "name": "Velocity Curve",
+      "options": [
+        "Soft",
+        "Normal",
+        "Hard"
+      ],
+      "default": "Normal"
+    },
+    {
+      "key": "mod_wheel",
+      "name": "Mod Wheel",
+      "options": [
+        "Vibrato",
+        "Filter",
+        "Off"
+      ],
+      "default": "Vibrato"
+    },
+    {
+      "key": "anim",
+      "name": "Animation",
+      "options": [
+        "Off",
+        "Low",
+        "Smooth"
+      ],
+      "default": "Smooth"
+    },
+    {
+      "key": "theme",
+      "name": "Theme",
+      "options": [
+        "Sunset",
+        "Lagos",
+        "Aloha",
+        "Kingston",
+        "Kanaval",
+        "Jozi Night"
+      ],
+      "default": "Sunset"
+    },
+    {
+      "key": "theme_prev",
+      "name": "Previous Theme",
+      "momentary": true
+    },
+    {
+      "key": "theme_next",
+      "name": "Next Theme",
+      "momentary": true
+    },
+    {
+      "key": "browse",
+      "name": "Browse",
+      "min": 0,
+      "max": 1000,
+      "default": 500,
+      "dynamic_display": true,
+      "display": "int"
+    },
+    {
+      "key": "look",
+      "name": "Look",
+      "options": [
+        "Sunset Browse",
+        "Sunset Sound",
+        "Sunset Settings",
+        "Lagos Browse",
+        "Lagos Sound",
+        "Lagos Settings",
+        "Aloha Browse",
+        "Aloha Sound",
+        "Aloha Settings",
+        "Kingston Browse",
+        "Kingston Sound",
+        "Kingston Settings",
+        "Kanaval Browse",
+        "Kanaval Sound",
+        "Kanaval Settings",
+        "Jozi Night Browse",
+        "Jozi Night Sound",
+        "Jozi Night Settings"
+      ],
+      "default": "Sunset Browse"
+    },
+    {
+      "key": "wave",
+      "name": "Waveform",
+      "min": 0,
+      "max": 16,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "fav",
+      "name": "Favourite Lit",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "favs",
+      "name": "Favourites Shown",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "edited",
+      "name": "Edited",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "midi_led",
+      "name": "MIDI LED",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "cpu",
+      "name": "CPU",
+      "min": 0,
+      "max": 10,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "pgenre",
+      "name": "Preset Genre",
+      "min": 0,
+      "max": 6,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "ptype",
+      "name": "Preset Type",
+      "min": 0,
+      "max": 7,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "act_a",
+      "name": "Layer A Active",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "act_b",
+      "name": "Layer B Active",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "hdr_info",
+      "name": "Header Info",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "desc_1",
+      "name": "Description 1",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "desc_2",
+      "name": "Description 2",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "list_head",
+      "name": "List Heading",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "cw_name",
+      "name": "Colorway Name",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "lname_a",
+      "name": "Layer A Name",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "lv_a",
+      "name": "Layer A Level",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "pn_a",
+      "name": "Layer A Pan",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "oc_a",
+      "name": "Layer A Octave",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "fn_a",
+      "name": "Layer A Fine",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "lname_b",
+      "name": "Layer B Name",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "lv_b",
+      "name": "Layer B Level",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "pn_b",
+      "name": "Layer B Pan",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "oc_b",
+      "name": "Layer B Octave",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "fn_b",
+      "name": "Layer B Fine",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_voice_mode",
+      "name": "Setting voice_mode",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_lfo_target",
+      "name": "Setting lfo_target",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_scoop",
+      "name": "Setting scoop",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_a4_ref",
+      "name": "Setting a4_ref",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_transpose",
+      "name": "Setting transpose",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_bend_range",
+      "name": "Setting bend_range",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_polyphony",
+      "name": "Setting polyphony",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_vel_curve",
+      "name": "Setting vel_curve",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_vel_sens",
+      "name": "Setting vel_sens",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_mod_wheel",
+      "name": "Setting mod_wheel",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_spread",
+      "name": "Setting spread",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_anim",
+      "name": "Setting anim",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "gen_1",
+      "name": "Genre 1",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "gen_2",
+      "name": "Genre 2",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "gen_3",
+      "name": "Genre 3",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "gen_4",
+      "name": "Genre 4",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "gen_5",
+      "name": "Genre 5",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "gen_6",
+      "name": "Genre 6",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "gen_7",
+      "name": "Genre 7",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "typ_1",
+      "name": "Type 1",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "typ_2",
+      "name": "Type 2",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "typ_3",
+      "name": "Type 3",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "typ_4",
+      "name": "Type 4",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "typ_5",
+      "name": "Type 5",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "typ_6",
+      "name": "Type 6",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "typ_7",
+      "name": "Type 7",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "typ_8",
+      "name": "Type 8",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "row_1",
+      "name": "List Row 1",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "row_2",
+      "name": "List Row 2",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "row_3",
+      "name": "List Row 3",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "row_4",
+      "name": "List Row 4",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "row_5",
+      "name": "List Row 5",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "row_6",
+      "name": "List Row 6",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "row_7",
+      "name": "List Row 7",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "row_8",
+      "name": "List Row 8",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "fav_0",
+      "name": "Favourites 1",
+      "min": 0,
+      "max": 8191,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "fav_1",
+      "name": "Favourites 2",
+      "min": 0,
+      "max": 8191,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "fav_2",
+      "name": "Favourites 3",
+      "min": 0,
+      "max": 8191,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "fav_3",
+      "name": "Favourites 4",
+      "min": 0,
+      "max": 8191,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "fav_4",
+      "name": "Favourites 5",
+      "min": 0,
+      "max": 8191,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "fav_5",
+      "name": "Favourites 6",
+      "min": 0,
+      "max": 8191,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "fav_6",
+      "name": "Favourites 7",
+      "min": 0,
+      "max": 8191,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "fav_7",
+      "name": "Favourites 8",
+      "min": 0,
+      "max": 8191,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "fav_8",
+      "name": "Favourites 9",
+      "min": 0,
+      "max": 8191,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "fav_9",
+      "name": "Favourites 10",
+      "min": 0,
+      "max": 8191,
+      "default": 0,
+      "display": "int"
+    },
+    {
+      "key": "gpick_1",
+      "name": "Genre Pad 1",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "gpick_2",
+      "name": "Genre Pad 2",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "gpick_3",
+      "name": "Genre Pad 3",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "gpick_4",
+      "name": "Genre Pad 4",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "gpick_5",
+      "name": "Genre Pad 5",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "gpick_6",
+      "name": "Genre Pad 6",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "gpick_7",
+      "name": "Genre Pad 7",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tpick_1",
+      "name": "Type Pad 1",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tpick_2",
+      "name": "Type Pad 2",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tpick_3",
+      "name": "Type Pad 3",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tpick_4",
+      "name": "Type Pad 4",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tpick_5",
+      "name": "Type Pad 5",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tpick_6",
+      "name": "Type Pad 6",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tpick_7",
+      "name": "Type Pad 7",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tpick_8",
+      "name": "Type Pad 8",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "pick_1",
+      "name": "Preset Pad 1",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "pick_2",
+      "name": "Preset Pad 2",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "pick_3",
+      "name": "Preset Pad 3",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "pick_4",
+      "name": "Preset Pad 4",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "pick_5",
+      "name": "Preset Pad 5",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "pick_6",
+      "name": "Preset Pad 6",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "pick_7",
+      "name": "Preset Pad 7",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "pick_8",
+      "name": "Preset Pad 8",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tlv_a",
+      "name": "Layer A Level Pad",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tpn_a",
+      "name": "Layer A Pan Pad",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "toc_a",
+      "name": "Layer A Octave Pad",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tfn_a",
+      "name": "Layer A Fine Pad",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tname_a",
+      "name": "Layer A Sound Pad",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tlv_b",
+      "name": "Layer B Level Pad",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tpn_b",
+      "name": "Layer B Pan Pad",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "toc_b",
+      "name": "Layer B Octave Pad",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tfn_b",
+      "name": "Layer B Fine Pad",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "tname_b",
+      "name": "Layer B Sound Pad",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_voice_mode",
+      "name": "Setting Pad voice_mode",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_lfo_target",
+      "name": "Setting Pad lfo_target",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_scoop",
+      "name": "Setting Pad scoop",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_a4_ref",
+      "name": "Setting Pad a4_ref",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_transpose",
+      "name": "Setting Pad transpose",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_bend_range",
+      "name": "Setting Pad bend_range",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_polyphony",
+      "name": "Setting Pad polyphony",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_vel_curve",
+      "name": "Setting Pad vel_curve",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_vel_sens",
+      "name": "Setting Pad vel_sens",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_mod_wheel",
+      "name": "Setting Pad mod_wheel",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_spread",
+      "name": "Setting Pad spread",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_anim",
+      "name": "Setting Pad anim",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "sw_1",
+      "name": "Colorway Pad 1",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "sw_2",
+      "name": "Colorway Pad 2",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "sw_3",
+      "name": "Colorway Pad 3",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "sw_4",
+      "name": "Colorway Pad 4",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "sw_5",
+      "name": "Colorway Pad 5",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "sw_6",
+      "name": "Colorway Pad 6",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    }
+  ]
+}
