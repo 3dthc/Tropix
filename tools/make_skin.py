@@ -320,7 +320,7 @@ def settings_html(th):
         out.append(f"<div class='abs' style='left:{sx}px;top:{sy}px;width:{sw}px;height:{sh}px;border-radius:12px;"
                    f"background:linear-gradient(135deg,{v['accent']},{v['bg2']} 55%,{v['accent2']});box-shadow:inset 0 0 0 2px rgba(255,255,255,.15)'></div>")
     out.append(f"<div class='abs' style='left:{x + 4}px;top:{ABOUT_Y}px;width:{w - 8}px;font:400 15px Outfit;line-height:1.4;color:var(--dim)'>"
-               f"Tropix {VERSION} · 65 instruments from open recordings (CC0, CC BY 3.0, University of Iowa MIS) and original "
+               f"Tropix · 65 instruments from open recordings (CC0, CC BY 3.0, University of Iowa MIS) and original "
                f"synthesis. Touch a row, then turn the data wheel.</div>")
     return "".join(out)
 
