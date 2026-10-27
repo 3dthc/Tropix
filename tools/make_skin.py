@@ -5,7 +5,7 @@
     python3 tools/make_skin.py --mockup DIR  (full-page renders of every view and colorway, live text included)
 
 One page (MAIN), three views on its screen: BROWSE (genre, type and preset lists), LAYERS (the two layers) and
-SETTINGS, in six colorways. A background per colorway and view is chosen by "look" (theme x view); live text is
+SETTINGS, in nine colorways. A background per colorway and view is chosen by "look" (theme x view); live text is
 MPC's own (Titillium Web, the only family it draws besides Roboto), everything else is baked into the pictures
 (Pacifico, Outfit and Barlow Semi Condensed, SIL OFL). The 16 knobs keep their place in every view, as the four
 Q-Link columns; the 16th Q-Link browses presets (MPC's track has its own volume).
