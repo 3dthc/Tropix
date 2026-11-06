@@ -2,7 +2,7 @@
   "name": "Tropix",
   "vendor": "3dthc",
   "uid": "TrPx",
-  "version": 10,
+  "version": 11,
   "so": "tropix.so",
   "params": "params.json",
   "defines": {

@@ -43,7 +43,7 @@ the list and its pages follow.
 ![The LAYERS view](docs/images/layers.jpg)
 
 The waveform, both layers and the preset's description. For each layer: ◀ ▶ change its sound (or touch the name and
-turn the data wheel), ON, SOLO, and LEVEL, PAN, OCTAVE and FINE (touch one, then turn the data wheel). On a
+turn the data wheel or drag), ON, SOLO, and LEVEL, PAN, OCTAVE and FINE (touch one, then drag or turn the data wheel). On a
 percussion kit, OCTAVE moves the kit along the keyboard instead of retuning it.
 
 ### SETTINGS
@@ -52,7 +52,9 @@ percussion kit, OCTAVE moves the kit along the keyboard instead of retuning it.
 
 THIS PRESET (voice mode, LFO target, horn scoop: saved in the preset), TUNING (A4 reference, transpose, bend
 range), PLAYING (polyphony, velocity curve, velocity), CONTROL (mod wheel, stereo spread, wave animation) and the
-colorway (◀ ▶). Pressing into a pad (aftertouch) does what the mod wheel does. Touch a row and turn the data wheel; a tap steps a row that has a list of choices.
+colorway (◀ ▶). Every value has a small knob: touch the value or its knob, then drag up or down or turn the data
+wheel. Tapping the name of a row with a list of choices (voice mode, LFO target, horn scoop, velocity curve, mod wheel,
+animation) steps to the next choice. Pressing into a pad (aftertouch) does what the mod wheel does.
 
 | Button | What it does |
 | --- | --- |

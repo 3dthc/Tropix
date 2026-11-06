@@ -32,11 +32,17 @@ LAYER_CELLS = [("lv", "level", "LEVEL"), ("pn", "pan", "PAN"), ("oc", "octave", 
 # its value text. (box title, [(param key, row label)])
 SETTINGS_BOXES = [
     ("THIS PRESET", [("voice_mode", "VOICE MODE"), ("lfo_target", "LFO TARGET"), ("scoop", "HORN SCOOP")]),
-    ("TUNING", [("a4_ref", "A4 REFERENCE"), ("transpose", "TRANSPOSE"), ("bend_range", "BEND RANGE")]),
-    ("PLAYING", [("polyphony", "POLYPHONY"), ("vel_curve", "VELOCITY CURVE"), ("vel_sens", "VELOCITY")]),
-    ("CONTROL", [("mod_wheel", "MOD WHEEL"), ("spread", "STEREO SPREAD"), ("anim", "WAVE ANIMATION")]),
+    ("TUNING", [("a4_ref", "A4 TUNING"), ("transpose", "TRANSPOSE"), ("bend_range", "BEND RANGE")]),
+    ("PLAYING", [("polyphony", "POLYPHONY"), ("vel_curve", "VEL CURVE"), ("vel_sens", "VELOCITY")]),
+    ("CONTROL", [("mod_wheel", "MOD WHEEL"), ("spread", "SPREAD"), ("anim", "ANIMATION")]),
 ]
 SETTING_KEYS = [k for _, rows in SETTINGS_BOXES for k, _ in rows]
+CHOICE_ROWS = {"voice_mode", "lfo_target", "scoop", "vel_curve", "mod_wheel", "anim"}   # a tap on the label steps these
+
+
+# a data wheel click moves a continuous knob 1% of its range; these (touched on the LAYERS and SETTINGS screens, where
+# there is no big knob to drag) move faster per click
+WHEEL_GAIN = {"level_a": 3, "level_b": 3, "pan_a": 2, "pan_b": 2, "vel_sens": 5, "spread": 5}
 
 
 def knob(key, name, default, lo=0.0, hi=1.0, fmt="PCT", integer=False, preset=True):
@@ -156,6 +162,8 @@ def to_json(P):
                 q["dynamic_display"] = True
             if p["integer"]:
                 q["display"] = "int"
+            if p["key"] in WHEEL_GAIN:
+                q["nudge_gain"] = WHEEL_GAIN[p["key"]]
         elif p["kind"] == "option":
             q.update(options=p["options"], default=p["default"])
             if p["key"] == "preset":

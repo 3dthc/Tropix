@@ -28,7 +28,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import ui_mockup as M  # noqa: E402
 from pack_tropix import TYPES  # noqa: E402
-from tropix_params import GENRES, LAYER_CELLS, LIST_ROWS, SETTINGS_BOXES, THEMES as THEME_LABELS, VIEWS, WAVE_FRAMES  # noqa: E402
+from tropix_params import CHOICE_ROWS, GENRES, LAYER_CELLS, LIST_ROWS, SETTINGS_BOXES, THEMES as THEME_LABELS, VIEWS, WAVE_FRAMES  # noqa: E402
 
 VST = os.path.join(HERE, "..", "vst")
 ART = os.path.join(VST, "art")
@@ -54,6 +54,7 @@ def hx(c):
 # ---------------------------------------------------------------- geometry (plugin-area pixels)
 BTN_W, BTN_H, BTN_GAP = 108, 47, 8   # every button one size (the picture is BTN_W x BTN_H + 4: its drop shadow)
 KNOB_R = 36                          # every knob one size; the filmstrip frame is 2r + 10
+SMALL_R = 14                         # the SETTINGS rows' small knobs (touch, then drag or turn the data wheel)
 VALUE_PX = 24
 SIDE_W, PANEL_H = 268, 303
 LX, RX = 8, W - 8 - SIDE_W           # 8, 1004
@@ -119,7 +120,7 @@ def card(l):
     """layer l's card: its box, and the boxes of everything on it"""
     x, y = CARD_X, CARD_Y[l]
     r1, r2 = y + 8, y + 8 + BTN_H + 6
-    d = dict(box=(x, y, CARD_W, CARD_H), badge=(x + 14, r1 + 8, 30, 30), name=(x + 54, r1, 400, BTN_H),
+    d = dict(box=(x, y, CARD_W, CARD_H), badge=(x + 14, r1 + 8, 30, 30), name=(x + 54, r1, CARD_W - 14 - 2 * BTN_W - BTN_GAP - 8 - 54, BTN_H),
              prev=(x + CARD_W - 14 - 2 * BTN_W - BTN_GAP, r1), next=(x + CARD_W - 14 - BTN_W, r1),
              on=(x + 14, r2), solo=(x + 14 + BTN_W + BTN_GAP, r2), cells=[])
     cx0 = x + 14 + 2 * (BTN_W + BTN_GAP) + 4
@@ -137,6 +138,17 @@ def setting_rows():
         out.append((bx, by, title, [(k, lab, (bx + 8, by + ROW_Y0 + i * (ROW_H + 2), BOX_W - 16, ROW_H))
                                     for i, (k, lab) in enumerate(rows)]))
     return out
+
+
+VALUE_W = 172                        # a SETTINGS row's value cell: its small knob, then the value
+
+
+def value_cell(row):
+    """(knob box, value text box) of a SETTINGS row: touch either, then drag or turn the data wheel"""
+    rx, ry, rw, rh = row
+    box = (rx + rw - VALUE_W - 6, ry, VALUE_W, rh)
+    s = 2 * SMALL_R + 10
+    return box, (box[0] + s + 6, ry, VALUE_W - s - 12, rh)
 
 
 def cw_parts():
@@ -314,8 +326,9 @@ def settings_html(th):
         for k, lab, (rx, ry, rw, rh) in rows:
             out.append(f"<div class='abs' style='left:{rx + 8}px;top:{ry + 6}px;height:{rh}px;line-height:{rh}px;font:600 20px Barlow;"
                        f"letter-spacing:1px;color:var(--ink)'>{lab}</div>")
-            out.append(f"<div class='abs' style='left:{rx + rw - 22}px;top:{ry}px;height:{rh}px;line-height:{rh - 2}px;font:600 26px Outfit;"
-                       f"color:var(--dim)'>›</div>")
+            (vx, vy, vw, vh), _ = value_cell((rx, ry, rw, rh))
+            out.append(f"<div class='abs' style='left:{vx}px;top:{vy + 4}px;width:{vw}px;height:{vh - 8}px;border-radius:10px;"
+                       f"background:color-mix(in srgb,var(--ink) 5%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent)'></div>")
     x, y, w, h = CW_BOX
     out.append(f"<div class='abs' style='left:{x}px;top:{y}px;width:{w}px;height:{h}px;border-radius:14px;"
                f"background:color-mix(in srgb,var(--ink) 6%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent)'></div>")
@@ -334,13 +347,15 @@ def background_html(th, view):
 
 
 # ---- overlays, each drawn alone on a transparent page of its own size
-def knob_svg(frac, th):
+def knob_svg(frac, th, kr=None):
     t = T[th]
-    s = 2 * KNOB_R + 10
+    KR = kr or KNOB_R
+    s = 2 * KR + 10
     c = s / 2
     a0, a1 = 135, 405
+    sw, lw = (4.5, 4) if KR > 20 else (3, 2.5)
     ang = a0 + (a1 - a0) * frac
-    r = KNOB_R - 1
+    r = KR - 1
 
     def pt(a, rr):
         return c + rr * math.cos(math.radians(a)), c + rr * math.sin(math.radians(a))
@@ -349,10 +364,10 @@ def knob_svg(frac, th):
     xa, ya = pt(ang, r)
     large = 1 if (ang - a0) > 180 else 0
     arc = (f'<path d="M{x0:.2f} {y0:.2f} A{r} {r} 0 {large} 1 {xa:.2f} {ya:.2f}" fill="none" stroke="{t["accent"]}" '
-           f'stroke-width="4.5" stroke-linecap="round" filter="url(#gl)"/>' if frac > 0.004 else "")
-    cr = KNOB_R - 8
-    px, py = pt(ang, cr - 6)
-    qx, qy = pt(ang, cr - 19)
+           f'stroke-width="{sw}" stroke-linecap="round" filter="url(#gl)"/>' if frac > 0.004 else "")
+    cr = KR - (8 if KR > 20 else 4)
+    px, py = pt(ang, cr - (6 if KR > 20 else 2))
+    qx, qy = pt(ang, cr - (19 if KR > 20 else 8))
     return (f'<svg width="{s}" height="{s}" viewBox="0 0 {s} {s}" xmlns="http://www.w3.org/2000/svg"><defs>'
             f'<radialGradient id="cg" cx="40%" cy="30%" r="80%"><stop offset="0" stop-color="color-mix(in srgb, {t["cap"]} 60%, #fff 40%)"/>'
             f'<stop offset=".55" stop-color="{t["cap"]}"/><stop offset="1" stop-color="#05040a"/></radialGradient>'
@@ -360,10 +375,10 @@ def knob_svg(frac, th):
             f'<filter id="gl" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.6" result="b"/>'
             f'<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>'
             f'<filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#000" flood-opacity=".55"/></filter></defs>'
-            f'<path d="M{x0:.2f} {y0:.2f} A{r} {r} 0 1 1 {x1:.2f} {y1:.2f}" fill="none" stroke="color-mix(in srgb, {t["ink"]} 13%, transparent)" stroke-width="4.5" stroke-linecap="round"/>'
+            f'<path d="M{x0:.2f} {y0:.2f} A{r} {r} 0 1 1 {x1:.2f} {y1:.2f}" fill="none" stroke="color-mix(in srgb, {t["ink"]} 13%, transparent)" stroke-width="{sw}" stroke-linecap="round"/>'
             f'{arc}<circle cx="{c}" cy="{c}" r="{cr}" fill="url(#cg)" stroke="rgba(0,0,0,.55)" stroke-width="1.5" filter="url(#sh)"/>'
             f'<circle cx="{c}" cy="{c}" r="{cr - 4}" fill="url(#fg)"/>'
-            f'<line x1="{qx:.2f}" y1="{qy:.2f}" x2="{px:.2f}" y2="{py:.2f}" stroke="{t["knobmark"]}" stroke-width="4" stroke-linecap="round"/></svg>')
+            f'<line x1="{qx:.2f}" y1="{qy:.2f}" x2="{px:.2f}" y2="{py:.2f}" stroke="{t["knobmark"]}" stroke-width="{lw}" stroke-linecap="round"/></svg>')
 
 
 class Renderer:
@@ -448,6 +463,9 @@ def export_art():
             s = 2 * KNOB_R + 10
             col = "".join("<div style='position:absolute;left:0;top:%dpx'>%s</div>" % (f * s, knob_svg(f / 127, th)) for f in range(128))
             save(R.overlay(th, col, s, 128 * s), th, "knob.png")
+            s = 2 * SMALL_R + 10                       # the SETTINGS rows' small knobs
+            col = "".join("<div style='position:absolute;left:0;top:%dpx'>%s</div>" % (f * s, knob_svg(f / 127, th, SMALL_R)) for f in range(128))
+            save(R.overlay(th, col, s, 128 * s), th, "knob_small.png")
             # foot buttons: view buttons 3 frames (lit when its view is shown), FAV / LIST / RESET 2 frames
             bh = FOOT_STRIP_H
             for v, (key, lab, bx) in enumerate(FOOT):
@@ -530,15 +548,10 @@ def pads():
     for (key, sel, x, w, tx, rows, size), pad in zip(LISTS, ("gpick", "tpick", "pick")):
         for i in range(rows):
             out.append(("%s_%d" % (pad, i + 1), (x, LIST_Y + i * (ROW_TH + ROW_GAP), w, ROW_TH)))
-    for l in range(2):
-        c = card(l)
-        x, y, w, h = c["name"]
-        out.append(("tname_" + "ab"[l], (x, y, w, h)))
-        for (cx, cy, cw, ch), (code, _, _) in zip(c["cells"], LAYER_CELLS):
-            out.append(("t%s_%s" % (code, "ab"[l]), (cx, cy, cw, ch)))
-    for bx, by, title, rows in setting_rows():
-        for k, lab, box in rows:
-            out.append(("set_" + k, box))
+    for bx, by, title, rows in setting_rows():     # a choice row's label: a tap steps to the next choice
+        for k, lab, (rx, ry, rw, rh) in rows:
+            if k in CHOICE_ROWS:
+                out.append(("set_" + k, (rx, ry, rw - VALUE_W - 10, rh)))
     return out
 
 
@@ -547,8 +560,6 @@ def pad_view(key):
         return (0, 1)
     if key.startswith(("gpick", "tpick", "pick")):
         return 0
-    if key.startswith(("tname", "tlv", "tpn", "toc", "tfn")):
-        return 1
     if key.startswith("set_"):
         return 2
     return None
@@ -571,6 +582,12 @@ def write_layout():
         x, y, w, h = box
         L.append('readout cx=%d cy=%d w=%d h=%d label="" key=%s box=0 tsize=%d tcolor=%s tweight=%s talign=%s%s %s' % (
             x + w // 2, y + h // 2 + Y, w, h, key, jh(size), color, weight, align, " tpad=%d" % pad if pad is not None else "", when))
+
+    def touch_knob(key, box, strip, r, when):
+        """a knob on a box: its picture (r) at the box's left, no text of its own; touch it, then drag or turn the wheel"""
+        x, y, w, h = box
+        L.append('knob cx=%d cy=%d r=%d lay=side bw=%d bh=%d vs=20 label="" key=%s ink=none strip=%s frames=128 %s' % (
+            x + w // 2, y + h // 2 + Y, r, w, h, key, strip, when))
 
     def meter(key, box, img, frames, when):
         x, y, w, h = box
@@ -622,6 +639,11 @@ def write_layout():
             readout("lname_" + ab, c["name"], 25, ink, align="left", when=w, pad=0)
             for (cx, cy, cw, ch), (code, _, _) in zip(c["cells"], LAYER_CELLS):
                 readout("%s_%s" % (code, ab), (cx, cy + 16, cw, ch - 18), 22, a2, align="center", when=w, pad=0)
+            # touch the name or a cell, then drag or turn the data wheel: each is a knob on the real parameter, with no
+            # picture and no text of its own (the readouts show the values)
+            touch_knob("inst_" + ab, c["name"], "art/clear_knob.png", 5, w)
+            for (cx, cy, cw, ch), (code, param, _) in zip(c["cells"], LAYER_CELLS):
+                touch_knob("%s_%s" % (param, ab), (cx, cy, cw, ch), "art/clear_knob.png", 5, w)
             for nm, key, img in (("on", "layer_" + ab, "on"), ("solo", "solo_" + ab, "solo")):
                 bx, by = c[nm]
                 L.append('toggle cx=%d cy=%d w=%d h=%d label="" key=%s ns=0 bw=%d img=art/%s/%s_off.png img_on=art/%s/%s_on.png %s' % (
@@ -635,8 +657,10 @@ def write_layout():
         # SETTINGS
         w = "when=look:%d" % (n * NV + 2)
         for bx, by, title, rows in setting_rows():
-            for k, lab, (rx, ry, rw, rh) in rows:
-                readout("sv_" + k, (rx + rw - 174, ry, 144, rh), 23, a2, align="right", when=w, pad=0)
+            for k, lab, row in rows:
+                kbox, tbox = value_cell(row)
+                readout("sv_" + k, tbox, 23, a2, align="right", when=w, pad=0)
+                touch_knob(k, kbox, "art/%s/knob_small.png" % th, SMALL_R, w)       # on top: it takes the touch
         prev, name, nxt = cw_parts()
         readout("cw_name", name, 28, ink, align="center", when=w, pad=0)
         for pos, key, img in ((prev, "theme_prev", "cwprev"), (nxt, "theme_next", "cwnext")):
@@ -728,9 +752,12 @@ def mockups(outdir):
                     sample = dict(voice_mode="LEGATO", lfo_target="TREMOLO", scoop="LIGHT", a4_ref="440 Hz", transpose="0 st",
                                   bend_range="2 st", polyphony="24", vel_curve="NORMAL", vel_sens="80%", mod_wheel="VIBRATO",
                                   spread="30%", anim="SMOOTH")
-                    for bx, by, title, rows in setting_rows():
-                        for k, lab, (rx, ry, rw, rh) in rows:
-                            text((rx + rw - 174, ry, 144, rh), sample[k], 23, t["accent2"], align="right")
+                    ks = 2 * SMALL_R + 10
+                    for i, (bx, by, title, rows) in enumerate(setting_rows()):
+                        for j, (k, lab, row) in enumerate(rows):
+                            kbox, tbox = value_cell(row)
+                            paste("%s/knob_small.png" % th, (kbox[0], kbox[1] + (kbox[3] - ks) // 2), (37 * (i * 3 + j + 1)) % 128, 128)
+                            text(tbox, sample[k], 23, t["accent2"], align="right")
                     prev, name, nxt = cw_parts()
                     text(name, THEME_LABELS[THEMES.index(th)].upper(), 28, t["ink"], align="center")
                 live = R.overlay(th, "".join(txt), W, H)

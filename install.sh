@@ -11,7 +11,7 @@
 # Safe to run again: each step skips what is already done.
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
-VERSION="0.1.0"
+VERSION="0.1.1"
 LIBRARY_VERSION="$(sed -n 's/^LIBRARY_VERSION = "\(.*\)".*/\1/p' "$HERE/tools/pack_tropix.py")"
 MPC_VST="${MPC_VST:-$HERE/../mpc-vst-plugins}"
 step() { printf '\n\033[1m== %s\033[0m\n' "$*"; }
