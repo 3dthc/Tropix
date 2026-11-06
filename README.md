@@ -75,7 +75,11 @@ cd ~ && { [ -d Tropix ] || git clone https://github.com/3dthc/Tropix.git; } && c
 ```
 
 The first build packs the instruments (a few minutes). It ends with `Tropix-<version>-mpc-armv7.zip` in your Windows
-Downloads. Install it on the MPC like any other plugin, then restart the MPC. TESTING.md has a checklist for trying a
+Downloads. Install it on the MPC like any other plugin, then restart the MPC.
+
+Or download a release: `-mpc-armv7.zip` for a first-generation MPC (Live / Live II, One, X, Key 61, Force) on MPC OS 3,
+`-mpc-aarch64.zip` for a second-generation MPC, `-mpc-os2.zip` for a first-generation MPC on MPC OS 2.x (the same
+build as the armv7 zip, named for OS 2). TESTING.md has a checklist for trying a
 new build.
 
 ## Sound sources

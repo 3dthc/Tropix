@@ -1,0 +1,31 @@
+# Adds Tropix-<version>-mpc-os2.zip to a release: the MPC OS 2.x download. It is the armv7 zip under its own name (MPC OS 2
+# runs only on first-generation MPCs, and that build already loads and draws there), so OS 2 users can find their file.
+# Publish release runs this step itself; run it by hand (Actions -> OS 2 zip) for a release made before that.
+name: OS 2 zip
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version of the release, e.g. 0.1.2
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  os2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add the OS 2 zip
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          V: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          gh release download "v$V" -R "$REPO" -p "Tropix-$V-mpc-armv7.zip"
+          cp "Tropix-$V-mpc-armv7.zip" "Tropix-$V-mpc-os2.zip"
+          gh release upload "v$V" -R "$REPO" --clobber "Tropix-$V-mpc-os2.zip"
+          gh release view "v$V" -R "$REPO" --json assets --jq '.assets[].name'
