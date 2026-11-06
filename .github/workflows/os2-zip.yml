@@ -18,6 +18,7 @@ jobs:
   os2:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Add the OS 2 zip
         env:
           GH_TOKEN: ${{ github.token }}
@@ -28,4 +29,5 @@ jobs:
           gh release download "v$V" -R "$REPO" -p "Tropix-$V-mpc-armv7.zip"
           cp "Tropix-$V-mpc-armv7.zip" "Tropix-$V-mpc-os2.zip"
           gh release upload "v$V" -R "$REPO" --clobber "Tropix-$V-mpc-os2.zip"
+          [ -f "docs/releases/v$V.md" ] && gh release edit "v$V" -R "$REPO" --notes-file "docs/releases/v$V.md"
           gh release view "v$V" -R "$REPO" --json assets --jq '.assets[].name'
