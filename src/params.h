@@ -644,7 +644,7 @@ static const pinfo_t PINFO[NP] = {
     { K_KNOB, F_HZINT, 400.0f, 480.0f, 440.0f, 1, 0 },  /* a4_ref */
     { K_KNOB, F_SEMI, -24.0f, 24.0f, 0.0f, 1, 0 },  /* transpose */
     { K_KNOB, F_SEMI, 0.0f, 24.0f, 2.0f, 1, 0 },  /* bend_range */
-    { K_KNOB, F_INT, 1.0f, 32.0f, 24.0f, 1, 0 },  /* polyphony */
+    { K_KNOB, F_INT, 1.0f, 32.0f, 16.0f, 1, 0 },  /* polyphony */
     { K_KNOB, F_PCT, 0.0f, 1.0f, 0.8f, 0, 0 },  /* vel_sens */
     { K_KNOB, F_PCT, 0.0f, 1.0f, 0.25f, 0, 0 },  /* vel_filter */
     { K_KNOB, F_PCT, 0.0f, 1.0f, 0.3f, 0, 0 },  /* spread */

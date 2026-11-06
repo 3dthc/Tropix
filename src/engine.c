@@ -24,6 +24,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <sys/resource.h>
+#include <sys/syscall.h>
 #include <unistd.h>
 #include "engine.h"
 #include "instruments.h"
@@ -37,7 +39,7 @@
 #define MAX_V (MAX_POLY * NLAYER + 8)
 #define RING 2048                    /* decoded frames a voice keeps: enough for 15x speed over a 128-frame block */
 #define PI_F 3.14159265f
-#define PREFETCH_BYTES (140u << 20)  /* background reading stops here; a preset's own banks always load */
+#define PREFETCH_BYTES (64u << 20)   /* background reading stops here; a preset's own banks always load */
 
 /* ---------- sample file (written by tools/pack_tropix.py) ----------
  * header (32 bytes): "TPXB", u32 version 1, u32 samples, u32 zones, u32 data offset, u32 flags (1 = mono, 2 = kit),
@@ -212,6 +214,7 @@ static int bank_load(bank_t *b, const char *path) {
 
 static void *loader_main(void *arg) {
     (void)arg;
+    setpriority(PRIO_PROCESS, (id_t)syscall(SYS_gettid), 19);   /* reading banks never competes with the audio */
     pthread_mutex_lock(&g_bank_mx);
     for (;;) {
         if (g_shutdown) break;
@@ -279,9 +282,14 @@ static float vib_ct(float p) { return 60.0f * clamp01(p) * clamp01(p); }        
 static float bright_db(float p) { return (clamp01(p) - 0.5f) * 24.0f; }                    /* -12 .. +12 dB */
 static int preset_key_index[NPRESET_KEYS];
 
+/* parameter names, sorted, for a binary search (MPC asks for every display by name, many times a second) */
+static int key_order[NP];
+static int key_cmp(const void *a, const void *b) { return strcmp(PKEY[*(const int *)a], PKEY[*(const int *)b]); }
 static void init_tables(void) {
     static int done;
     if (done) return;
+    for (int i = 0; i < NP; i++) key_order[i] = i;
+    qsort(key_order, NP, sizeof key_order[0], key_cmp);
     for (int k = 0; k < NPRESET_KEYS; k++) {
         preset_key_index[k] = -1;
         for (int i = 0; i < NP; i++) if (!strcmp(PKEY[i], PRESET_KEYS[k])) preset_key_index[k] = i;
@@ -346,7 +354,12 @@ typedef struct {
 } inst_t;
 
 static int find_key(const char *k) {
-    for (int i = 0; i < NP; i++) if (!strcmp(k, PKEY[i])) return i;
+    int lo = 0, hi = NP - 1;
+    while (lo <= hi) {
+        int mid = (lo + hi) >> 1, c = strcmp(k, PKEY[key_order[mid]]);
+        if (!c) return key_order[mid];
+        if (c < 0) hi = mid - 1; else lo = mid + 1;
+    }
     return -1;
 }
 static int ival(const inst_t *s, int i, int lo, int hi) {
@@ -1174,14 +1187,14 @@ static void eng_render(void *inst, int16_t *out, int frames) {
             case ENV_RELEASE: v->env -= v->env * rel_k; break;
             case ENV_KILL: v->env -= v->env * kill_k; break;
             }
-            if (v->stage >= ENV_RELEASE && v->env < 1e-4f) { v->stage = ENV_OFF; break; }
+            if (v->stage >= ENV_RELEASE && v->env < 1e-3f) { v->stage = ENV_OFF; break; }   /* -60 dB: under the mix */
             if (v->stage == ENV_SUSTAIN && sus <= 0.0f) { v->stage = ENV_OFF; break; }
             if (!e->loop_e && v->sp >= e->frames) { v->stage = ENV_OFF; break; }
             uint32_t ip = (uint32_t)v->sp;
             float fr = (float)(v->sp - ip);
             uint32_t i0 = ip & (RING - 1), i1 = (ip + 1) & (RING - 1);
             float L = (r0[i0] + (r0[i1] - r0[i0]) * fr) * (1.0f / 32768.0f);
-            float R = (r1[i0] + (r1[i1] - r1[i0]) * fr) * (1.0f / 32768.0f);
+            float R = v->nch == 1 ? L : (r1[i0] + (r1[i1] - r1[i0]) * fr) * (1.0f / 32768.0f);   /* mono: once */
             if (filter_on) {
                 if ((f & 15) == 0) {
                     float fc = exp2f(voice_oct + env_oct * v->env + lfo_oct);
@@ -1220,6 +1233,8 @@ static void eng_render(void *inst, int16_t *out, int frames) {
     float vstep = (vtarget - s->vol_smooth) / frames;
     float dry = 1.0f - 0.35f * space, wet = space * 0.9f;
     float cho_rate = 2 * PI_F * 0.6f / SR, cho_depth = 0.0035f * SR * chorus, cho_base = 0.012f * SR;
+    float cho_s = sinf(s->cho_ph), cho_c = cosf(s->cho_ph), cho_rs = sinf(cho_rate), cho_rc = cosf(cho_rate);
+    if (chorus > 0.001f) { s->cho_ph += cho_rate * frames; if (s->cho_ph > 2 * PI_F) s->cho_ph -= 2 * PI_F; }
     float beat = 60.0f / (s->bpm > 0 ? s->bpm : 120.0f);
     float dly_target = DELAY_BEATS[ival(s, P_DELAY_TIME, 0, NDELAY_TIMES - 1)] * beat * SR;
     while (dly_target > DLY_LEN - 4) dly_target *= 0.5f;
@@ -1230,7 +1245,10 @@ static void eng_render(void *inst, int16_t *out, int frames) {
     int pre_n = (int)(clamp01(s->p[P_REV_PREDELAY]) * 0.1f * SR);
     float rw = clamp01(s->p[P_REV_WIDTH]);
     float peak = 0;
-    for (int i = 0; i < frames; i++) {
+    /* silent: no notes for a second and the echoes and reverb died away. Skip the bus (an idle Tropix costs ~nothing) */
+    int idle = !sounding && s->level < 3e-5f && s->clock - s->quiet_t > 1.0;
+    if (idle) { memset(out, 0, sizeof(int16_t) * 2 * frames); s->vol_smooth = vtarget; }
+    for (int i = 0; i < frames && !idle; i++) {
         float ch[2] = { mix[2 * i], mix[2 * i + 1] };
         if (tilt_on)
             for (int c = 0; c < 2; c++) {
@@ -1241,11 +1259,12 @@ static void eng_render(void *inst, int16_t *out, int frames) {
             for (int c = 0; c < 2; c++) ch[c] = tanhf(ch[c] * dk) * dnorm;
         ch[0] *= trim_g; ch[1] *= trim_g;
         if (chorus > 0.001f) {
-            s->cho_ph += cho_rate; if (s->cho_ph > 2 * PI_F) s->cho_ph -= 2 * PI_F;
+            float ps = cho_s, pc = cho_c;                       /* a rotating phasor: sin / cos without calling them */
+            cho_s = ps * cho_rc + pc * cho_rs; cho_c = pc * cho_rc - ps * cho_rs;
             int w = s->cho_w;
             s->cho[w] = ch[0]; s->cho[2048 + w] = ch[1];
             for (int c = 0; c < 2; c++) {
-                float d = cho_base + cho_depth * (1.0f + (c ? cosf(s->cho_ph) : sinf(s->cho_ph)));
+                float d = cho_base + cho_depth * (1.0f + (c ? cho_c : cho_s));
                 float rp = (float)w - d;
                 while (rp < 0) rp += 2048;
                 int q = (int)rp; float fr = rp - q;
@@ -1300,7 +1319,7 @@ static void eng_render(void *inst, int16_t *out, int frames) {
     if (held) s->midi_t = s->clock;
     if (s->p[P_MIDI_LED] > 0.5f && s->clock - s->midi_t > 0.15) { s->p[P_MIDI_LED] = 0; s->rev++; }
     for (int l = 0; l < NLAYER; l++)
-        if (busy[l] != (int)s->p[P_ACT_A + l]) { s->p[P_ACT_A + l] = (float)busy[l]; s->rev++; }
+        s->p[P_ACT_A + l] = (float)busy[l];               /* (no faceplate picture uses it: no repaint) */
     s->level = peak > s->level ? peak : s->level * expf(-dt / 0.25f);
     int anim = ival(s, P_ANIM, 0, 2);
     if (sounding) s->quiet_t = s->clock;

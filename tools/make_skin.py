@@ -28,7 +28,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import ui_mockup as M  # noqa: E402
 from pack_tropix import TYPES  # noqa: E402
-from tropix_params import CHOICE_ROWS, GENRES, LAYER_CELLS, LIST_ROWS, SETTINGS_BOXES, THEMES as THEME_LABELS, VIEWS, WAVE_FRAMES  # noqa: E402
+from tropix_params import GENRES, LAYER_CELLS, LIST_ROWS, SETTINGS_BOXES, THEMES as THEME_LABELS, VIEWS, WAVE_FRAMES  # noqa: E402
 
 VST = os.path.join(HERE, "..", "vst")
 ART = os.path.join(VST, "art")
@@ -54,7 +54,6 @@ def hx(c):
 # ---------------------------------------------------------------- geometry (plugin-area pixels)
 BTN_W, BTN_H, BTN_GAP = 108, 47, 8   # every button one size (the picture is BTN_W x BTN_H + 4: its drop shadow)
 KNOB_R = 36                          # every knob one size; the filmstrip frame is 2r + 10
-SMALL_R = 14                         # the SETTINGS rows' small knobs (touch, then drag or turn the data wheel)
 VALUE_PX = 24
 SIDE_W, PANEL_H = 268, 303
 LX, RX = 8, W - 8 - SIDE_W           # 8, 1004
@@ -96,12 +95,18 @@ CARD_Y = (254, 374)
 CARD_X, CARD_W, CARD_H = 306, 668, 112
 DESC_Y = (496, 524)
 # SETTINGS
+# SETTINGS: one row of knobs (the settings with a number), two boxes of choice rows (a tap steps them), the colorway
+KNOB_BOX = (302, 82, 676, 176)
+KNOB_SETTINGS = [("a4_ref", "A4 TUNING"), ("transpose", "TRANSPOSE"), ("bend_range", "BEND"),
+                 ("polyphony", "POLYPHONY"), ("vel_sens", "VELOCITY"), ("spread", "SPREAD")]
+CHOICE_BOXES = [("THIS PRESET", [("voice_mode", "VOICE MODE"), ("lfo_target", "LFO TARGET"), ("scoop", "HORN SCOOP")]),
+                ("CONTROL", [("vel_curve", "VEL CURVE"), ("mod_wheel", "MOD WHEEL"), ("anim", "ANIMATION")])]
 BOX_X = (302, 646)
 BOX_W = 332
-BOX_Y = (86, 270)
-BOX_H = 176
-ROW_H, ROW_Y0 = 44, 34               # a settings row's height, the first row's top inside its box
-CW_BOX = (302, 456, 676, 96)
+BOX_Y = 268
+BOX_H = 174
+ROW_H, ROW_Y0 = 44, 34               # a choice row's height, the first row's top inside its box
+CW_BOX = (302, 452, 676, 96)
 # the buttons along the foot
 FOOT_Y = 571
 FOOT_STRIP_H = 54                    # >= BTN_W / 2: the skin tool reads a strip as stacked only when it is taller than wide
@@ -130,25 +135,20 @@ def card(l):
     return d
 
 
+def setting_knobs():
+    """[(key, label, knob centre x, y)] for the SETTINGS knobs"""
+    x, y, w, h = KNOB_BOX
+    return [(k, lab, x + int(w * (i + 0.5) / len(KNOB_SETTINGS)), y + 92) for i, (k, lab) in enumerate(KNOB_SETTINGS)]
+
+
 def setting_rows():
-    """(box x, box y, title, [(key, label, row box)])"""
+    """(box x, box y, title, [(key, label, row box)]) for the SETTINGS choice rows"""
     out = []
-    for b, (title, rows) in enumerate(SETTINGS_BOXES):
-        bx, by = BOX_X[b % 2], BOX_Y[b // 2]
+    for b, (title, rows) in enumerate(CHOICE_BOXES):
+        bx, by = BOX_X[b], BOX_Y
         out.append((bx, by, title, [(k, lab, (bx + 8, by + ROW_Y0 + i * (ROW_H + 2), BOX_W - 16, ROW_H))
                                     for i, (k, lab) in enumerate(rows)]))
     return out
-
-
-VALUE_W = 172                        # a SETTINGS row's value cell: its small knob, then the value
-
-
-def value_cell(row):
-    """(knob box, value text box) of a SETTINGS row: touch either, then drag or turn the data wheel"""
-    rx, ry, rw, rh = row
-    box = (rx + rw - VALUE_W - 6, ry, VALUE_W, rh)
-    s = 2 * SMALL_R + 10
-    return box, (box[0] + s + 6, ry, VALUE_W - s - 12, rh)
 
 
 def cw_parts():
@@ -319,16 +319,24 @@ def sound_html(th):
 
 def settings_html(th):
     out = []
+    x, y, w, h = KNOB_BOX
+    out.append(f"<div class='abs' style='left:{x}px;top:{y}px;width:{w}px;height:{h}px;border-radius:14px;"
+               f"background:color-mix(in srgb,var(--ink) 6%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent)'></div>")
+    out.append(f"<div class='abs' style='left:{x + 16}px;top:{y + 8}px;font:700 16px Barlow;letter-spacing:3px;color:var(--accent)'>TUNING &amp; FEEL</div>")
+    for k, lab, cx, cy in setting_knobs():
+        out.append(f"<div class='abs' style='left:{cx - 64}px;top:{cy - KNOB_R - 26}px;width:128px;text-align:center;"
+                   f"font:600 19px Barlow;letter-spacing:1.2px;color:var(--ink)'>{lab}</div>")
     for bx, by, title, rows in setting_rows():
         out.append(f"<div class='abs' style='left:{bx}px;top:{by}px;width:{BOX_W}px;height:{BOX_H}px;border-radius:14px;"
                    f"background:color-mix(in srgb,var(--ink) 6%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent)'></div>")
         out.append(f"<div class='abs' style='left:{bx + 16}px;top:{by + 10}px;font:700 16px Barlow;letter-spacing:3px;color:var(--accent)'>{title}</div>")
         for k, lab, (rx, ry, rw, rh) in rows:
-            out.append(f"<div class='abs' style='left:{rx + 8}px;top:{ry + 6}px;height:{rh}px;line-height:{rh}px;font:600 20px Barlow;"
-                       f"letter-spacing:1px;color:var(--ink)'>{lab}</div>")
-            (vx, vy, vw, vh), _ = value_cell((rx, ry, rw, rh))
-            out.append(f"<div class='abs' style='left:{vx}px;top:{vy + 4}px;width:{vw}px;height:{vh - 8}px;border-radius:10px;"
+            out.append(f"<div class='abs' style='left:{rx}px;top:{ry + 2}px;width:{rw}px;height:{rh - 4}px;border-radius:10px;"
                        f"background:color-mix(in srgb,var(--ink) 5%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent)'></div>")
+            out.append(f"<div class='abs' style='left:{rx + 12}px;top:{ry + 5}px;height:{rh}px;line-height:{rh}px;font:600 20px Barlow;"
+                       f"letter-spacing:1px;color:var(--ink)'>{lab}</div>")
+            out.append(f"<div class='abs' style='left:{rx + rw - 26}px;top:{ry}px;height:{rh}px;line-height:{rh - 2}px;font:600 26px Outfit;"
+                       f"color:var(--dim)'>›</div>")
     x, y, w, h = CW_BOX
     out.append(f"<div class='abs' style='left:{x}px;top:{y}px;width:{w}px;height:{h}px;border-radius:14px;"
                f"background:color-mix(in srgb,var(--ink) 6%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent)'></div>")
@@ -463,9 +471,6 @@ def export_art():
             s = 2 * KNOB_R + 10
             col = "".join("<div style='position:absolute;left:0;top:%dpx'>%s</div>" % (f * s, knob_svg(f / 127, th)) for f in range(128))
             save(R.overlay(th, col, s, 128 * s), th, "knob.png")
-            s = 2 * SMALL_R + 10                       # the SETTINGS rows' small knobs
-            col = "".join("<div style='position:absolute;left:0;top:%dpx'>%s</div>" % (f * s, knob_svg(f / 127, th, SMALL_R)) for f in range(128))
-            save(R.overlay(th, col, s, 128 * s), th, "knob_small.png")
             # foot buttons: view buttons 3 frames (lit when its view is shown), FAV / LIST / RESET 2 frames
             bh = FOOT_STRIP_H
             for v, (key, lab, bx) in enumerate(FOOT):
@@ -550,8 +555,7 @@ def pads():
             out.append(("%s_%d" % (pad, i + 1), (x, LIST_Y + i * (ROW_TH + ROW_GAP), w, ROW_TH)))
     for bx, by, title, rows in setting_rows():     # a choice row's label: a tap steps to the next choice
         for k, lab, (rx, ry, rw, rh) in rows:
-            if k in CHOICE_ROWS:
-                out.append(("set_" + k, (rx, ry, rw - VALUE_W - 10, rh)))
+            out.append(("set_" + k, (rx, ry, rw, rh)))
     return out
 
 
@@ -656,11 +660,12 @@ def write_layout():
             readout("desc_%d" % (i + 1), (CARD_X + 4, y, CARD_W - 8, 28), 21, ink, weight="regular", align="left", when=w, pad=0)
         # SETTINGS
         w = "when=look:%d" % (n * NV + 2)
+        for k, lab, cx, cy in setting_knobs():        # full-size knobs, no Q-Link: touch, then drag or turn the wheel
+            L.append('knob cx=%d cy=%d r=%d label="%s" key=%s ns=0 vs=%d bw=108 ink=%s ink_dim=%s strip=art/%s/knob.png frames=128 %s' % (
+                cx, cy + Y, KNOB_R, lab, k, jh(VALUE_PX), a2, a2, th, w))
         for bx, by, title, rows in setting_rows():
-            for k, lab, row in rows:
-                kbox, tbox = value_cell(row)
-                readout("sv_" + k, tbox, 23, a2, align="right", when=w, pad=0)
-                touch_knob(k, kbox, "art/%s/knob_small.png" % th, SMALL_R, w)       # on top: it takes the touch
+            for k, lab, (rx, ry, rw, rh) in rows:
+                readout("sv_" + k, (rx + rw - 206, ry, 168, rh), 23, a2, align="right", when=w, pad=0)
         prev, name, nxt = cw_parts()
         readout("cw_name", name, 28, ink, align="center", when=w, pad=0)
         for pos, key, img in ((prev, "theme_prev", "cwprev"), (nxt, "theme_next", "cwnext")):
@@ -750,14 +755,15 @@ def mockups(outdir):
                         text((CARD_X + 4, y, CARD_W - 8, 28), s_, 21, t["ink"], weight=400)
                 else:
                     sample = dict(voice_mode="LEGATO", lfo_target="TREMOLO", scoop="LIGHT", a4_ref="440 Hz", transpose="0 st",
-                                  bend_range="2 st", polyphony="24", vel_curve="NORMAL", vel_sens="80%", mod_wheel="VIBRATO",
+                                  bend_range="2 st", polyphony="16", vel_curve="NORMAL", vel_sens="80%", mod_wheel="VIBRATO",
                                   spread="30%", anim="SMOOTH")
-                    ks = 2 * SMALL_R + 10
-                    for i, (bx, by, title, rows) in enumerate(setting_rows()):
-                        for j, (k, lab, row) in enumerate(rows):
-                            kbox, tbox = value_cell(row)
-                            paste("%s/knob_small.png" % th, (kbox[0], kbox[1] + (kbox[3] - ks) // 2), (37 * (i * 3 + j + 1)) % 128, 128)
-                            text(tbox, sample[k], 23, t["accent2"], align="right")
+                    s = 2 * KNOB_R + 10
+                    for (k, lab, cx, cy), fr in zip(setting_knobs(), (64, 64, 5, 60, 102, 38)):
+                        paste("%s/knob.png" % th, (cx - s // 2, cy - s // 2), fr, 128)
+                        text((cx - 62, cy + KNOB_R + 2, 124, 44), sample[k], VALUE_PX, t["accent2"], align="center")
+                    for bx, by, title, rows in setting_rows():
+                        for k, lab, (rx, ry, rw, rh) in rows:
+                            text((rx + rw - 206, ry, 168, rh), sample[k], 23, t["accent2"], align="right")
                     prev, name, nxt = cw_parts()
                     text(name, THEME_LABELS[THEMES.index(th)].upper(), 28, t["ink"], align="center")
                 live = R.overlay(th, "".join(txt), W, H)

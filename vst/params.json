@@ -760,7 +760,7 @@
       "name": "Polyphony",
       "min": 1,
       "max": 32,
-      "default": 24,
+      "default": 16,
       "dynamic_display": true,
       "display": "int"
     },

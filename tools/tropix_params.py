@@ -111,7 +111,7 @@ def spec():
     P += [knob("a4_ref", "A4 Ref", 440, 400, 480, fmt="HZINT", integer=True, preset=False),
           knob("transpose", "Transpose", 0, -24, 24, fmt="SEMI", integer=True, preset=False),
           knob("bend_range", "Bend Range", 2, 0, 24, fmt="SEMI", integer=True, preset=False),
-          knob("polyphony", "Polyphony", 24, 1, 32, fmt="INT", integer=True, preset=False),
+          knob("polyphony", "Polyphony", 16, 1, 32, fmt="INT", integer=True, preset=False),
           knob("vel_sens", "Velocity", 0.8, preset=False),
           knob("vel_filter", "Vel > Filter", 0.25, preset=False),
           knob("spread", "Spread", 0.3, preset=False),

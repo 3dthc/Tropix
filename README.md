@@ -50,11 +50,10 @@ percussion kit, OCTAVE moves the kit along the keyboard instead of retuning it.
 
 ![The SETTINGS view](docs/images/settings.jpg)
 
-THIS PRESET (voice mode, LFO target, horn scoop: saved in the preset), TUNING (A4 reference, transpose, bend
-range), PLAYING (polyphony, velocity curve, velocity), CONTROL (mod wheel, stereo spread, wave animation) and the
-colorway (◀ ▶). Every value has a small knob: touch the value or its knob, then drag up or down or turn the data
-wheel. Tapping the name of a row with a list of choices (voice mode, LFO target, horn scoop, velocity curve, mod wheel,
-animation) steps to the next choice. Pressing into a pad (aftertouch) does what the mod wheel does.
+TUNING & FEEL is a row of knobs for the settings with a number (A4 tuning, transpose, bend range, polyphony, velocity,
+stereo spread): touch one and drag, or turn the data wheel. THIS PRESET (voice mode, LFO target, horn scoop: saved in
+the preset) and CONTROL (velocity curve, mod wheel, wave animation) are rows you tap to step to the next choice. Then
+the colorway (◀ ▶). Pressing into a pad (aftertouch) does what the mod wheel does.
 
 | Button | What it does |
 | --- | --- |
