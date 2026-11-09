@@ -27,11 +27,6 @@ jobs:
           set -euo pipefail
           draft=$(gh release view "$TAG" --json isDraft --jq .isDraft)
           [ "$draft" = "true" ] || { echo "$TAG is not a draft (already published?)"; exit 1; }
-          # the MPC OS 2.x download: the armv7 zip under its own name (os2-zip.yml)
-          V=${{ inputs.version }}
-          gh release download "$TAG" -p "Tropix-$V-mpc-armv7.zip"
-          cp "Tropix-$V-mpc-armv7.zip" "Tropix-$V-mpc-os2.zip"
-          gh release upload "$TAG" --clobber "Tropix-$V-mpc-os2.zip"
           notes="docs/releases/$TAG.md"
           if [ -f "$notes" ]; then
             gh release edit "$TAG" --draft=false --latest --title "Tropix ${{ inputs.version }}" --notes-file "$notes"
