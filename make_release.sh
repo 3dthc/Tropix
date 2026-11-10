@@ -6,7 +6,7 @@
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 MPC_VST="${MPC_VST:-$HERE/../mpc-vst-plugins}"
-VERSION="${1:-0.1.2}"
+VERSION="${1:-0.1.3}"
 B="$HERE/vst/build"
 
 bash "$HERE/vst/build.sh"
@@ -19,6 +19,8 @@ sed -i "s|<version>[^<]*</version>|<version>$SKIN_VER</version>|" "$B/skin/3dthc
 grep -q "<version>$SKIN_VER</version>" "$B/skin/3dthc - VST - Tropix/version.xml" || { echo "could not stamp the skin version" >&2; exit 1; }
 cp "$HERE/library/LICENSES.md" "$HERE/engine/LICENSES.md"
 
+# the shared favourites file is the user's (an upgrade keeps it); a local one must never ship and overwrite theirs
+rm -f "$HERE/engine/favorites.txt" "$HERE/engine/favorites.txt.new"
 python3 "$MPC_VST/tools/release.py" \
   --so "$B/tropix.so" \
   --skin "$B/skin/3dthc - VST - Tropix" \

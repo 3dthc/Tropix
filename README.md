@@ -22,10 +22,11 @@ plugin, built on [sd88me/mpc-vst-plugins](https://github.com/sd88me/mpc-vst-plug
   mono / legato voice modes.
 - **Sound shaping:** cutoff, resonance, bright (a treble tilt), drive, the amp envelope, an LFO for tremolo, filter
   or auto-pan, chorus, a tempo-synced delay and reverb.
-- **Favourites:** star any preset and find them all in one list.
+- **Favourites:** star any preset and find them all in one list. Stars are shared by every Tropix on the MPC and stay
+  until you take them off.
 - **Nine colorways:** Sunset, Lagos, Aloha, Jamaica, Rasta, Haiti, Africa (the flag colorways carry a flag band across the screen), Kanaval, Jozi Night.
 - **Made for the MPC:** the 16 knobs are the Q-Links in four columns of four, on every view; big knobs and
-  buttons, everything on one page; edits, favourites and the colorway are saved with the project.
+  buttons, everything on one page; edits and the colorway are saved with the project.
 
 ## The page
 
