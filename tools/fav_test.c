@@ -31,7 +31,7 @@ static int fav_bits(void) {
 int main(int argc, char **argv) {
     if (argc < 2) return 2;
     char path[1100];
-    snprintf(path, sizeof path, "%s/favorites.txt", argv[1]);
+    snprintf(path, sizeof path, "%s/../user/favorites.txt", argv[1]);
     remove(path);
     E = mpc_engine();
     S = E->create(argv[1]);

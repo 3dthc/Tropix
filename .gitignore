@@ -7,5 +7,4 @@ engine/LICENSES.md
 vst/build/
 dist/
 *.pyc
-engine/favorites.txt
-engine/favorites.txt.new
+user/
