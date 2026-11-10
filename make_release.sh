@@ -6,7 +6,7 @@
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 MPC_VST="${MPC_VST:-$HERE/../mpc-vst-plugins}"
-VERSION="${1:-0.1.3}"
+VERSION="${1:-0.1.4}"
 B="$HERE/vst/build"
 
 bash "$HERE/vst/build.sh"

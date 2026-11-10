@@ -346,6 +346,7 @@ typedef struct {
     int genre;                       /* 0 = all genres */
     int type;                        /* -1 = every type */
     int favs;                        /* the list shows the favourites */
+    double quiet_until;              /* wall clock: until then the LCD pads ignore data-wheel moves (see tap_pad) */
     int fav_gen;                     /* the shared favourites' g_fav_gen this instance last mirrored */
     /* what the faceplate shows */
     int rev;
@@ -545,6 +546,12 @@ static void step_option(inst_t *s, int i, int dir, int wrap) {
     s->p[i] = (float)(wrap ? ((v % n) + n) % n : v < 0 ? 0 : v >= n ? n - 1 : v);
 }
 static int is_tap(int i) { return PINFO[i].fmt == F_TAP; }
+#define QUIET_S 2.0      /* after opening or a state restore: the pads ignore data-wheel moves for this long */
+static double wall_s(void) {
+    struct timespec t;
+    clock_gettime(CLOCK_MONOTONIC, &t);
+    return (double)t.tv_sec + t.tv_nsec / 1e9;
+}
 /* a tap on MPC's touch screen: buttons there act like toggles (each tap alternates 1 / 0, and a hold may send
  * nothing more), so every set is a tap; a second set within 150 ms is the same tap (MPC's echo of it) */
 static int tapped(inst_t *s, int i) {
@@ -835,6 +842,7 @@ static void *eng_create(const char *data_dir) {
     s->last_key = -1;
     s->type = -1;
     for (int i = 0; i < NP; i++) { s->mom_t[i] = -1; s->wlast[i] = 0.5f; }
+    s->quiet_until = wall_s() + QUIET_S;      /* MPC puts a project's values back right after it opens Tropix */
     s->cho = calloc(2 * 2048, sizeof(float));
     s->dly = calloc(2 * DLY_LEN, sizeof(float));
     s->pre = calloc(PRE_LEN, sizeof(float));
@@ -956,6 +964,9 @@ static void tap_pad(inst_t *s, int i, float x) {
         if (tapped(s, i)) pad_tapped(s, i);
         return;
     }
+    /* Just after Tropix opens, or a project's state is restored, a pad's value is a project being put back (projects
+     * saved before 0.1.4 kept a pad slightly off centre after a wheel move): never a wheel click. */
+    if (wall_s() < s->quiet_until) { s->p[i] = 0.5f; s->wlast[i] = 0.5f; return; }
     float d = x - s->wlast[i];
     s->wlast[i] = x; s->p[i] = x;
     if (x < 0.2f || x > 0.8f) { s->p[i] = 0.5f; s->wlast[i] = 0.5f; s->rev++; }
@@ -963,8 +974,43 @@ static void tap_pad(inst_t *s, int i, float x) {
     pad_wheel(s, i, d > 0 ? 1 : -1);
 }
 
+/* A project's state, as one "key=value;" string (the wrapper's chunk): the preset first, then every setting and
+ * edit, so a reload puts all of it back at once and in the right order. Not kept: the LCD pads and the browse
+ * control (their values are taps and wheel moves, not settings), and the engine's own displays. */
+static int state_kept(int i) {
+    if (i == P_PRESET || is_tap(i) || i == P_BROWSE || is_computed(i)) return 0;
+    return PINFO[i].kind == K_KNOB || PINFO[i].kind == K_OPTION || (i >= P_FAV_0 && i <= P_FAV_9);
+}
+static int state_get(const inst_t *s, char *buf, int n) {
+    int len = snprintf(buf, n, "tropix=1;preset=%d;", cur_preset(s));
+    for (int i = 0; i < NP && len > 0 && len < n - 64; i++)
+        if (state_kept(i)) len += snprintf(buf + len, n - len, "%s=%.9g;", PKEY[i], s->p[i]);
+    return len < n ? len : n - 1;
+}
+static void eng_set_param(void *inst, const char *key, const char *val);
+static void state_set(inst_t *s, const char *str) {
+    const char *pre = strstr(str, ";preset=");
+    apply_preset(s, pre ? atoi(pre + 8) : cur_preset(s));   /* the preset's own values first, edits on top */
+    char item[128];
+    for (const char *q = str; *q; ) {
+        const char *e = strchr(q, ';');
+        size_t len = e ? (size_t)(e - q) : strlen(q);
+        if (len < sizeof item) {
+            memcpy(item, q, len); item[len] = 0;
+            char *eq = strchr(item, '=');
+            if (eq) { *eq = 0; int i = find_key(item); if (i >= 0 && state_kept(i)) eng_set_param(s, item, eq + 1); }
+        }
+        if (!e) break;
+        q = e + 1;
+    }
+    s->quiet_until = wall_s() + QUIET_S;
+    sync_view(s); sync_flags(s);
+    s->rev++;
+}
+
 static void eng_set_param(void *inst, const char *key, const char *val) {
     inst_t *s = inst;
+    if (!strcmp(key, "state")) { state_set(s, val); return; }
     if (!strcmp(key, "lfo_bpm")) { float b = (float)atof(val); if (b > 20 && b < 400) s->bpm = b; return; }
     int i = find_key(key);
     float x = (float)atof(val);
@@ -1119,6 +1165,7 @@ static int eng_get_param(void *inst, const char *key, char *buf, int n) {
     inst_t *s = inst;
     if (n <= 0) return 0;
     if (!strcmp(key, "display_rev")) return snprintf(buf, n, "%d", s->rev);
+    if (!strcmp(key, "state")) return state_get(s, buf, n);
     if (!strcmp(key, "preset_display")) return fmt_display(s, P_BROWSE, buf, n);
     size_t kl = strlen(key);
     if (kl > 3 && !strcmp(key + kl - 3, "_on")) {     /* list rows: lit = the chosen genre / type / the current preset */
