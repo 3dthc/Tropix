@@ -559,10 +559,17 @@ static double wall_s(void) {
     return (double)t.tv_sec + t.tv_nsec / 1e9;
 }
 /* a tap on MPC's touch screen: buttons there act like toggles (each tap alternates 1 / 0, and a hold may send
- * nothing more), so every set is a tap; a second set within 150 ms is the same tap (MPC's echo of it) */
+ * nothing more), so every set is a tap; a second set within TAP_S is the same tap (MPC's echo of it).
+ *
+ * Measured on a wall clock, as in Sonix: s->clock only advances inside render(), so it said nothing about when the
+ * echo came. And the echo can come late: a tap that changes the browser redraws the faceplate first, which took longer
+ * than the old 150 ms, so the echo counted as a second tap -- PREV / NEXT stepped two presets, a type tapped
+ * twice went straight back to every type. */
+#define TAP_S 0.25
 static int tapped(inst_t *s, int i) {
-    if (s->clock - s->mom_t[i] < 0.15) return 0;
-    s->mom_t[i] = s->clock;
+    double now = wall_s();
+    if (s->mom_t[i] > 0 && now - s->mom_t[i] < TAP_S) return 0;
+    s->mom_t[i] = now;
     return 1;
 }
 
@@ -1024,9 +1031,11 @@ static void eng_set_param(void *inst, const char *key, const char *val) {
     if (i < 0 || is_computed(i)) return;
     if (is_tap(i)) { tap_pad(s, i, x); return; }
     if (PINFO[i].kind == K_MOMENTARY) {
-        float was = s->p[i];
+        /* No tapped() here, as in Sonix: every momentary param is declared momentary in params.json, so the wrapper
+         * already ignores a second press within its debounce_ms (250); a second window on this side could eat a
+         * deliberate tap. */
         s->p[i] = x;
-        if (x < 0.5f || was >= 0.5f || !tapped(s, i)) return;   /* the press only: its release (0) steps nothing */
+        if (x < 0.5f) return;                  /* the release, and the host's echo of it, are not presses */
         if (i == P_THEME_PREV || i == P_THEME_NEXT) { step_option(s, P_THEME, i == P_THEME_NEXT ? 1 : -1, 1); sync_view(s); }
         else for (int l = 0; l < NLAYER; l++)
             if (i == LP(P_INST_A_PREV, l) || i == LP(P_INST_A_NEXT, l)) {

@@ -78,6 +78,19 @@ int main(int argc, char **argv) {
     set(key, val); seti("preset", a);
     CHECK(getf("fav") == 0, "once a star is changed by hand, projects no longer add stars");
     CHECK(fav_bits() == 0 && !file_has(path, na) && !file_has(path, nb), "all stars off again");
+    /* NEXT, with MPC's echo of the tap arriving late (after the faceplate redrew): one preset on, not two */
+    seti("preset", 10); usleep(300000);
+    int from = (int)getf("preset");
+    set("next", "1"); run(0.18); usleep(180000); set("next", "0"); run(0.02);   /* audio runs as on a device */
+    int to = (int)getf("preset");
+    set("prev", "1"); run(0.18); usleep(180000); set("prev", "0"); run(0.02);
+    int m[NPRESET], nm = list_members(S, m), want = -1;
+    for (int k = 0; k < nm; k++) if (m[k] == from) want = m[(k + 1) % nm];
+    CHECK(to == want && (int)getf("preset") == from, "a late echo of NEXT / PREV steps one preset, not two (%d -> %d (want %d) -> %d)",
+          from, to, want, (int)getf("preset"));
+    usleep(300000); set("next", "1"); run(0.02); int p1 = (int)getf("preset");
+    usleep(300000); set("next", "0"); run(0.02); int p2 = (int)getf("preset");
+    CHECK(p1 == to && p2 != p1 && p2 != from, "two taps a moment apart step twice (%d -> %d -> %d)", from, p1, p2);
     E->destroy(S);
     remove(path);
     printf(fails ? "%d FAILED\n" : "all passed\n", fails);
