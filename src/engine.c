@@ -26,8 +26,10 @@
 #include <sys/stat.h>
 #include <strings.h>
 #include <time.h>
+#ifdef __linux__   /* thread priority: the MPC (Linux) only; the desktop VST3 leaves it to the host */
 #include <sys/resource.h>
 #include <sys/syscall.h>
+#endif
 #include <unistd.h>
 #include "engine.h"
 #include "instruments.h"
@@ -216,7 +218,9 @@ static int bank_load(bank_t *b, const char *path) {
 
 static void *loader_main(void *arg) {
     (void)arg;
+#ifdef __linux__
     setpriority(PRIO_PROCESS, (id_t)syscall(SYS_gettid), 19);   /* reading banks never competes with the audio */
+#endif
     pthread_mutex_lock(&g_bank_mx);
     for (;;) {
         if (g_shutdown) break;
