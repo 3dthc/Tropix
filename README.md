@@ -96,6 +96,12 @@ Both Mac zips are universal (Apple Silicon and Intel). If macOS says the plugin 
 curl -fsSL https://raw.githubusercontent.com/3dthc/mpc-vst-plugins/desktop-vst3-openmpc/tools/install_mac_vst3.sh | bash
 ```
 
+To check every installed Audio Unit with Apple's validator (PASS or FAIL for each):
+
+```
+curl -fsSL https://raw.githubusercontent.com/3dthc/mpc-vst-plugins/desktop-vst3-openmpc/tools/install_mac_vst3.sh | bash -s -- --check
+```
+
 ## Sound sources
 
 Every sampled sound comes from recordings that allow redistribution in a public plugin (CC0, CC BY 3.0, or "free to
