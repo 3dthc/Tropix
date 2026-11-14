@@ -1,5 +1,7 @@
 # Tropix
 
+[![Support me on Ko-fi](https://img.shields.io/badge/Support%20me%20on-Ko--fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/3dthc)
+
 Island and afro sounds for Akai MPC standalone devices: a ROMpler with 128 presets and 65 instruments for
 afrobeat, amapiano, Haitian kompa, soca, reggae and Hawaiian music. It runs natively on the MPC as an ARM VST2
 plugin, built on [sd88me/mpc-vst-plugins](https://github.com/sd88me/mpc-vst-plugins).
