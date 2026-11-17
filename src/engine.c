@@ -1184,6 +1184,10 @@ static int eng_get_param(void *inst, const char *key, char *buf, int n) {
     inst_t *s = inst;
     if (n <= 0) return 0;
     if (!strcmp(key, "display_rev")) return snprintf(buf, n, "%d", s->rev);
+    if (!strncmp(key, "preset_category:", 16)) {   /* its genre, for the Sounds browser's folders (tools/xpl_presets.sh) */
+        int p = atoi(key + 16);
+        return p >= 0 && p < NPRESET && PRESET_GENRE[p] > 0 && PRESET_GENRE[p] < NGENRE ? snprintf(buf, n, "%s", GENRE_NAME[PRESET_GENRE[p]]) : 0;
+    }
     if (!strcmp(key, "state")) return state_get(s, buf, n);
     if (!strcmp(key, "preset_display")) return fmt_display(s, P_BROWSE, buf, n);
     size_t kl = strlen(key);
