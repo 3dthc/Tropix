@@ -28,7 +28,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import ui_mockup as M  # noqa: E402
 from pack_tropix import TYPES  # noqa: E402
-from tropix_params import GENRES, LAYER_CELLS, LIST_ROWS, SETTINGS_BOXES, THEMES as THEME_LABELS, VIEWS, WAVE_FRAMES  # noqa: E402
+from tropix_params import ARP_KNOBS, ARP_ROWS, GENRES, LAYER_CELLS, LIST_ROWS, SETTINGS_BOXES, THEMES as THEME_LABELS, VIEWS, WAVE_FRAMES  # noqa: E402
 
 VST = os.path.join(HERE, "..", "vst")
 ART = os.path.join(VST, "art")
@@ -110,8 +110,19 @@ CW_BOX = (302, 452, 676, 96)
 # the buttons along the foot
 FOOT_Y = 571
 FOOT_STRIP_H = 54                    # >= BTN_W / 2: the skin tool reads a strip as stacked only when it is taller than wide
-FOOT = [("go_browse", "BROWSE", 284), ("go_layers", "LAYERS", 400), ("fav_tap", "★ FAV", 516),
-        ("favs_tap", "★ LIST", 632), ("go_settings", "SETTINGS", 772), ("reset_tap", "RESET", 888)]
+FOOT = [("go_browse", "BROWSE", 284), ("go_layers", "LAYERS", 400), ("go_arp", "ARP", 516),
+        ("go_settings", "SETTINGS", 632), ("fav_tap", "★ FAV", 772), ("reset_tap", "RESET", 888)]
+GO_VIEW = {"go_browse": 0, "go_layers": 1, "go_settings": 2, "go_arp": 3}       # the foot's view buttons: the view each one shows
+# the favourites list is the genre list's last row (below the seven genres, level with the eighth type)
+FAVS_ROW = (COL1 + 8, LIST_Y + len(GENRES) * (ROW_TH + ROW_GAP), COL2 - COL1 - 16, ROW_TH + ROW_GAP)
+# ARP: a row of four knobs, two boxes of choice rows (a tap steps them), a few lines on what each mode does
+ARP_KNOB_BOX = (302, 82, 676, 176)
+ARP_BOXES = [("PLAY", [ARP_ROWS[0], ARP_ROWS[1]]), ("TIMING", [ARP_ROWS[2], ARP_ROWS[3]])]
+ARP_BOX_H = 134
+ARP_INFO_BOX = (302, 412, 676, 136)
+ARP_INFO = [("ARP", "plays the notes you hold, in time with the project"),
+            ("PATTERN", "a groove on your lowest key; hold more keys for chord hits"),
+            ("CHORD", "one key plays a chord; STRUM spreads it like a picked guitar")]
 GENRE_DOTS = ["var(--ink)", "#e8a33d", "#b06cff", "#ff3b4f", "#ffd23f", "#2fa84f", "#ff5d8f"]
 
 
@@ -146,6 +157,22 @@ def setting_rows():
     out = []
     for b, (title, rows) in enumerate(CHOICE_BOXES):
         bx, by = BOX_X[b], BOX_Y
+        out.append((bx, by, title, [(k, lab, (bx + 8, by + ROW_Y0 + i * (ROW_H + 2), BOX_W - 16, ROW_H))
+                                    for i, (k, lab) in enumerate(rows)]))
+    return out
+
+
+def arp_knobs():
+    """[(key, label, knob centre x, y)] for the ARP knobs"""
+    x, y, w, h = ARP_KNOB_BOX
+    return [(k, lab, x + int(w * (i + 0.5) / len(ARP_KNOBS)), y + 92) for i, (k, lab) in enumerate(ARP_KNOBS)]
+
+
+def arp_rows():
+    """(box x, box y, title, [(key, label, row box)]) for the ARP choice rows"""
+    out = []
+    for b, (title, rows) in enumerate(ARP_BOXES):
+        bx, by = BOX_X[b], 268
         out.append((bx, by, title, [(k, lab, (bx + 8, by + ROW_Y0 + i * (ROW_H + 2), BOX_W - 16, ROW_H))
                                     for i, (k, lab) in enumerate(rows)]))
     return out
@@ -267,12 +294,12 @@ def chassis_html(th, view):
     flag = "" if t.get("split") else "".join(f"<div style='flex:1;background:{c}'></div>" for c in t.get("flag", []))   # a split chassis is the flag already
     out.append(f"""<div class='abs' style='left:{x}px;top:{y}px;width:{w}px;height:{h}px;border-radius:20px;overflow:hidden;
   background:linear-gradient(180deg, color-mix(in srgb,var(--glass) 66%,var(--panel)), color-mix(in srgb,var(--glass) 78%,var(--panel)));box-shadow:inset 0 0 0 2px rgba(0,0,0,.6), inset 0 0 0 4px color-mix(in srgb,var(--ink) 10%,transparent),0 10px 24px rgba(0,0,0,.45)'>
-<div class='abs' style='left:0;top:0;width:{w}px;height:{RULE_Y - y if view != 2 else 120}px;
+<div class='abs' style='left:0;top:0;width:{w}px;height:{RULE_Y - y if view < 2 else 120}px;
   background:radial-gradient(600px 220px at 50% -20%, color-mix(in srgb,var(--accent) 22%,transparent), transparent 70%)'></div>
-{"" if view == 2 else f"<div class='abs' style='left:0;top:{RULE_Y - y}px;width:{w}px;height:1px;background:color-mix(in srgb,var(--ink) 12%,transparent)'></div>"}
+{"" if view >= 2 else f"<div class='abs' style='left:0;top:{RULE_Y - y}px;width:{w}px;height:1px;background:color-mix(in srgb,var(--ink) 12%,transparent)'></div>"}
 {f"<div class='abs' style='left:0;top:0;width:{w}px;height:5px;display:flex;opacity:.9'>{flag}</div>" if flag else ""}
 </div>""")
-    if view != 2:
+    if view < 2:
         out.append(sbtn_html(PREV[0], PREV[1], "◀", "big"))
         out.append(sbtn_html(NEXT[0], NEXT[1], "▶", "big"))
     # the buttons along the foot, unlit (the lit ones are overlays)
@@ -288,6 +315,8 @@ def browse_html(th):
                    f"background:color-mix(in srgb,var(--ink) 10%,transparent)'></div>")
     for x, txt in ((COL1 + 18, "GENRE"), (COL2 + 18, "TYPE")):
         out.append(f"<div class='abs' style='left:{x}px;top:{HEAD_Y + 4}px;font:700 16px Barlow;letter-spacing:3px;color:var(--dim)'>{txt}</div>")
+    fx, fy, fw, fh = FAVS_ROW
+    out.append(f"<div class='abs' style='left:{fx + 10}px;top:{fy - 1}px;width:{fw - 20}px;height:1px;background:color-mix(in srgb,var(--ink) 14%,transparent)'></div>")
     for k in range(len(GENRES)):
         cy = LIST_Y + k * (ROW_TH + ROW_GAP) + ROW_TH // 2
         out.append(f"<div class='abs' style='left:{COL1 + 22}px;top:{cy - 6}px;width:12px;height:12px;border-radius:50%;"
@@ -314,6 +343,41 @@ def sound_html(th):
             out.append(sbtn_html(*c[key], "◀" if key == "prev" else "▶", "big"))
         out.append(sbtn_html(*c["on"], "ON"))
         out.append(sbtn_html(*c["solo"], "SOLO"))
+    return "".join(out)
+
+
+def choice_box_html(bx, by, bh, title, rows):
+    out = [f"<div class='abs' style='left:{bx}px;top:{by}px;width:{BOX_W}px;height:{bh}px;border-radius:14px;"
+           f"background:color-mix(in srgb,var(--ink) 6%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent)'></div>",
+           f"<div class='abs' style='left:{bx + 16}px;top:{by + 10}px;font:700 16px Barlow;letter-spacing:3px;color:var(--accent)'>{title}</div>"]
+    for k, lab, (rx, ry, rw, rh) in rows:
+        out.append(f"<div class='abs' style='left:{rx}px;top:{ry + 2}px;width:{rw}px;height:{rh - 4}px;border-radius:10px;"
+                   f"background:color-mix(in srgb,var(--ink) 5%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent)'></div>")
+        out.append(f"<div class='abs' style='left:{rx + 12}px;top:{ry + 5}px;height:{rh}px;line-height:{rh}px;font:600 20px Barlow;"
+                   f"letter-spacing:1px;color:var(--ink)'>{lab}</div>")
+        out.append(f"<div class='abs' style='left:{rx + rw - 26}px;top:{ry}px;height:{rh}px;line-height:{rh - 2}px;font:600 26px Outfit;"
+                   f"color:var(--dim)'>›</div>")
+    return "".join(out)
+
+
+def arp_html(th):
+    out = []
+    x, y, w, h = ARP_KNOB_BOX
+    out.append(f"<div class='abs' style='left:{x}px;top:{y}px;width:{w}px;height:{h}px;border-radius:14px;"
+               f"background:color-mix(in srgb,var(--ink) 6%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent)'></div>")
+    out.append(f"<div class='abs' style='left:{x + 16}px;top:{y + 8}px;font:700 16px Barlow;letter-spacing:3px;color:var(--accent)'>ARPEGGIATOR &amp; PATTERNS</div>")
+    for k, lab, cx, cy in arp_knobs():
+        out.append(f"<div class='abs' style='left:{cx - 64}px;top:{cy - KNOB_R - 26}px;width:128px;text-align:center;"
+                   f"font:600 19px Barlow;letter-spacing:1.2px;color:var(--ink)'>{lab}</div>")
+    for bx, by, title, rows in arp_rows():
+        out.append(choice_box_html(bx, by, ARP_BOX_H, title, rows))
+    x, y, w, h = ARP_INFO_BOX
+    out.append(f"<div class='abs' style='left:{x}px;top:{y}px;width:{w}px;height:{h}px;border-radius:14px;"
+               f"background:color-mix(in srgb,var(--ink) 6%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent)'></div>")
+    out.append(f"<div class='abs' style='left:{x + 16}px;top:{y + 10}px;font:700 16px Barlow;letter-spacing:3px;color:var(--accent)'>HOW IT WORKS</div>")
+    for i, (mode, txt) in enumerate(ARP_INFO):
+        out.append(f"<div class='abs' style='left:{x + 16}px;top:{y + 42 + i * 30}px;width:{w - 32}px;font:500 19px Barlow;color:var(--ink);white-space:nowrap'>"
+                   f"<span style='font-weight:700;letter-spacing:1.5px;color:var(--accent2)'>{mode}</span>&nbsp;&nbsp;{txt}</div>")
     return "".join(out)
 
 
@@ -347,7 +411,7 @@ def settings_html(th):
     return "".join(out)
 
 
-VIEW_HTML = [browse_html, sound_html, settings_html]
+VIEW_HTML = [browse_html, sound_html, settings_html, arp_html]
 
 
 def background_html(th, view):
@@ -462,11 +526,11 @@ def export_art():
         for th in THEMES:
             t = T[th]
             bgs = []
-            for v in range(3):
+            for v in range(len(VIEWS)):
                 bg = R.shot(background_html(th, v))
                 save(bg, th, "bg_%s.png" % VIEWS[v].lower())
                 bgs.append(bg)
-            b0, b1, b2 = bgs
+            b0, b1, b2, b3 = bgs
             # knob filmstrip (transparent)
             s = 2 * KNOB_R + 10
             col = "".join("<div style='position:absolute;left:0;top:%dpx'>%s</div>" % (f * s, knob_svg(f / 127, th)) for f in range(128))
@@ -477,9 +541,9 @@ def export_art():
                 box = (bx, FOOT_Y, BTN_W, bh)
                 lit = R.overlay(th, button_html(0, 0, lab, "on"), BTN_W, bh)
                 unlit = b0.crop((bx, FOOT_Y, bx + BTN_W, FOOT_Y + bh))
-                if key in ("go_browse", "go_layers", "go_settings"):
-                    me = ("go_browse", "go_layers", "go_settings").index(key)
-                    fr = [on_bg(bgs[i], box, lit) if i == me else bgs[i].crop((bx, FOOT_Y, bx + BTN_W, FOOT_Y + bh)) for i in range(3)]
+                if key in GO_VIEW:
+                    me = GO_VIEW[key]
+                    fr = [on_bg(bgs[i], box, lit) if i == me else bgs[i].crop((bx, FOOT_Y, bx + BTN_W, FOOT_Y + bh)) for i in range(len(VIEWS))]
                 else:
                     cls = "edit" if key == "reset_tap" else "on"
                     fr = [unlit, on_bg(b0, box, R.overlay(th, button_html(0, 0, lab, cls), BTN_W, bh))]
@@ -511,6 +575,12 @@ def export_art():
                     fr.append(on_bg(b0, box, R.overlay(th, f"<div class='row sel' style='left:0;top:{top}px;width:{w}px;"
                                                            f"height:{ROW_TH + ROW_GAP - 2 * HL_INSET}px'></div>", w, box[3])))
                 save(strip(fr), th, "hl_%s.png" % key)
+            # the favourites row (the genre list's last): frame 0 none, frame 1 lit
+            fx, fy, fw, fh = FAVS_ROW
+            fr = [b0.crop((fx, fy, fx + fw, fy + fh)),
+                  on_bg(b0, FAVS_ROW, R.overlay(th, f"<div class='row sel' style='left:0;top:{HL_INSET}px;width:{fw}px;"
+                                                    f"height:{fh - 2 * HL_INSET}px'></div>", fw, fh))]
+            save(strip(fr), th, "hl_favs.png")
             # LAYERS view: the waveform (17 frames, two halves), layer ON / SOLO, instrument arrows
             x, y, w, h = WAVE
             fr = [R.overlay(th, wave_frame(th, w, h, -1, 0), w, h)]
@@ -550,10 +620,14 @@ def pads():
     """every transparent tap plate: (key, box), with the view it belongs to in the key's entry of PAD_VIEW"""
     out = [("prev", (*PREV, BTN_W, BTN_H)), ("next", (*NEXT, BTN_W, BTN_H))]
     out += [(k, (bx, FOOT_Y, BTN_W, BTN_H + 4)) for k, _, bx in FOOT]
+    out.append(("favs_tap", FAVS_ROW))
     for (key, sel, x, w, tx, rows, size), pad in zip(LISTS, ("gpick", "tpick", "pick")):
         for i in range(rows):
             out.append(("%s_%d" % (pad, i + 1), (x, LIST_Y + i * (ROW_TH + ROW_GAP), w, ROW_TH)))
     for bx, by, title, rows in setting_rows():     # a choice row's label: a tap steps to the next choice
+        for k, lab, (rx, ry, rw, rh) in rows:
+            out.append(("set_" + k, (rx, ry, rw, rh)))
+    for bx, by, title, rows in arp_rows():
         for k, lab, (rx, ry, rw, rh) in rows:
             out.append(("set_" + k, (rx, ry, rw, rh)))
     return out
@@ -563,6 +637,10 @@ def pad_view(key):
     if key in ("prev", "next"):
         return (0, 1)
     if key.startswith(("gpick", "tpick", "pick")):
+        return 0
+    if key.startswith("set_arp"):
+        return 3
+    if key == "favs_tap":
         return 0
     if key.startswith("set_"):
         return 2
@@ -608,8 +686,8 @@ def write_layout():
             L.append('knob cx=%d cy=%d r=%d label="%s" key=%s ns=0 vs=%d bw=124 ink=%s ink_dim=%s strip=art/%s/knob.png frames=128 %s' % (
                 cx, cy + Y, KNOB_R, lab, key, jh(VALUE_PX), a2, a2, th, w))
         for key, lab, bx in FOOT:
-            frames = 3 if key.startswith("go_") else 2
-            mkey = {"go_browse": "view", "go_layers": "view", "go_settings": "view", "fav_tap": "fav", "favs_tap": "favs",
+            frames = NV if key in GO_VIEW else 2
+            mkey = {"go_browse": "view", "go_layers": "view", "go_settings": "view", "go_arp": "view", "fav_tap": "fav",
                     "reset_tap": "edited"}[key]
             meter(mkey, (bx, FOOT_Y, BTN_W, FOOT_STRIP_H), "art/%s/foot_%s.png" % (th, key), frames, w)
     for n, th in enumerate(THEMES):
@@ -632,6 +710,8 @@ def write_layout():
                 readout("%s_%d" % (key, r + 1), (tx, LIST_Y + r * (ROW_TH + ROW_GAP), x + wd - 8 - tx, ROW_TH + ROW_GAP), size, ink,
                         align="left", when=w, pad=0)
         readout("list_head", LIST_HEAD, 18, dim, align="left", when=w, pad=0)
+        meter("favs", FAVS_ROW, "art/%s/hl_favs.png" % th, 2, w)
+        readout("gen_fav", (COL1 + 42, FAVS_ROW[1], COL2 - COL1 - 16 + COL1 + 8 - 8 - (COL1 + 42), FAVS_ROW[3]), 23, ink, align="left", when=w, pad=0)
         # SOUND
         w = "when=look:%d" % (n * NV + 1)
         x, y, wd, h = WAVE
@@ -668,6 +748,14 @@ def write_layout():
                 readout("sv_" + k, (rx + rw - 206, ry, 168, rh), 23, a2, align="right", when=w, pad=0)
         prev, name, nxt = cw_parts()
         readout("cw_name", name, 28, ink, align="center", when=w, pad=0)
+        # ARP
+        wa = "when=look:%d" % (n * NV + 3)
+        for k, lab, cx, cy in arp_knobs():
+            L.append('knob cx=%d cy=%d r=%d label="%s" key=%s ns=0 vs=%d bw=108 ink=%s ink_dim=%s strip=art/%s/knob.png frames=128 %s' % (
+                cx, cy + Y, KNOB_R, lab, k, jh(VALUE_PX), a2, a2, th, wa))
+        for bx, by, title, rows in arp_rows():
+            for k, lab, (rx, ry, rw, rh) in rows:
+                readout("sv_" + k, (rx + rw - 206, ry, 168, rh), 23, a2, align="right", when=wa, pad=0)
         for pos, key, img in ((prev, "theme_prev", "cwprev"), (nxt, "theme_next", "cwnext")):
             L.append('button cx=%d cy=%d w=%d h=%d label="" key=%s img=art/%s/%s_off.png img_on=art/%s/%s_on.png %s' % (
                 pos[0] + BTN_W // 2, pos[1] + BTN_H // 2 + Y, BTN_W, BTN_H, key, th, img, th, img, w))
@@ -694,7 +782,7 @@ def mockups(outdir):
         R = Renderer(p)
         for th in THEMES:
             t = T[th]
-            for v in range(3):
+            for v in range(len(VIEWS)):
                 bg = Image.open(os.path.join(ART, th, "bg_%s.png" % VIEWS[v].lower())).convert("RGBA")
                 im = bg.copy()
 
@@ -709,9 +797,9 @@ def mockups(outdir):
                 for i, (key, lab, cx, cy) in enumerate(knob_centres()):
                     paste("%s/knob.png" % th, (cx - s // 2, cy - s // 2), [100, 15, 70, 0, 6, 60, 100, 40, 0, 40, 64, 0, 25, 20, 36, 100][i], 128)
                 for key, lab, bx in FOOT:
-                    paste("%s/foot_%s.png" % (th, key), (bx, FOOT_Y), (v if key.startswith("go_") else (1 if key == "fav_tap" else 0)),
-                          3 if key.startswith("go_") else 2)
-                if v != 2:
+                    paste("%s/foot_%s.png" % (th, key), (bx, FOOT_Y), (GO_VIEW[key] if key in GO_VIEW else (1 if key == "fav_tap" else 0)) if key not in GO_VIEW else v,
+                          len(VIEWS) if key in GO_VIEW else 2)
+                if v < 2:
                     paste("%s/chip_g.png" % th, CHIP_G, 3, len(GENRES))
                     paste("%s/chip_t.png" % th, CHIP_T, 2, len(TYPES))
                 paste("%s/led.png" % th, (MIDI_LED[0] - 8, MIDI_LED[1] - 8), 1, 2)
@@ -728,7 +816,7 @@ def mockups(outdir):
                         "20%", "15%", "28%", "-3.0 dB"]
                 for (key, lab, cx, cy), val in zip(knob_centres(), vals):
                     text((cx - 62, cy + KNOB_R + 2, 124, 44), val, VALUE_PX, t["accent2"], align="center")
-                if v != 2:
+                if v < 2:
                     text(HDR_INFO, "PRESET 040 / 128", 18, t["dim"])
                     text(NAME, pr["name"], 34, t["ink"], align="center")
                 if v == 0:
@@ -739,6 +827,8 @@ def mockups(outdir):
                         for i, g in enumerate(labels):
                             text((tx, LIST_Y + i * (ROW_TH + ROW_GAP), x + wd - 8 - tx, ROW_TH + ROW_GAP), g, size, t["ink"])
                     text(LIST_HEAD, "PRESETS  ·  %d" % len(names), 18, t["dim"])
+                    text((COL1 + 42, FAVS_ROW[1], 110, FAVS_ROW[3]), "★ FAVS", 23, t["ink"])
+                    paste("%s/hl_favs.png" % th, FAVS_ROW[:2], 0, 2)
                 elif v == 1:
                     paste("%s/wave_l.png" % th, WAVE[:2], 10, WAVE_FRAMES)
                     paste("%s/wave_r.png" % th, (WAVE[0] + WAVE[2] // 2, WAVE[1]), 10, WAVE_FRAMES)
@@ -753,6 +843,16 @@ def mockups(outdir):
                     d1, d2 = PR.desc_lines(pr["desc"])
                     for y, s_ in zip(DESC_Y, (d1, d2)):
                         text((CARD_X + 4, y, CARD_W - 8, 28), s_, 21, t["ink"], weight=400)
+                elif v == 3:
+                    sample = dict(arp_mode="PATTERN", arp_style="KOMPA PICK", arp_rate="1/16", arp_latch="OFF",
+                                  arp_oct="2", arp_gate="70%", arp_swing="56%", arp_strum="20 ms")
+                    s = 2 * KNOB_R + 10
+                    for (k, lab, cx, cy), fr in zip(arp_knobs(), (32, 80, 24, 40)):
+                        paste("%s/knob.png" % th, (cx - s // 2, cy - s // 2), fr, 128)
+                        text((cx - 62, cy + KNOB_R + 2, 124, 44), sample[k], VALUE_PX, t["accent2"], align="center")
+                    for bx, by, title, rows in arp_rows():
+                        for k, lab, (rx, ry, rw, rh) in rows:
+                            text((rx + rw - 206, ry, 168, rh), sample[k], 23, t["accent2"], align="right")
                 else:
                     sample = dict(voice_mode="LEGATO", lfo_target="TREMOLO", scoop="LIGHT", a4_ref="440 Hz", transpose="0 st",
                                   bend_range="2 st", polyphony="16", vel_curve="NORMAL", vel_sens="80%", mod_wheel="VIBRATO",

@@ -191,6 +191,30 @@ enum {
     P_SET_MOD_WHEEL,
     P_SET_SPREAD,
     P_SET_ANIM,
+    P_ARP_MODE,
+    P_ARP_DIR,
+    P_ARP_RATE,
+    P_ARP_PAT,
+    P_ARP_CHORD,
+    P_ARP_LATCH,
+    P_ARP_OCT,
+    P_ARP_GATE,
+    P_ARP_SWING,
+    P_ARP_STRUM,
+    P_GO_ARP,
+    P_SV_ARP_MODE,
+    P_SV_ARP_STYLE,
+    P_SV_ARP_RATE,
+    P_SV_ARP_LATCH,
+    P_SV_ARP_OCT,
+    P_SV_ARP_GATE,
+    P_SV_ARP_SWING,
+    P_SV_ARP_STRUM,
+    P_SET_ARP_MODE,
+    P_SET_ARP_STYLE,
+    P_SET_ARP_RATE,
+    P_SET_ARP_LATCH,
+    P_GEN_FAV,
     NP
 };
 static const char *const PKEY[NP] = {
@@ -385,6 +409,30 @@ static const char *const PKEY[NP] = {
     "set_mod_wheel",
     "set_spread",
     "set_anim",
+    "arp_mode",
+    "arp_dir",
+    "arp_rate",
+    "arp_pat",
+    "arp_chord",
+    "arp_latch",
+    "arp_oct",
+    "arp_gate",
+    "arp_swing",
+    "arp_strum",
+    "go_arp",
+    "sv_arp_mode",
+    "sv_arp_style",
+    "sv_arp_rate",
+    "sv_arp_latch",
+    "sv_arp_oct",
+    "sv_arp_gate",
+    "sv_arp_swing",
+    "sv_arp_strum",
+    "set_arp_mode",
+    "set_arp_style",
+    "set_arp_rate",
+    "set_arp_latch",
+    "gen_fav",
 };
 static const char *const PNAME[NP] = {
     "VOLUME",
@@ -578,9 +626,33 @@ static const char *const PNAME[NP] = {
     "SETTING PAD MOD_WHEEL",
     "SETTING PAD SPREAD",
     "SETTING PAD ANIM",
+    "ARP MODE",
+    "ARP DIRECTION",
+    "ARP RATE",
+    "ARP PATTERN",
+    "ARP CHORD",
+    "ARP LATCH",
+    "ARP OCTAVES",
+    "ARP GATE",
+    "ARP SWING",
+    "ARP STRUM",
+    "SHOW ARP",
+    "SETTING ARP_MODE",
+    "SETTING ARP_STYLE",
+    "SETTING ARP_RATE",
+    "SETTING ARP_LATCH",
+    "SETTING ARP_OCT",
+    "SETTING ARP_GATE",
+    "SETTING ARP_SWING",
+    "SETTING ARP_STRUM",
+    "SETTING PAD ARP_MODE",
+    "SETTING PAD ARP_STYLE",
+    "SETTING PAD ARP_RATE",
+    "SETTING PAD ARP_LATCH",
+    "FAVOURITES ROW",
 };
 enum { K_KNOB, K_OPTION, K_MOMENTARY, K_DISPLAY, K_TEXT };
-enum { F_ATTACK, F_BIPOLAR, F_BRIGHT, F_BROWSE, F_CENTS, F_CUTOFF, F_DB, F_GLIDE, F_HZINT, F_INT, F_LEVEL, F_LFO, F_LOOK, F_NONE, F_OCT, F_OPT, F_PAN, F_PCT, F_PREDELAY, F_SEMI, F_TAP, F_TIME, F_TONE, F_VIB, F_VOL };
+enum { F_ATTACK, F_BIPOLAR, F_BRIGHT, F_BROWSE, F_CENTS, F_CUTOFF, F_DB, F_GLIDE, F_HZINT, F_INT, F_LEVEL, F_LFO, F_LOOK, F_MS, F_NONE, F_OCT, F_OPT, F_PAN, F_PCT, F_PREDELAY, F_SEMI, F_TAP, F_TIME, F_TONE, F_VIB, F_VOL };
 typedef struct { int kind, fmt; float lo, hi, def; int whole, in_preset; } pinfo_t;
 static const pinfo_t PINFO[NP] = {
     { K_KNOB, F_VOL, 0.0f, 1.0f, 0.8f, 0, 0 },  /* volume */
@@ -593,7 +665,7 @@ static const pinfo_t PINFO[NP] = {
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* fav_tap */
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* favs_tap */
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* reset_tap */
-    { K_OPTION, F_OPT, 0.0f, 2.0f, 0.0f, 1, 0 },  /* view */
+    { K_OPTION, F_OPT, 0.0f, 3.0f, 0.0f, 1, 0 },  /* view */
     { K_KNOB, F_CUTOFF, 0.0f, 1.0f, 1.0f, 0, 1 },  /* cutoff */
     { K_KNOB, F_PCT, 0.0f, 1.0f, 0.0f, 0, 1 },  /* resonance */
     { K_KNOB, F_BRIGHT, 0.0f, 1.0f, 0.5f, 0, 1 },  /* bright */
@@ -655,7 +727,7 @@ static const pinfo_t PINFO[NP] = {
     { K_MOMENTARY, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* theme_prev */
     { K_MOMENTARY, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* theme_next */
     { K_KNOB, F_BROWSE, 0.0f, 1000.0f, 500.0f, 1, 0 },  /* browse */
-    { K_OPTION, F_LOOK, 0.0f, 26.0f, 0.0f, 1, 0 },  /* look */
+    { K_OPTION, F_LOOK, 0.0f, 35.0f, 0.0f, 1, 0 },  /* look */
     { K_DISPLAY, F_NONE, 0.0f, 16.0f, 0.0f, 0, 0 },  /* wave */
     { K_DISPLAY, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* fav */
     { K_DISPLAY, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* favs */
@@ -774,9 +846,33 @@ static const pinfo_t PINFO[NP] = {
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* set_mod_wheel */
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* set_spread */
     { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* set_anim */
+    { K_OPTION, F_OPT, 0.0f, 3.0f, 0.0f, 1, 0 },  /* arp_mode */
+    { K_OPTION, F_OPT, 0.0f, 4.0f, 0.0f, 1, 0 },  /* arp_dir */
+    { K_OPTION, F_OPT, 0.0f, 7.0f, 4.0f, 1, 0 },  /* arp_rate */
+    { K_OPTION, F_OPT, 0.0f, 15.0f, 0.0f, 1, 0 },  /* arp_pat */
+    { K_OPTION, F_OPT, 0.0f, 7.0f, 0.0f, 1, 0 },  /* arp_chord */
+    { K_OPTION, F_OPT, 0.0f, 1.0f, 0.0f, 1, 0 },  /* arp_latch */
+    { K_KNOB, F_INT, 1.0f, 4.0f, 1.0f, 1, 0 },  /* arp_oct */
+    { K_KNOB, F_PCT, 0.1f, 1.0f, 0.7f, 0, 0 },  /* arp_gate */
+    { K_KNOB, F_PCT, 0.5f, 0.75f, 0.5f, 0, 0 },  /* arp_swing */
+    { K_KNOB, F_MS, 0.0f, 80.0f, 0.0f, 1, 0 },  /* arp_strum */
+    { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* go_arp */
+    { K_TEXT, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* sv_arp_mode */
+    { K_TEXT, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* sv_arp_style */
+    { K_TEXT, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* sv_arp_rate */
+    { K_TEXT, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* sv_arp_latch */
+    { K_TEXT, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* sv_arp_oct */
+    { K_TEXT, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* sv_arp_gate */
+    { K_TEXT, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* sv_arp_swing */
+    { K_TEXT, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* sv_arp_strum */
+    { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* set_arp_mode */
+    { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* set_arp_style */
+    { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* set_arp_rate */
+    { K_KNOB, F_TAP, 0.0f, 1.0f, 0.5f, 0, 0 },  /* set_arp_latch */
+    { K_TEXT, F_NONE, 0.0f, 1.0f, 0.0f, 0, 0 },  /* gen_fav */
 };
 /* option labels (for the SETTINGS rows and the colorway name) */
-static const char *const OPT_VIEW[] __attribute__((unused)) = { "BROWSE", "LAYERS", "SETTINGS" };
+static const char *const OPT_VIEW[] __attribute__((unused)) = { "BROWSE", "LAYERS", "SETTINGS", "ARP" };
 static const char *const OPT_VOICE_MODE[] __attribute__((unused)) = { "POLY", "MONO", "LEGATO" };
 static const char *const OPT_LFO_TARGET[] __attribute__((unused)) = { "TREMOLO", "FILTER", "AUTO-PAN" };
 static const char *const OPT_SCOOP[] __attribute__((unused)) = { "OFF", "LIGHT", "DEEP" };
@@ -789,6 +885,12 @@ static const char *const OPT_VEL_CURVE[] __attribute__((unused)) = { "SOFT", "NO
 static const char *const OPT_MOD_WHEEL[] __attribute__((unused)) = { "VIBRATO", "FILTER", "OFF" };
 static const char *const OPT_ANIM[] __attribute__((unused)) = { "OFF", "LOW", "SMOOTH" };
 static const char *const OPT_THEME[] __attribute__((unused)) = { "SUNSET", "LAGOS", "ALOHA", "JAMAICA", "RASTA", "HAITI", "AFRICA", "KANAVAL", "JOZI NIGHT" };
+static const char *const OPT_ARP_MODE[] __attribute__((unused)) = { "OFF", "ARP", "PATTERN", "CHORD" };
+static const char *const OPT_ARP_DIR[] __attribute__((unused)) = { "UP", "DOWN", "UP-DOWN", "AS PLAYED", "RANDOM" };
+static const char *const OPT_ARP_RATE[] __attribute__((unused)) = { "1/4", "1/8.", "1/8", "1/8T", "1/16", "1/16T", "1/32", "1/32T" };
+static const char *const OPT_ARP_PAT[] __attribute__((unused)) = { "KOMPA PICK", "KOMPA TAP", "AMAPIANO LOG", "AMAPIANO KEYS", "SOCA STAB", "REGGAE SKANK", "ONE DROP", "AFRO PLUCK", "HIGHLIFE RUN", "GOUYAD BOUNCE", "STEEL PAN ROLL", "MBIRA CYCLE", "SLACK KEY", "UKULELE STRUM", "BASS WALK", "SYNTH CLIMB" };
+static const char *const OPT_ARP_CHORD[] __attribute__((unused)) = { "MAJOR", "MINOR", "DOM 7", "MIN 7", "MAJ 7", "SUS 4", "POWER", "MIN 9" };
+static const char *const OPT_ARP_LATCH[] __attribute__((unused)) = { "OFF", "ON" };
 static const char *const *const OPT_OF[NP] = {
     0,
     0,
@@ -981,13 +1083,40 @@ static const char *const *const OPT_OF[NP] = {
     0,
     0,
     0,
+    OPT_ARP_MODE,
+    OPT_ARP_DIR,
+    OPT_ARP_RATE,
+    OPT_ARP_PAT,
+    OPT_ARP_CHORD,
+    OPT_ARP_LATCH,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
 };
 #define LIST_ROWS 8
 #define NTHEME 9
-#define NVIEW 3
+#define NVIEW 4
 #define NGENRE 7
 static const char *const GENRE_NAME[NGENRE] = { "ALL", "AFROBEAT", "AMAPIANO", "KOMPA", "SOCA", "REGGAE", "HAWAIIAN" };
 #define NSETTING 12
 static const int SETTING_PARAM[NSETTING] = { P_VOICE_MODE, P_LFO_TARGET, P_SCOOP, P_A4_REF, P_TRANSPOSE, P_BEND_RANGE, P_POLYPHONY, P_VEL_CURVE, P_VEL_SENS, P_MOD_WHEEL, P_SPREAD, P_ANIM };
+#define NARP_ROW 4
+#define NARP_TEXT 8
+static const char *const ARP_MODE_LABEL[] = { "OFF", "ARP", "PATTERN", "CHORD" };
 #define NDELAY_TIMES 8
 static const float DELAY_BEATS[NDELAY_TIMES] = { 0.25f, 1.0f / 3, 0.5f, 0.75f, 2.0f / 3, 1.0f, 1.5f, 2.0f };

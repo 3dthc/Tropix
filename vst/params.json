@@ -207,7 +207,8 @@
       "options": [
         "Browse",
         "Layers",
-        "Settings"
+        "Settings",
+        "Arp"
       ],
       "default": "Browse"
     },
@@ -862,30 +863,39 @@
         "Sunset Browse",
         "Sunset Layers",
         "Sunset Settings",
+        "Sunset Arp",
         "Lagos Browse",
         "Lagos Layers",
         "Lagos Settings",
+        "Lagos Arp",
         "Aloha Browse",
         "Aloha Layers",
         "Aloha Settings",
+        "Aloha Arp",
         "Jamaica Browse",
         "Jamaica Layers",
         "Jamaica Settings",
+        "Jamaica Arp",
         "Rasta Browse",
         "Rasta Layers",
         "Rasta Settings",
+        "Rasta Arp",
         "Haiti Browse",
         "Haiti Layers",
         "Haiti Settings",
+        "Haiti Arp",
         "Africa Browse",
         "Africa Layers",
         "Africa Settings",
+        "Africa Arp",
         "Kanaval Browse",
         "Kanaval Layers",
         "Kanaval Settings",
+        "Kanaval Arp",
         "Jozi Night Browse",
         "Jozi Night Layers",
-        "Jozi Night Settings"
+        "Jozi Night Settings",
+        "Jozi Night Arp"
       ],
       "default": "Sunset Browse"
     },
@@ -1787,6 +1797,232 @@
       "min": 0.0,
       "max": 1.0,
       "default": 0.5
+    },
+    {
+      "key": "arp_mode",
+      "name": "Arp Mode",
+      "options": [
+        "Off",
+        "Arp",
+        "Pattern",
+        "Chord"
+      ],
+      "default": "Off"
+    },
+    {
+      "key": "arp_dir",
+      "name": "Arp Direction",
+      "options": [
+        "Up",
+        "Down",
+        "Up-Down",
+        "As Played",
+        "Random"
+      ],
+      "default": "Up"
+    },
+    {
+      "key": "arp_rate",
+      "name": "Arp Rate",
+      "options": [
+        "1/4",
+        "1/8.",
+        "1/8",
+        "1/8T",
+        "1/16",
+        "1/16T",
+        "1/32",
+        "1/32T"
+      ],
+      "default": "1/16"
+    },
+    {
+      "key": "arp_pat",
+      "name": "Arp Pattern",
+      "options": [
+        "Kompa Pick",
+        "Kompa Tap",
+        "Amapiano Log",
+        "Amapiano Keys",
+        "Soca Stab",
+        "Reggae Skank",
+        "One Drop",
+        "Afro Pluck",
+        "Highlife Run",
+        "Gouyad Bounce",
+        "Steel Pan Roll",
+        "Mbira Cycle",
+        "Slack Key",
+        "Ukulele Strum",
+        "Bass Walk",
+        "Synth Climb"
+      ],
+      "default": "Kompa Pick"
+    },
+    {
+      "key": "arp_chord",
+      "name": "Arp Chord",
+      "options": [
+        "Major",
+        "Minor",
+        "Dom 7",
+        "Min 7",
+        "Maj 7",
+        "Sus 4",
+        "Power",
+        "Min 9"
+      ],
+      "default": "Major"
+    },
+    {
+      "key": "arp_latch",
+      "name": "Arp Latch",
+      "options": [
+        "Off",
+        "On"
+      ],
+      "default": "Off"
+    },
+    {
+      "key": "arp_oct",
+      "name": "Arp Octaves",
+      "min": 1,
+      "max": 4,
+      "default": 1,
+      "dynamic_display": true,
+      "display": "int"
+    },
+    {
+      "key": "arp_gate",
+      "name": "Arp Gate",
+      "min": 0.1,
+      "max": 1.0,
+      "default": 0.7,
+      "dynamic_display": true
+    },
+    {
+      "key": "arp_swing",
+      "name": "Arp Swing",
+      "min": 0.5,
+      "max": 0.75,
+      "default": 0.5,
+      "dynamic_display": true
+    },
+    {
+      "key": "arp_strum",
+      "name": "Arp Strum",
+      "min": 0,
+      "max": 80,
+      "default": 0,
+      "dynamic_display": true,
+      "display": "int"
+    },
+    {
+      "key": "go_arp",
+      "name": "Show Arp",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "sv_arp_mode",
+      "name": "Setting arp_mode",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_arp_style",
+      "name": "Setting arp_style",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_arp_rate",
+      "name": "Setting arp_rate",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_arp_latch",
+      "name": "Setting arp_latch",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_arp_oct",
+      "name": "Setting arp_oct",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_arp_gate",
+      "name": "Setting arp_gate",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_arp_swing",
+      "name": "Setting arp_swing",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "sv_arp_strum",
+      "name": "Setting arp_strum",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
+    },
+    {
+      "key": "set_arp_mode",
+      "name": "Setting Pad arp_mode",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_arp_style",
+      "name": "Setting Pad arp_style",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_arp_rate",
+      "name": "Setting Pad arp_rate",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "set_arp_latch",
+      "name": "Setting Pad arp_latch",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "key": "gen_fav",
+      "name": "Favourites Row",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "display": "string"
     }
   ]
 }

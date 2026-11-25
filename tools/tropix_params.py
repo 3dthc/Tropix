@@ -14,12 +14,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 from pack_tropix import ORDER, TYPES  # noqa: E402
+import arp_pats  # noqa: E402
 
 INSTRUMENTS = [d for _, d, _ in ORDER]
 LAYERS = "ab"
 GENRES = ["ALL", "AFROBEAT", "AMAPIANO", "KOMPA", "SOCA", "REGGAE", "HAWAIIAN"]   # 0 = every genre
 LIST_ROWS = 8                       # the BROWSE view's preset list: pages of 8
-VIEWS = ["Browse", "Layers", "Settings"]
+VIEWS = ["Browse", "Layers", "Settings", "Arp"]
 THEMES = ["Sunset", "Lagos", "Aloha", "Jamaica", "Rasta", "Haiti", "Africa", "Kanaval", "Jozi Night"]   # = make_skin.THEMES, in order
 WAVE_FRAMES = 17                    # the LAYERS view's waveform: idle + 4 levels x 4 phases
 DELAY_TIMES = ["1/16", "1/8T", "1/8", "1/8.", "1/4T", "1/4", "1/4.", "1/2"]
@@ -39,6 +40,16 @@ SETTINGS_BOXES = [
 SETTING_KEYS = [k for _, rows in SETTINGS_BOXES for k, _ in rows]
 CHOICE_ROWS = {"voice_mode", "lfo_target", "scoop", "vel_curve", "mod_wheel", "anim"}   # a tap on the label steps these
 
+
+# ARP view: four tap rows (a tap steps the choice, the data wheel too) and four knobs. The STYLE row is the direction
+# (ARP), the pattern (PATTERN) or the chord (CHORD), whichever the mode uses. The settings are global, not per preset.
+ARP_MODES = ["Off", "Arp", "Pattern", "Chord"]
+ARP_DIRS = ["Up", "Down", "Up-Down", "As Played", "Random"]
+ARP_RATES = ["1/4", "1/8.", "1/8", "1/8T", "1/16", "1/16T", "1/32", "1/32T"]
+ARP_CHORDS = ["Major", "Minor", "Dom 7", "Min 7", "Maj 7", "Sus 4", "Power", "Min 9"]
+ARP_ROWS = [("arp_mode", "MODE"), ("arp_style", "STYLE"), ("arp_rate", "RATE"), ("arp_latch", "LATCH")]
+ARP_KNOBS = [("arp_oct", "OCTAVES"), ("arp_gate", "GATE"), ("arp_swing", "SWING"), ("arp_strum", "STRUM")]
+ARP_TEXTS = [k for k, _ in ARP_ROWS + ARP_KNOBS]
 
 # a data wheel click moves a continuous knob 1% of its range; these (touched on the LAYERS and SETTINGS screens, where
 # there is no big knob to drag) move faster per click
@@ -149,6 +160,21 @@ def spec():
         P += [tap("t%s_%s" % (c, l), "Layer %s %s Pad" % (l.upper(), lab.title())) for c, _, lab in LAYER_CELLS]
         P += [tap("tname_" + l, "Layer %s Sound Pad" % l.upper())]
     P += [tap("set_" + k, "Setting Pad %s" % k) for k in SETTING_KEYS]
+    # added with the ARP view (0.2.0): append only
+    P += [option("arp_mode", "Arp Mode", ARP_MODES, "Off", preset=False),
+          option("arp_dir", "Arp Direction", ARP_DIRS, "Up", preset=False),
+          option("arp_rate", "Arp Rate", ARP_RATES, "1/16", preset=False),
+          option("arp_pat", "Arp Pattern", arp_pats.names(), arp_pats.names()[0], preset=False),
+          option("arp_chord", "Arp Chord", ARP_CHORDS, "Major", preset=False),
+          option("arp_latch", "Arp Latch", ["Off", "On"], "Off", preset=False),
+          knob("arp_oct", "Arp Octaves", 1, 1, 4, fmt="INT", integer=True, preset=False),
+          knob("arp_gate", "Arp Gate", 0.7, 0.1, 1.0, preset=False),
+          knob("arp_swing", "Arp Swing", 0.5, 0.5, 0.75, preset=False),
+          knob("arp_strum", "Arp Strum", 0, 0, 80, fmt="MS", integer=True, preset=False),
+          tap("go_arp", "Show Arp")]
+    P += [text("sv_" + k, "Setting %s" % k) for k in ARP_TEXTS]
+    P += [tap("set_" + k, "Setting Pad %s" % k) for k, _ in ARP_ROWS]
+    P += [text("gen_fav", "Favourites Row")]
     return P
 
 
@@ -228,6 +254,9 @@ def to_header(P):
     L.append("static const char *const GENRE_NAME[NGENRE] = { %s };" % ", ".join(c_str(g) for g in GENRES))
     L.append("#define NSETTING %d" % len(SETTING_KEYS))
     L.append("static const int SETTING_PARAM[NSETTING] = { %s };" % ", ".join("P_" + k.upper() for k in SETTING_KEYS))
+    L.append("#define NARP_ROW %d" % len(ARP_ROWS))
+    L.append("#define NARP_TEXT %d" % len(ARP_TEXTS))
+    L.append("static const char *const ARP_MODE_LABEL[] = { %s };" % ", ".join(c_str(m.upper()) for m in ARP_MODES))
     L.append("#define NDELAY_TIMES %d" % len(DELAY_TIMES))
     L.append("static const float DELAY_BEATS[NDELAY_TIMES] = { 0.25f, 1.0f / 3, 0.5f, 0.75f, 2.0f / 3, 1.0f, 1.5f, 2.0f };")
     return "\n".join(L) + "\n"
@@ -244,6 +273,8 @@ def main():
         f.write(to_header(P))
     import presets
     presets.write_header(P, os.path.join(REPO, "src", "presets.h"))
+    with open(os.path.join(REPO, "src", "arp_pats.h"), "w") as f:
+        f.write(arp_pats.c_header())
     print("%d parameters, %d presets" % (len(P), len(presets.PRESETS)))
 
 

@@ -35,6 +35,8 @@
 #include "instruments.h"
 #include "params.h"
 #include "presets.h"
+#include "arp.h"
+#include "arp_pats.h"
 
 #define SR 44100.0f
 #define MAX_EV 256
@@ -346,6 +348,8 @@ typedef struct {
     float *rv; int rv_comb[8], rv_len_c[8], rv_ap[4], rv_len_a[4]; float rv_store[8];
     float *pre; int pre_w;
     float bpm;
+    arp_t arp;                       /* arpeggiator / pattern / chord (arp.h) */
+    double sp_ppq, sp_bpm; int sp_playing;   /* the host's song position for the block about to render */
     /* the browser */
     int genre;                       /* 0 = all genres */
     int type;                        /* -1 = every type */
@@ -758,20 +762,26 @@ static void all_off(inst_t *s, int hard) {
     s->nheld = 0;
 }
 
+/* the arp plays its notes through the engine's own note_on / note_off */
+static void arp_cb(void *ud, int key, int vel, int on) {
+    if (on) note_on(ud, key, vel); else note_off(ud, key);
+}
+
 static void handle_event(inst_t *s, const ev_t *e) {
     int type = e->st & 0xF0;
-    if (type == 0x90 && e->d2 > 0) note_on(s, e->d1 & 127, e->d2 & 127);
-    else if (type == 0x80 || (type == 0x90 && e->d2 == 0)) note_off(s, e->d1 & 127);
+    if (type == 0x90 && e->d2 > 0) { if (!arp_note(&s->arp, e->d1 & 127, e->d2 & 127, 1, arp_cb, s)) note_on(s, e->d1 & 127, e->d2 & 127); }
+    else if (type == 0x80 || (type == 0x90 && e->d2 == 0)) { if (!arp_note(&s->arp, e->d1 & 127, 0, 0, arp_cb, s)) note_off(s, e->d1 & 127); }
     else if (type == 0xB0) {
         if (e->d1 == 1) s->mw = (e->d2 & 127) / 127.0f;
+        else if (e->d1 == 64 && arp_active(&s->arp)) arp_pedal(&s->arp, e->d2 >= 64);   /* the arp holds its notes, not the voices */
         else if (e->d1 == 64) {
             int down = e->d2 >= 64;
             if (!down && s->pedal)
                 for (int i = 0; i < MAX_V; i++)
                     if (s->v[i].sustained) { s->v[i].sustained = 0; if (s->v[i].stage < ENV_RELEASE) s->v[i].stage = ENV_RELEASE; }
             s->pedal = down;
-        } else if (e->d1 == 120) all_off(s, 1);
-        else if (e->d1 == 123) all_off(s, 0);
+        } else if (e->d1 == 120) { arp_clear(&s->arp, arp_cb, s); all_off(s, 1); }
+        else if (e->d1 == 123) { arp_clear(&s->arp, arp_cb, s); all_off(s, 0); }
     } else if (type == 0xD0) s->press = (e->d1 & 127) / 127.0f;      /* channel pressure */
     else if (type == 0xA0) {                                              /* poly pressure: the strongest key counts */
         float p = (e->d2 & 127) / 127.0f;
@@ -855,6 +865,8 @@ static void *eng_create(const char *data_dir) {
     inst_t *s = calloc(1, sizeof *s);
     if (!s) return NULL;
     for (int i = 0; i < NP; i++) s->p[i] = PINFO[i].def;
+    arp_init(&s->arp);
+    s->sp_ppq = -1;
     s->vol_smooth = -1;
     s->last_key = -1;
     s->type = -1;
@@ -929,11 +941,22 @@ static void nudge(inst_t *s, int i, int dir) {
     s->p[i] = x;
 }
 
+/* the ARP view's rows: MODE, STYLE (direction, pattern or chord, by the mode), RATE, LATCH */
+static int arp_style_param(const inst_t *s) {
+    int m = ival(s, P_ARP_MODE, 0, ARP_NMODE - 1);
+    return m == ARP_PATTERN ? P_ARP_PAT : m == ARP_CHORD ? P_ARP_CHORD : P_ARP_DIR;
+}
+static void arp_row_step(inst_t *s, int row, int dir) {
+    int q = row == 0 ? P_ARP_MODE : row == 1 ? arp_style_param(s) : row == 2 ? P_ARP_RATE : P_ARP_LATCH;
+    step_option(s, q, row == 3 ? 1 : dir, 1);
+}
+
 /* what a tap on a pad does */
 static void pad_tapped(inst_t *s, int i) {
     int l;
     if (i == P_PREV || i == P_NEXT) step_preset(s, i == P_NEXT ? 1 : -1);
     else if (i == P_GO_BROWSE || i == P_GO_LAYERS || i == P_GO_SETTINGS) set_view(s, i - P_GO_BROWSE);
+    else if (i == P_GO_ARP) set_view(s, 3);
     else if (i == P_FAV_TAP) fav_set(s, cur_preset(s), !fav_get(s, cur_preset(s)));
     else if (i == P_FAVS_TAP) { s->favs = !s->favs; set_view(s, 0); }
     else if (i == P_RESET_TAP) apply_preset(s, cur_preset(s));
@@ -950,7 +973,8 @@ static void pad_tapped(inst_t *s, int i) {
             step_option(s, q, 1, 1);
             if (q == P_VOICE_MODE) s->nheld = 0;
         }
-    } else if (cell_param(i, &l) >= 0 || i == P_TNAME_A || i == P_TNAME_B) { /* a tap only gives the cell the wheel */ }
+    } else if (i >= P_SET_ARP_MODE && i < P_SET_ARP_MODE + NARP_ROW) arp_row_step(s, i - P_SET_ARP_MODE, 1);
+    else if (cell_param(i, &l) >= 0 || i == P_TNAME_A || i == P_TNAME_B) { /* a tap only gives the cell the wheel */ }
     sync_flags(s);
     s->rev++;
 }
@@ -969,7 +993,8 @@ static void pad_wheel(inst_t *s, int i, int dir) {
         q = SETTING_PARAM[i - P_SET_VOICE_MODE];
         nudge(s, q, dir);
         if (q == P_VOICE_MODE) s->nheld = 0;
-    } else step_preset(s, dir);
+    } else if (i >= P_SET_ARP_MODE && i < P_SET_ARP_MODE + NARP_ROW) arp_row_step(s, i - P_SET_ARP_MODE, dir);
+    else step_preset(s, dir);
     sync_flags(s);
     s->rev++;
 }
@@ -1106,6 +1131,7 @@ static int fmt_display(const inst_t *s, int i, char *buf, int n) {
         return fmt_signed((int)lroundf(x), " st", buf, n);
     case F_HZINT: return snprintf(buf, n, "%d Hz", (int)lroundf(x));
     case F_INT: return snprintf(buf, n, "%d", (int)lroundf(x));
+    case F_MS: return snprintf(buf, n, "%d ms", (int)lroundf(x));
     case F_PREDELAY: return snprintf(buf, n, "%d ms", (int)lroundf(clamp01(x) * 100));
     case F_BROWSE: {                                    /* the header's name: the preset's name and its star */
         int pr = cur_preset(s);
@@ -1146,6 +1172,13 @@ static int text_of(inst_t *s, int i, char *buf, int n) {
         if (i == P_FN_A + o) return fmt_display(s, LP(P_FINE_A, l), buf, n);
     }
     if (i >= P_SV_VOICE_MODE && i < P_SV_VOICE_MODE + NSETTING) return fmt_display(s, SETTING_PARAM[i - P_SV_VOICE_MODE], buf, n);
+    if (i >= P_SV_ARP_MODE && i < P_SV_ARP_MODE + NARP_TEXT) {
+        static const int shown[NARP_TEXT] = { P_ARP_MODE, -1, P_ARP_RATE, P_ARP_LATCH, P_ARP_OCT, P_ARP_GATE, P_ARP_SWING, P_ARP_STRUM };
+        int q = shown[i - P_SV_ARP_MODE];
+        if (q < 0) return ival(s, P_ARP_MODE, 0, ARP_NMODE - 1) == ARP_OFF ? snprintf(buf, n, "-") : fmt_display(s, arp_style_param(s), buf, n);
+        return fmt_display(s, q, buf, n);
+    }
+    if (i == P_GEN_FAV) return snprintf(buf, n, "\xe2\x98\x85 FAVS");
     if (i >= P_GEN_1 && i < P_GEN_1 + NGENRE) return snprintf(buf, n, "%s", GENRE_NAME[i - P_GEN_1]);
     if (i >= P_TYP_1 && i < P_TYP_1 + NTYPE) return snprintf(buf, n, "%s", TYPE_NAME[i - P_TYP_1]);
     if (i >= P_ROW_1 && i < P_ROW_1 + LIST_ROWS) {
@@ -1222,8 +1255,23 @@ static void eng_render(void *inst, int16_t *out, int frames) {
     clock_gettime(CLOCK_MONOTONIC, &t0);
     if (frames > 128) frames = 128;
     if (frames < 1) return;
+    arp_cfg_t *ac = &s->arp.c;
+    ac->mode = ival(s, P_ARP_MODE, 0, ARP_NMODE - 1);
+    ac->dir = ival(s, P_ARP_DIR, 0, ARP_NDIR - 1);
+    ac->rate = ival(s, P_ARP_RATE, 0, ARP_NRATE - 1);
+    ac->pat = ival(s, P_ARP_PAT, 0, NARP_PAT - 1);
+    ac->chord = ival(s, P_ARP_CHORD, 0, ARP_NCHORD - 1);
+    ac->latch = ival(s, P_ARP_LATCH, 0, 1);
+    ac->oct = ival(s, P_ARP_OCT, 1, 4);
+    ac->gate = (int)lroundf(clamp01(s->p[P_ARP_GATE]) * 100);
+    ac->swing = (int)lroundf(clamp01(s->p[P_ARP_SWING]) * 100);
+    ac->strum = ival(s, P_ARP_STRUM, 0, 80);
+    if (arp_sync(&s->arp, arp_cb, s)) { all_off(s, 0); s->pedal = 0; }
+    arp_latch_changed(&s->arp);
     for (int i = 0; i < s->nev; i++) handle_event(s, &s->ev[i]);
     s->nev = 0;
+    arp_block(&s->arp, s->sp_ppq, s->sp_bpm, s->sp_playing, frames, s->bpm, ARP_PATS, NARP_PAT, arp_cb, s);
+    s->sp_ppq = -1; s->sp_bpm = 0; s->sp_playing = 0;
     const float dt = frames / SR;
 
     /* pitch: A4 reference, transpose, bend; the mod wheel's vibrato; the LFO */
@@ -1481,5 +1529,12 @@ static void eng_render(void *inst, int16_t *out, int frames) {
     }
 }
 
-static const mpc_engine_t ENGINE = { eng_create, eng_destroy, eng_midi, eng_set_param, eng_get_param, eng_render, NULL, NULL };
+/* the host's song position for the next block (vst.json "HAS_SONG_POS"): the arp places its steps on it */
+static void eng_song_pos(void *inst, double ppq, double bpm, int playing, int frames) {
+    inst_t *s = inst;
+    (void)frames;
+    s->sp_ppq = ppq; s->sp_bpm = bpm; s->sp_playing = playing;
+}
+
+static const mpc_engine_t ENGINE = { eng_create, eng_destroy, eng_midi, eng_set_param, eng_get_param, eng_render, NULL, eng_song_pos };
 const mpc_engine_t *mpc_engine(void) { return &ENGINE; }

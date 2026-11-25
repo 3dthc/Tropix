@@ -26,6 +26,12 @@ plugin, built on [sd88me/mpc-vst-plugins](https://github.com/sd88me/mpc-vst-plug
   or auto-pan, chorus, a tempo-synced delay and reverb.
 - **Favourites:** star any preset and find them all in one list. Stars are shared by every Tropix on the MPC and stay
   until you take them off.
+- **Arpeggiator, patterns and chords** (the ARP view): ARP plays the notes you hold (up, down, up-down, as played, random,
+  1 to 4 octaves); PATTERN builds a groove on your lowest key from 16 genre phrases (kompa pick and tap, amapiano log drum
+  and keys, soca stab, reggae skank, one drop, afro pluck, highlife run, steel pan roll, mbira cycle, slack key, ukulele
+  strum, bass walk and more), with chord hits that play every key you hold; CHORD turns one key into a chord with a strum.
+  Rates 1/4 to 1/32 with dotted and triplet values, gate, swing and latch. Steps sit on MPC's song position, so they stay
+  in time across loops and tempo changes (and run on their own at the tempo when stopped). The sustain pedal holds the notes.
 - **Nine colorways:** Sunset, Lagos, Aloha, Jamaica, Rasta, Haiti, Africa (the flag colorways carry a flag band across the screen), Kanaval, Jozi Night.
 - **Made for the MPC:** the 16 knobs are the Q-Links in four columns of four, on every view; big knobs and
   buttons, everything on one page; edits and the colorway are saved with the project.
@@ -33,7 +39,7 @@ plugin, built on [sd88me/mpc-vst-plugins](https://github.com/sd88me/mpc-vst-plug
 ## The page
 
 The 16 knobs sit on either side (TONE, ENVELOPE, MOTION, SPACE: one Q-Link column each; Q-Link 16 browses presets,
-since the MPC track has its own volume). The screen in the middle has three views, picked along its foot.
+since the MPC track has its own volume). The screen in the middle has four views, picked along its foot.
 
 ### BROWSE
 
@@ -49,6 +55,12 @@ The waveform, both layers and the preset's description. For each layer: ◀ ▶ 
 turn the data wheel or drag), ON, SOLO, and LEVEL, PAN, OCTAVE and FINE (touch one, then drag or turn the data wheel). On a
 percussion kit, OCTAVE moves the kit along the keyboard instead of retuning it.
 
+### ARP
+
+Four knobs (OCTAVES, GATE, SWING, STRUM) and four rows you tap to step: MODE (off, arp, pattern, chord), STYLE (the
+direction, the pattern or the chord, by the mode), RATE and LATCH. The settings stay when you change presets. MPC records
+the keys you play, not the arp's notes, so resample the track to keep the result as audio.
+
 ### SETTINGS
 
 ![The SETTINGS view](docs/images/settings.jpg)
@@ -60,9 +72,9 @@ the colorway (◀ ▶). Pressing into a pad (aftertouch) does what the mod wheel
 
 | Button | What it does |
 | --- | --- |
-| BROWSE, LAYERS, SETTINGS | the screen's three views |
+| BROWSE, LAYERS, ARP, SETTINGS | the screen's four views |
 | ★ FAV | mark or unmark the current preset as a favourite |
-| ★ LIST | list every favourite; tap again to go back |
+| ★ FAVS (last row of the genre list) | list every favourite; tap again to go back |
 | RESET | undo your edits to the current preset (it lights when there are some) |
 
 ### Colorways
